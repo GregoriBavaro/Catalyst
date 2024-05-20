@@ -1,0 +1,16 @@
+.hamburgerItems {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+
+    li {
+      font-size: var(--fs-600);
+    }
+
+    li:first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

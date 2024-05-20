@@ -1,0 +1,24 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    .logo {
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    nav {
+      padding: 1rem;
+    }
+  }
+}

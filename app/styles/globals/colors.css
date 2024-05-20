@@ -1,0 +1,22 @@
+:root {
+  --dark-blue: rgb(15, 23, 42);
+  --white: rgb(226, 232, 240);
+  --sand-white: rgb(199, 199, 199);
+  --background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: var(--white);
+    --background-color: var(--dark-blue);
+    --background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: var(--dark-blue);
+    --background-color: var(--white);
+    --background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  }
+}
