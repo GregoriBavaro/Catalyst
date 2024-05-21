@@ -1,15 +1,18 @@
 :root {
   --dark-blue: rgb(15, 23, 42);
   --white: rgb(226, 232, 240);
+  --red: rgb(221, 87, 70);
+  --light-orange: rgb(255, 196, 112);
   --sand-white: rgb(199, 199, 199);
-  --background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  --white-gray: rgb(182, 179, 179);
+  --background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: var(--white);
     --background-color: var(--dark-blue);
-    --background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+    --background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
   }
 }
 

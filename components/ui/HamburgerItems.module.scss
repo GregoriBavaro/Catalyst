@@ -1,16 +1,79 @@
 .hamburgerItems {
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
 
-    li {
-      font-size: var(--fs-600);
+  .listsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 3rem 0;
+    border-bottom: 1px solid var(--sand-white);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      width: fit-content;
+
+      li {
+        z-index: 2;
+        overflow: hidden;
+
+        div {
+          display: flex;
+          gap: 1rem;
+        }
+      }
     }
 
-    li:first-letter {
-      text-transform: capitalize;
+    .paths {
+      .title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: var(--fs-600);
+        line-height: 3rem;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .title:hover {
+        color: var(--light-orange);
+      }
+
+      .number {
+        color: var(--light-orange);
+      }
+    }
+
+    .links {
+      gap: 1.5rem;
+
+      li {
+        width: 100%;
+
+        div {
+          justify-content: space-between;
+
+          svg {
+            transform: rotate(40deg);
+          }
+        }
+      }
+
+      .title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: var(--fs-100);
+        cursor: pointer;
+        opacity: 0.5;
+        transition: 0.3s;
+      }
+
+      .title:hover {
+        opacity: 1;
+      }
     }
   }
 }

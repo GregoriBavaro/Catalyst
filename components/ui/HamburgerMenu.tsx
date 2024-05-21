@@ -17,17 +17,19 @@ const HamburgerMenu: React.FC = () => {
     setOpen(toggled);
   };
 
-  const circlePosition = (size.width ?? 1280) > 640 ? "64px" : "38px";
+  const circlePosition = (size.width ?? 1280) > 640 ? "64px" : "42px";
   const circleSize = (size.width ?? 1280) > 640 ? "32px" : "25px";
 
   const menuAnimation = {
     initial: {
       clipPath: `circle(${circleSize} at calc(100% - ${circlePosition}) ${circlePosition})`,
+      opacity: 0,
     },
     animate: {
       clipPath: `circle(${
         (size.width ?? 1000) * 2 + 200
       }px at calc(100% - ${circlePosition}) ${circlePosition})`,
+      opacity: 1,
       transition: {
         type: "spring",
         stiffness: 20,
@@ -36,11 +38,13 @@ const HamburgerMenu: React.FC = () => {
     },
     exit: {
       clipPath: `circle(${circleSize} at calc(100% - ${circlePosition}) ${circlePosition})`,
+      opacity: 0,
       transition: {
         delay: 0.4,
         type: "spring",
         stiffness: 400,
         damping: 40,
+        opacity: { delay: 0.58 },
       },
     },
     transition: { duration: 4 },
