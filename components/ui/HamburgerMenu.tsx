@@ -40,11 +40,11 @@ const HamburgerMenu: React.FC = () => {
       clipPath: `circle(${circleSize} at calc(100% - ${circlePosition}) ${circlePosition})`,
       opacity: 0,
       transition: {
-        delay: 0.4,
+        delay: 0.6,
         type: "spring",
         stiffness: 400,
         damping: 40,
-        opacity: { delay: 0.58 },
+        opacity: { delay: 0.79 },
       },
     },
     transition: { duration: 4 },
