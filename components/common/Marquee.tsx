@@ -22,7 +22,9 @@ const Slider: React.FC<MarqueeInterface> = ({ text, repeatTimes, className }) =>
     <m.div {...MarqueeAnimation} className={`${classes.marquee} ${className}`}>
       <Marquee>
         {Array.from({ length: repeatTimes }, (_, index) => (
-          <span key={`${text}-${index}`}>{text}</span>
+          <span className="gradientText" key={`${text}-${index}`}>
+            {text}
+          </span>
         ))}
       </Marquee>
     </m.div>

@@ -1,18 +1,19 @@
 :root {
-  --dark-blue: rgb(15, 23, 42);
+  --dark-blue: rgb(1, 19, 31);
+  --dark-purple: rgb(11, 31, 57);
+  --bright-aqua: rgb(97, 235, 235);
+  --light-cyan: rgb(182, 255, 254);
   --white: rgb(226, 232, 240);
-  --red: rgb(221, 87, 70);
-  --light-orange: rgb(255, 196, 112);
   --sand-white: rgb(199, 199, 199);
   --white-gray: rgb(182, 179, 179);
-  --background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  --background-image: linear-gradient(to right, var(--dark-purple) 0%, var(--dark-blue) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: var(--white);
     --background-color: var(--dark-blue);
-    --background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    --background-image: linear-gradient(to right, var(--dark-purple) 0%, var(--dark-blue) 100%);
   }
 }
 
@@ -20,6 +21,16 @@
   :root {
     --text-color: var(--dark-blue);
     --background-color: var(--white);
-    --background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+    --background-image: linear-gradient(to right, var(--sand-white) 0%, var(--white) 100%);
   }
+}
+
+.gradientText {
+  font-size: 3em;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--bright-aqua), var(--light-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }

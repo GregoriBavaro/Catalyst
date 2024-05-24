@@ -20,10 +20,30 @@ body {
   color: var(--text-color);
   background: var(--background-color);
   background-image: var(--background-image);
-  min-height: 100vh;
   user-select: none;
+}
+
+main {
+  padding: calc(128px + 4rem) 6rem 0;
+  max-width: 1980px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-wrap: pretty;
 }
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

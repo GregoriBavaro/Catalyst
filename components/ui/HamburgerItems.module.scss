@@ -1,10 +1,11 @@
 .hamburgerItems {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 100%;
+  gap: 2rem;
 
   .menuOptions {
     width: 100%;
@@ -56,11 +57,11 @@
         }
 
         .title:hover {
-          color: var(--light-orange);
+          color: var(--light-cyan);
         }
 
         .number {
-          color: var(--light-orange);
+          color: var(--light-cyan);
         }
       }
 
@@ -96,11 +97,7 @@
 
     .horizontalLine {
       height: 1px;
-      background-color: var(--sand-white);
+      background-color: rgba(226, 232, 240, 0.258);
     }
-  }
-
-  .slider {
-    margin-top: auto;
   }
 }

@@ -63,7 +63,7 @@ const HamburgerMenu: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <m.div {...menuAnimation} className={classes.menu}>
-            <HamburgerItems isOpen={isOpen} />
+            <HamburgerItems isOpen={isOpen} setOpen={setOpen} />
           </m.div>
         )}
       </AnimatePresence>

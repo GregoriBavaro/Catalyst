@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { motion as m } from "framer-motion";
+import Link from "next/link";
 
 import { GrLinkUp } from "react-icons/gr";
 
@@ -10,13 +11,14 @@ import classes from "./HamburgerItems.module.scss";
 
 interface HamburgerItemsProps {
   isOpen: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const PATHS = [
-  { id: 0, title: "contact", path: "", animationDelay: 0.1 },
-  { id: 1, title: "portfolio", path: "", animationDelay: 0.2 },
-  { id: 2, title: "about us", path: "", animationDelay: 0.3 },
-  { id: 3, title: "services", path: "", animationDelay: 0.4 },
+  { id: 0, title: "contact", path: "/contact", animationDelay: 0.1 },
+  { id: 1, title: "portfolio", path: "/portfolio", animationDelay: 0.2 },
+  { id: 2, title: "about us", path: "/about", animationDelay: 0.3 },
+  { id: 3, title: "services", path: "/services", animationDelay: 0.4 },
 ];
 
 const LINKS = [
@@ -30,12 +32,12 @@ const LANGUAGES = [
   { id: 1, title: "МК", tag: "mk", animationDelay: 0.4 },
 ];
 
-const listAnimation = (delayTime: number) => {
+const listAnimation = (delayTime: number, enterDelay: number) => {
   return {
-    initial: { opacity: 0, y: "-5rem" },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: "-5rem", transition: { delay: delayTime } },
-    transition: { duration: 0.3, delay: delayTime },
+    initial: { opacity: 0, y: "-120%" },
+    animate: { opacity: 1, y: 0, transition: { delay: enterDelay } },
+    exit: { opacity: 0, y: "-120%", transition: { delay: delayTime } },
+    transition: { duration: 0.3, delay: delayTime, bounce: 0 },
   };
 };
 
@@ -53,7 +55,7 @@ const languagesAnimation = {
   transition: { duration: 0.3, delay: 0.3 },
 };
 
-const HamburgerItems: React.FC<HamburgerItemsProps> = ({ isOpen }) => {
+const HamburgerItems: React.FC<HamburgerItemsProps> = ({ isOpen, setOpen }) => {
   return (
     <div className={classes.hamburgerItems}>
       {isOpen && (
@@ -61,19 +63,21 @@ const HamburgerItems: React.FC<HamburgerItemsProps> = ({ isOpen }) => {
           <div className={classes.menuOptions}>
             <div className={classes.listsWrapper}>
               <ul className={classes.paths}>
-                {PATHS.map(({ id, title, animationDelay }) => (
+                {PATHS.map(({ id, title, animationDelay, path }) => (
                   <li key={id}>
-                    <m.div {...listAnimation(animationDelay)}>
-                      <span className={classes.title}>{title}</span>
-                      <span className={classes.number}>0{id + 1} /</span>
-                    </m.div>
+                    <Link href={path} onClick={() => setOpen(false)}>
+                      <m.div {...listAnimation(animationDelay, animationDelay + 0.3)}>
+                        <span className={classes.title}>{title}</span>
+                        <span className={classes.number}>0{id + 1} /</span>
+                      </m.div>
+                    </Link>
                   </li>
                 ))}
               </ul>
               <ul className={classes.links}>
                 {LINKS.map(({ id, title, animationDelay }) => (
                   <li key={id}>
-                    <m.div {...listAnimation(animationDelay)}>
+                    <m.div {...listAnimation(animationDelay, animationDelay + 0.2)}>
                       <span className={classes.title}>{title}</span>
                       <GrLinkUp />
                     </m.div>
@@ -86,7 +90,7 @@ const HamburgerItems: React.FC<HamburgerItemsProps> = ({ isOpen }) => {
               <Selector data={LANGUAGES} animation={languagesAnimation} />
             </div>
           </div>
-          <Slider text={"Let's connect"} className={classes.slider} repeatTimes={50} />
+          <Slider text={"Let's connect"} repeatTimes={50} />
         </>
       )}
     </div>
