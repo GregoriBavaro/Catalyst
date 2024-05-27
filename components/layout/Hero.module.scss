@@ -1,5 +1,4 @@
 .hero {
-//   max-height: 100vh;
 
   .promo {
     display: flex;
@@ -9,11 +8,12 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 2rem;
 
       h1 {
         font-size: var(--fs-700);
-        max-width: 14ch;
+        max-width: 24ch;
       }
 
       p {

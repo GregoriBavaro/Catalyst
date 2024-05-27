@@ -8,7 +8,7 @@ import Button from "../common/Button";
 
 import classes from "./Hero.module.scss";
 
-import growth from "../../public/images/growth.png";
+import growth from "../../public/images/media/growth1.png";
 
 const Hero: React.FC = () => {
   const router = useRouter();
