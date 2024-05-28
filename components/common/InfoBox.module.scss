@@ -6,8 +6,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-self: center;
-    border: 1px solid rgba(226, 232, 240, 0.258);
-    border-radius: 2rem;
+    border: 1px solid var(--border-gray);
+    border-radius: var(--border-radius);
     padding: 1rem;
 
     li {
