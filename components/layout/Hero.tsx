@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useRouter } from "next/navigation";
 
 import Image from "next/image";
@@ -10,7 +9,7 @@ import classes from "./Hero.module.scss";
 
 import growth from "../../public/images/media/growth1.png";
 
-const Hero: React.FC = () => {
+const Hero = () => {
   const router = useRouter();
 
   const handleRoute = (path: string) => {

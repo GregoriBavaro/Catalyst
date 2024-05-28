@@ -1,5 +1,3 @@
-import React from "react";
-
 import classes from "./Button.module.scss";
 
 interface ButtonProps {
@@ -10,13 +8,7 @@ interface ButtonProps {
   className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  label,
-  onClick,
-  type = "button",
-  disabled = false,
-  className,
-}) => {
+const Button = ({ label, onClick, type = "button", disabled = false, className }: ButtonProps) => {
   const buttonType = type === undefined ? "button" : type;
 
   return (

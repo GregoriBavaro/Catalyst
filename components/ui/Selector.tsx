@@ -32,7 +32,7 @@ const selectOptionsAnimation = {
   exit: initialAndExitStyle,
 };
 
-const Selector: React.FC<SelectorInterface> = ({ data, animation }) => {
+const Selector = ({ data, animation }: SelectorInterface) => {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [selected, setSelected] = useState<string>(data[0].title);
 

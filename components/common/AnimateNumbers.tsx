@@ -6,7 +6,7 @@ interface AnimatedNumbersProps {
   duration: number;
 }
 
-const AnimatedNumbers: React.FC<AnimatedNumbersProps> = ({ value, duration }) => {
+const AnimatedNumbers = ({ value, duration }: AnimatedNumbersProps) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {

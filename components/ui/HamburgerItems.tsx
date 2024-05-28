@@ -55,7 +55,7 @@ const languagesAnimation = {
   transition: { duration: 0.3, delay: 0.3 },
 };
 
-const HamburgerItems: React.FC<HamburgerItemsProps> = ({ setOpen }) => {
+const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       setOpen(false);

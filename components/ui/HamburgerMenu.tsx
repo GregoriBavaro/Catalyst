@@ -14,7 +14,7 @@ const HamburgerMenu = () => {
   const { isOpen, setOpen } = useHamburgerMenu();
   const size = useWindowSize();
 
-  const circlePosition = (size.width ?? 1280) > 640 ? "64px" : "42px";
+  const circlePosition = (size.width ?? 1280) > 640 ? "55px" : "42px";
   const circleSize = (size.width ?? 1280) > 640 ? "32px" : "25px";
 
   const menuAnimation = {

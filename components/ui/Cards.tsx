@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 
 import classes from "./Cards.module.scss";
@@ -7,7 +6,7 @@ interface CardsProps {
   data: { id: number; icon: string; title: string; description: string; path: string }[];
   sectionName: string;
 }
-const Cards: React.FC<CardsProps> = ({ data, sectionName }) => {
+const Cards = ({ data, sectionName }: CardsProps) => {
   return (
     <section className={classes.cardsWrapper}>
       <h4>{sectionName}</h4>
