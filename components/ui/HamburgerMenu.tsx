@@ -1,21 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Spiral as Hamburger } from "hamburger-react";
 import { motion as m, AnimatePresence } from "framer-motion";
+import { useHamburgerMenu } from "../../store/store";
 import useWindowSize from "../../hooks/use-WindowSize";
 
 import HamburgerItems from "./HamburgerItems";
 
 import classes from "./HamburgerMenu.module.scss";
 
-const HamburgerMenu: React.FC = () => {
-  const [isOpen, setOpen] = useState<boolean>(false);
+const HamburgerMenu = () => {
+  const { isOpen, setOpen } = useHamburgerMenu();
   const size = useWindowSize();
-
-  const handleClick = (toggled: boolean) => {
-    setOpen(toggled);
-  };
 
   const circlePosition = (size.width ?? 1280) > 640 ? "64px" : "42px";
   const circleSize = (size.width ?? 1280) > 640 ? "32px" : "25px";
@@ -50,20 +47,28 @@ const HamburgerMenu: React.FC = () => {
     transition: { duration: 4 },
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      setOpen(false);
+    }
+  };
+
   return (
     <>
-      <div className={classes.hamburgerButton}>
-        <Hamburger
-          toggled={isOpen}
-          toggle={setOpen}
-          onToggle={(toggled) => handleClick(toggled)}
-          size={26}
-        />
+      <div
+        className={classes.hamburgerButton}
+        onClick={() => setOpen(!isOpen)}
+        onKeyDown={(e) => handleKeyDown(e)}
+        role="button"
+        aria-label="Toggle menu"
+        tabIndex={0}
+      >
+        <Hamburger toggled={isOpen} size={26} />
       </div>
       <AnimatePresence>
         {isOpen && (
           <m.div {...menuAnimation} className={classes.menu}>
-            <HamburgerItems isOpen={isOpen} setOpen={setOpen} />
+            <HamburgerItems setOpen={setOpen} />
           </m.div>
         )}
       </AnimatePresence>

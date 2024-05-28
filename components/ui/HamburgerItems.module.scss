@@ -71,7 +71,9 @@
         li {
           width: 100%;
 
-          div {
+          a {
+            display: flex;
+            gap: 1rem;
             justify-content: space-between;
 
             svg {

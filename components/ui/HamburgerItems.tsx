@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction } from "react";
+/* eslint-disable no-unused-vars */
+import React from "react";
 import { motion as m } from "framer-motion";
 import Link from "next/link";
 
@@ -10,8 +11,7 @@ import Selector from "./Selector";
 import classes from "./HamburgerItems.module.scss";
 
 interface HamburgerItemsProps {
-  isOpen: boolean;
-  setOpen: Dispatch<SetStateAction<boolean>>;
+  setOpen: (isOpen: boolean) => void;
 }
 
 const PATHS = [
@@ -55,44 +55,52 @@ const languagesAnimation = {
   transition: { duration: 0.3, delay: 0.3 },
 };
 
-const HamburgerItems: React.FC<HamburgerItemsProps> = ({ isOpen, setOpen }) => {
+const HamburgerItems: React.FC<HamburgerItemsProps> = ({ setOpen }) => {
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      setOpen(false);
+    }
+  };
+
   return (
     <div className={classes.hamburgerItems}>
-      {isOpen && (
-        <>
-          <div className={classes.menuOptions}>
-            <div className={classes.listsWrapper}>
-              <ul className={classes.paths}>
-                {PATHS.map(({ id, title, animationDelay, path }) => (
-                  <li key={id}>
-                    <Link href={path} onClick={() => setOpen(false)}>
-                      <m.div {...listAnimation(animationDelay, animationDelay + 0.3)}>
-                        <span className={classes.title}>{title}</span>
-                        <span className={classes.number}>0{id + 1} /</span>
-                      </m.div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <ul className={classes.links}>
-                {LINKS.map(({ id, title, animationDelay }) => (
-                  <li key={id}>
-                    <m.div {...listAnimation(animationDelay, animationDelay + 0.2)}>
-                      <span className={classes.title}>{title}</span>
-                      <GrLinkUp />
-                    </m.div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <m.span {...lineAnimation} className={classes.horizontalLine} />
-            <div {...languagesAnimation} className={classes.languages}>
-              <Selector data={LANGUAGES} animation={languagesAnimation} />
-            </div>
-          </div>
-          <Slider text={"Let's connect"} repeatTimes={50} />
-        </>
-      )}
+      <div className={classes.menuOptions}>
+        <div className={classes.listsWrapper}>
+          <ul className={classes.paths}>
+            {PATHS.map(({ id, title, animationDelay, path }) => (
+              <li key={id}>
+                <Link href={path}>
+                  <m.div
+                    {...listAnimation(animationDelay, animationDelay + 0.3)}
+                    onClick={() => setOpen(false)}
+                    onKeyDown={(e) => handleKeyDown(e)}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <span className={classes.title}>{title}</span>
+                    <span className={classes.number}>0{id + 1} /</span>
+                  </m.div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className={classes.links}>
+            {LINKS.map(({ id, title, animationDelay, path }) => (
+              <li key={id}>
+                <m.a href={path} {...listAnimation(animationDelay, animationDelay + 0.2)}>
+                  <span className={classes.title}>{title}</span>
+                  <GrLinkUp />
+                </m.a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <m.span {...lineAnimation} className={classes.horizontalLine} />
+        <div {...languagesAnimation} className={classes.languages}>
+          <Selector data={LANGUAGES} animation={languagesAnimation} />
+        </div>
+      </div>
+      <Slider text={"Let's connect"} repeatTimes={50} />
     </div>
   );
 };
