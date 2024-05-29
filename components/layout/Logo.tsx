@@ -42,7 +42,7 @@ const Logo = () => {
       role="button"
       tabIndex={0}
     >
-      <Image src={logo} alt="catalyst logo" />
+      <Image src={logo} alt="catalyst logo" priority />
     </div>
   );
 };
