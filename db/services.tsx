@@ -1,6 +1,7 @@
 export const SERVICES = [
   {
     id: 0,
+    animationDelay: 0.2,
     title: "Web design & development",
     serviceId: "web-design-and-development",
     description:
@@ -10,6 +11,7 @@ export const SERVICES = [
   },
   {
     id: 1,
+    animationDelay: 0.4,
     title: "Website maintenance",
     serviceId: "website-maintenance",
     description:
@@ -19,6 +21,7 @@ export const SERVICES = [
   },
   {
     id: 2,
+    animationDelay: 0.6,
     title: "SEO",
     serviceId: "seo",
     description:
@@ -28,6 +31,7 @@ export const SERVICES = [
   },
   {
     id: 3,
+    animationDelay: 0.8,
     title: "Marketing",
     serviceId: "marketing",
     description:
@@ -37,6 +41,7 @@ export const SERVICES = [
   },
   {
     id: 4,
+    animationDelay: 1,
     title: "Social media",
     serviceId: "social-media",
     description:
@@ -46,6 +51,7 @@ export const SERVICES = [
   },
   {
     id: 5,
+    animationDelay: 1.2,
     title: "Brand",
     serviceId: "brand",
     description:

@@ -1,0 +1,61 @@
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65, 0, 0.076, 1)) {
+  transition: $property $duration $ease;
+}
+
+.cardItem {
+  .learnMore {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: auto;
+
+    .circle {
+      @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+      position: relative;
+      display: block;
+      margin: 0;
+
+      .icon {
+        @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+
+        &.arrow {
+          @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+          left: 0.625rem;
+          width: 1.125rem;
+          height: 0.125rem;
+          background: none;
+
+          &::before {
+            position: absolute;
+            content: "";
+            top: -0.25rem;
+            right: 0.0625rem;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-top: 0.125rem solid var(--white);
+            border-right: 0.125rem solid var(--white);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    border: 1px solid var(--sand-white);
+    .learnMore {
+      .circle {
+        .icon {
+          &.arrow {
+            background: var(--white);
+            transform: translate(1rem, 0);
+          }
+        }
+      }
+    }
+  }
+}

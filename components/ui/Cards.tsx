@@ -1,9 +1,18 @@
-import Link from "next/link";
+"use client";
+
+import CardItem from "./CardItem";
 
 import classes from "./Cards.module.scss";
 
 interface CardsProps {
-  data: { id: number; icon: string; title: string; description: string; path: string }[];
+  data: {
+    id: number;
+    icon: string;
+    title: string;
+    description: string;
+    path: string;
+    animationDelay: number;
+  }[];
   sectionName: string;
 }
 const Cards = ({ data, sectionName }: CardsProps) => {
@@ -11,20 +20,16 @@ const Cards = ({ data, sectionName }: CardsProps) => {
     <section className={classes.cardsWrapper}>
       <h4>{sectionName}</h4>
       <ul>
-        {data.map(({ id, icon, title, description, path }) => (
-          <li key={id}>
-            <Link href={path}>
-              {icon && <span>{icon}</span>}
-              <h6>{title}</h6>
-              <p>{description}</p>
-              <div className={classes.learnMore}>
-                <span className={classes.circle} aria-hidden="true">
-                  <span className={`${classes.icon} ${classes.arrow}`} />
-                </span>
-                <p>Learn more</p>
-              </div>
-            </Link>
-          </li>
+        {data.map(({ id, icon, title, description, path, animationDelay }) => (
+          <CardItem
+            key={id}
+            id={id}
+            icon={icon}
+            title={title}
+            description={description}
+            path={path}
+            animationDelay={animationDelay}
+          />
         ))}
       </ul>
     </section>
