@@ -1,7 +1,7 @@
 export const SERVICES = [
   {
     id: 0,
-    animationDelay: 0.2,
+    animationDelay: 0.1,
     title: "Web design & development",
     serviceId: "web-design-and-development",
     description:
@@ -11,7 +11,7 @@ export const SERVICES = [
   },
   {
     id: 1,
-    animationDelay: 0.4,
+    animationDelay: 0.2,
     title: "Website maintenance",
     serviceId: "website-maintenance",
     description:
@@ -21,7 +21,7 @@ export const SERVICES = [
   },
   {
     id: 2,
-    animationDelay: 0.6,
+    animationDelay: 0.3,
     title: "SEO",
     serviceId: "seo",
     description:
@@ -31,7 +31,7 @@ export const SERVICES = [
   },
   {
     id: 3,
-    animationDelay: 0.8,
+    animationDelay: 0.1,
     title: "Marketing",
     serviceId: "marketing",
     description:
@@ -41,7 +41,7 @@ export const SERVICES = [
   },
   {
     id: 4,
-    animationDelay: 1,
+    animationDelay: 0.2,
     title: "Social media",
     serviceId: "social-media",
     description:
@@ -51,7 +51,7 @@ export const SERVICES = [
   },
   {
     id: 5,
-    animationDelay: 1.2,
+    animationDelay: 0.3,
     title: "Brand",
     serviceId: "brand",
     description:
@@ -59,4 +59,14 @@ export const SERVICES = [
     icon: "",
     path: "/services/brand",
   },
+  {
+    id: 6,
+    animationDelay: 0.1,
+    title: "Brand",
+    serviceId: "brand",
+    description:
+      "Define and communicate your brand identity with cohesive visual elements, messaging, and guidelines that resonate with your audience.",
+    icon: "",
+    path: "/services/brand",
+  }
 ];

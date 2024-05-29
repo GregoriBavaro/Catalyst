@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion as m, useInView } from "framer-motion";
+import useWindowSize from "../../hooks/use-WindowSize";
 
 import classes from "./CardItem.module.scss";
 
@@ -11,11 +12,29 @@ interface CardItemProps {
   description: string;
   path: string;
   animationDelay: number;
+  showAllCards: boolean;
+  setCardHeight?: (height: number) => void;
 }
 
-const CardItem = ({ id, icon, title, description, path, animationDelay }: CardItemProps) => {
+const CardItem = ({
+  id,
+  icon,
+  title,
+  description,
+  path,
+  animationDelay,
+  showAllCards,
+  setCardHeight,
+}: CardItemProps) => {
   const ref = useRef<HTMLLIElement | null>(null);
   const isInView = useInView(ref, { once: true });
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (ref.current && setCardHeight) {
+      setCardHeight(ref.current.offsetHeight);
+    }
+  }, [isInView, setCardHeight, size.width, showAllCards]);
 
   return (
     <m.li

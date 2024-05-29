@@ -28,11 +28,10 @@ body {
 }
 
 main {
-  padding: calc(128px + 4rem) 6rem 0;
+  padding: calc(128px + 2rem) 6rem 0;
   max-width: 1870px;
   margin: 0 auto;
 }
-
 
 ul {
   list-style: none;
