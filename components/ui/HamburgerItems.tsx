@@ -54,6 +54,13 @@ const languagesAnimation = {
   transition: { duration: 0.3, delay: 0.3 },
 };
 
+const MarqueeAnimation = {
+  initial: { transform: "translateY(120%)" },
+  animate: { transform: "translateY(0%)", transition: { duration: 0.3, delay: 0.6 } },
+  exit: { transform: "translateY(120%)" },
+  transition: { duration: 0.3, delay: 0 },
+};
+
 const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -99,7 +106,7 @@ const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
           <Selector data={LANGUAGES} animation={languagesAnimation} />
         </div>
       </div>
-      <Slider text={"Let's connect"} repeatTimes={50} />
+      <Slider text={"Let's connect"} repeatTimes={50} marqueeAnimation={MarqueeAnimation} />
     </div>
   );
 };

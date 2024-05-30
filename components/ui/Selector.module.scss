@@ -19,10 +19,10 @@
 
   .selectOptions {
     padding: 0.5rem;
-    background-color: var(--white);
-    color: var(--dark-blue);
+    border: 1px solid var(--sand-white);
     position: absolute;
     top: 140%;
+    border-radius: 0.2rem;
 
     ul {
       display: flex;

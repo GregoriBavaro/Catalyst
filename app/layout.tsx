@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import Navigation from "../components/layout/Navigation";
+import Footer from "../components/layout/Footer";
 
 import "./styles/main.css";
 
@@ -37,6 +38,7 @@ const RootLayout = ({
       <body className={roboto.className}>
         <Navigation />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import Marquee from "react-fast-marquee";
 import { motion as m } from "framer-motion";
 
@@ -8,18 +9,12 @@ interface MarqueeInterface {
   text: string;
   className?: string;
   repeatTimes: number;
+  marqueeAnimation?: {};
 }
 
-const MarqueeAnimation = {
-  initial: { transform: "translateY(120%)" },
-  animate: { transform: "translateY(0%)", transition: { duration: 0.3, delay: 0.6 } },
-  exit: { transform: "translateY(120%)" },
-  transition: { duration: 0.3, delay: 0 },
-};
-
-const Slider: React.FC<MarqueeInterface> = ({ text, repeatTimes, className }) => {
+const Slider = ({ text, repeatTimes, className, marqueeAnimation }: MarqueeInterface) => {
   return (
-    <m.div {...MarqueeAnimation} className={`${classes.marquee} ${className}`}>
+    <m.div {...marqueeAnimation} className={`${classes.marquee} ${className}`}>
       <Marquee>
         {Array.from({ length: repeatTimes }, (_, index) => (
           <span className="gradientText" key={`${text}-${index}`}>

@@ -99,7 +99,7 @@
 
     .horizontalLine {
       height: 1px;
-      background-color: rgba(226, 232, 240, 0.258);
+      background-color: var(--border-gray);
     }
   }
 }

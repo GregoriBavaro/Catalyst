@@ -1,0 +1,105 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .footerMarquee {
+    z-index: 0;
+  }
+
+  .footerWrapper {
+    max-width: 1870px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6rem;
+
+    .logoListWrapper {
+      display: flex;
+      justify-content: flex-start;
+      border-top: 1px solid var(--border-gray);
+      padding: 4rem 0 0;
+
+      .footerLogo {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 0 2rem 0 0;
+
+        div {
+          width: 13rem;
+
+          img {
+            max-width: 7rem;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .footerList {
+        display: flex;
+        justify-content: space-between;
+        flex: 3;
+
+        li {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 1.2rem;
+
+          .footerLinkList {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+
+            li {
+              a {
+                opacity: 0.7;
+                transition: 0.3s;
+
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          p {
+            font-weight: 700;
+          }
+        }
+      }
+
+      .footerPreferences {
+        font-weight: 700;
+      }
+    }
+
+    .footerYearSocialWrapper {
+      padding: 4rem 0 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      .footerYear {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .footerSocial {
+        display: flex;
+        gap: 1.5rem;
+
+        svg {
+          font-size: 1.3rem;
+          opacity: 0.7;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
