@@ -3,6 +3,8 @@ import Link from "next/link";
 import { motion as m, useInView } from "framer-motion";
 import useWindowSize from "../../hooks/use-WindowSize";
 
+import ArrowButton from "../common/ArrowButton";
+
 import classes from "./CardItem.module.scss";
 
 interface CardItemProps {
@@ -52,12 +54,11 @@ const CardItem = ({
         {icon && <span>{icon}</span>}
         <h6>{title}</h6>
         <p>{description}</p>
-        <div className={classes.learnMore}>
-          <span className={classes.circle} aria-hidden="true">
-            <span className={`${classes.icon} ${classes.arrow}`} />
-          </span>
-          <p>Learn more</p>
-        </div>
+        <ArrowButton
+          label="learn more"
+          classNameWrapper={classes.learnMore}
+          classNameIcon={classes.icon}
+        />
       </Link>
     </m.li>
   );

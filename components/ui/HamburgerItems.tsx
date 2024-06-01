@@ -69,7 +69,7 @@ const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
   };
 
   return (
-    <div className={classes.hamburgerItems}>
+    <div className={`${classes.hamburgerItems} requires-no-scroll`}>
       <div className={classes.menuOptions}>
         <div className={classes.listsWrapper}>
           <ul className={classes.paths}>
@@ -84,7 +84,7 @@ const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
                     tabIndex={0}
                   >
                     <span className={classes.title}>{title}</span>
-                    <span className={classes.number}>0{id + 1} /</span>
+                    <span className={`${classes.number} number`}>0{id + 1} /</span>
                   </m.div>
                 </Link>
               </li>

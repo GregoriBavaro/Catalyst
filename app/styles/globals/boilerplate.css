@@ -27,6 +27,13 @@ body {
   user-select: none;
 }
 
+html:has(.requires-no-scroll),
+body:has(.requires-no-scroll) {
+  overflow: hidden;
+  touch-action: none;
+  -webkit-overflow-scrolling: touch !important;
+}
+
 main {
   padding: calc(128px + 2rem) 6rem 0;
   max-width: 1870px;

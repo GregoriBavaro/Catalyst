@@ -18,9 +18,10 @@ interface CardsProps {
     path: string;
     animationDelay: number;
   }[];
-  sectionName: string;
+  heading: string;
+  subHeading: string;
 }
-const Cards = ({ data, sectionName }: CardsProps) => {
+const Cards = ({ data, heading, subHeading }: CardsProps) => {
   const [showAllCards, setShowAllCards] = useState<boolean>(false);
   const [firstCardHeight, setFirstCardHeight] = useState<number | null>(null);
 
@@ -38,7 +39,11 @@ const Cards = ({ data, sectionName }: CardsProps) => {
 
   return (
     <section className={classes.cardsWrapper}>
-      <h4>{sectionName}</h4>
+      <div className={classes.subName}>
+        <span className="headingSquare" />
+        <h6>{subHeading}</h6>
+      </div>
+      <h4>{heading}</h4>
       <m.ul {...ulAnimation}>
         {data.map(({ id, icon, title, description, path, animationDelay }) => (
           <CardItem

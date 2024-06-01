@@ -5,7 +5,7 @@ import { FaRegCopyright } from "react-icons/fa6";
 
 import Slider from "../common/Marquee";
 
-import logo from "../../public/images/logo/catalyst-logo-one.png";
+import logo from "../../public/images/logo/catalyst-logo-two.png";
 
 import classes from "./Footer.module.scss";
 
@@ -22,7 +22,7 @@ const Footer = () => {
         <div className={classes.logoListWrapper}>
           <div className={classes.footerLogo}>
             <div>
-              <Image src={logo} alt="logo" />
+              <Image src={logo} alt="logo" priority />
             </div>
             <p>Empower Your Aspirations</p>
           </div>

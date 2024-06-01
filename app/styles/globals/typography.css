@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
+
 :root {
   --fs-100: clamp(0.84rem, calc(0.94rem + -0.13vw), 0.91rem);
   --fs-200: clamp(1.09rem, calc(1.08rem + 0.06vw), 1.13rem);
@@ -21,7 +23,6 @@ p {
   text-wrap: pretty;
 }
 
-
 h1 {
   font-size: var(--fs-700);
 }
@@ -36,6 +37,7 @@ h3 {
 
 h4 {
   font-size: var(--fs-400);
+  max-width: 52ch;
 }
 
 h5 {
