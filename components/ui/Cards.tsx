@@ -33,7 +33,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
   const calculateHeight = effectiveHeight * 2 + 40;
 
   const ulAnimation = {
-    initial: { height: `${calculateHeight}px` },
+    initial: { height: "auto" },
     animate: { height: showAllCards ? "auto" : `${calculateHeight}px` },
   };
 

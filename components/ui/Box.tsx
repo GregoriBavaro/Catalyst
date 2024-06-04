@@ -23,7 +23,7 @@ const Box = ({ heading, subHeading, data }: BoxProps) => {
         {data.map(({ id, title, text }) => (
           <li key={id}>
             <span className="number">0{id + 1} /</span>
-            <h6>{title}</h6>
+            <h5>{title}</h5>
             <p>{text}</p>
           </li>
         ))}

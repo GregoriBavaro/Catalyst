@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+import { useRouter } from "next/navigation";
 import Marquee from "react-fast-marquee";
 import { motion as m } from "framer-motion";
 
@@ -13,9 +15,29 @@ interface MarqueeInterface {
 }
 
 const Slider = ({ text, repeatTimes, className, marqueeAnimation }: MarqueeInterface) => {
+  const route = useRouter();
+
+  const handleRoute = () => {
+    route.push("contact");
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleRoute();
+    }
+  };
+
   return (
-    <m.div {...marqueeAnimation} className={`${classes.marquee} ${className}`}>
-      <Marquee>
+    <m.div
+      {...marqueeAnimation}
+      className={`${classes.marquee} ${className}`}
+      onClick={handleRoute}
+      onKeyDown={(e) => handleKeyDown(e)}
+      role="button"
+      tabIndex={0}
+    >
+      <Marquee pauseOnHover>
         {Array.from({ length: repeatTimes }, (_, index) => (
           <span className="gradientText" key={`${text}-${index}`}>
             {text}
