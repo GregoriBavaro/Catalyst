@@ -1,5 +1,7 @@
+import PageHeader from "../../components/layout/PageHeader";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return <PageHeader header="Lets connect!" />;
 };
 
 export default Contact;

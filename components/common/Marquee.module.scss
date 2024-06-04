@@ -2,6 +2,10 @@
   width: 100%;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   span {
     padding: 0 1rem;
     font-size: var(--fs-1000);

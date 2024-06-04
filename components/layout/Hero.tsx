@@ -1,7 +1,3 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-
 import Image from "next/image";
 import Button from "../common/Button";
 
@@ -10,12 +6,6 @@ import classes from "./Hero.module.scss";
 import growth from "../../public/images/media/growth1.png";
 
 const Hero = () => {
-  const router = useRouter();
-
-  const handleRoute = (path: string) => {
-    router.push(path);
-  };
-
   return (
     <section className={classes.hero}>
       <div className={classes.promo}>
@@ -30,7 +20,7 @@ const Hero = () => {
             marketing solutions ensure your message resonates far and wide. Lets elevate your online
             presence together.
           </p>
-          <Button label="contact" type="button" onClick={() => handleRoute("contact")} />
+          <Button label="contact" type="button" routeTo="contact" />
         </div>
         <div className={classes.pictureContainer}>
           <Image src={growth} alt="growth" priority />

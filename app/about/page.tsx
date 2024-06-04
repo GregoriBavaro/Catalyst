@@ -1,5 +1,7 @@
+import PageHeader from "../../components/layout/PageHeader";
+
 const About = () => {
-  return <div>About</div>;
+  return <PageHeader header="About us" />;
 };
 
 export default About;

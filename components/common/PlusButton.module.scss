@@ -1,0 +1,23 @@
+.plus {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+
+  .line1,
+  .line2 {
+    position: absolute;
+    background-color: var(--bright-aqua);
+    width: calc(100% - 1rem);
+    height: 2px;
+  }
+
+  .line2 {
+    transform: rotate(90deg);
+  }
+}

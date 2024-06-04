@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { SERVICES } from "../../../db/services";
 
+import PageHeader from "../../../components/layout/PageHeader";
+
 const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
   const service = SERVICES.find((s) => s.serviceId === params.servicesId);
 
@@ -8,7 +10,7 @@ const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
     notFound();
   }
 
-  return <div>{service.title}</div>;
+  return <PageHeader header={service.title} />;
 };
 
 export default ServicesDetails;

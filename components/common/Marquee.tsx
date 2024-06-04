@@ -4,6 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Marquee from "react-fast-marquee";
 import { motion as m } from "framer-motion";
+import { useHamburgerMenu } from "../../store/store";
 
 import classes from "./Marquee.module.scss";
 
@@ -16,8 +17,12 @@ interface MarqueeInterface {
 
 const Slider = ({ text, repeatTimes, className, marqueeAnimation }: MarqueeInterface) => {
   const route = useRouter();
+  const { isOpen, setOpen } = useHamburgerMenu();
 
   const handleRoute = () => {
+    if (isOpen) {
+      setOpen(false);
+    }
     route.push("contact");
   };
 

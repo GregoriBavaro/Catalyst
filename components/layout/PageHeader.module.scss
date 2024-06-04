@@ -1,0 +1,13 @@
+.pageHeader {
+  padding: 0 0 8rem;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-bottom: 1px solid var(--border-gray);
+    width: 100%;
+    top: calc(100% - 4rem);
+  }
+}

@@ -23,7 +23,6 @@ export const FOOTER_DATA = [
     index: 2,
     title: "Legal",
     links: [
-      { id: 0, linksTitle: "Privacy", link: "/privacy" },
       { id: 1, linksTitle: "Terms", link: "/terms" },
       { id: 2, linksTitle: "Legal notice", link: "/legal" },
     ],

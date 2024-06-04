@@ -1,5 +1,7 @@
+import PageHeader from "../../components/layout/PageHeader";
+
 const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return <PageHeader header="Our portfolio" />;
 };
 
 export default Portfolio;
