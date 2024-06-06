@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "formik": "^2.4.6",
     "framer-motion": "^11.2.3",
     "hamburger-react": "^2.5.1",
     "lottie-react": "^2.4.0",
@@ -19,6 +20,7 @@
     "react-icons": "^5.2.1",
     "sass": "^1.77.2",
     "sharp": "^0.33.4",
+    "yup": "^1.4.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {

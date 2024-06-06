@@ -18,6 +18,9 @@ const Button = ({ label, routeTo, type = "button", disabled = false, className }
   const router = useRouter();
 
   const handleRoute = (path: string) => {
+    if (path === "noRoute") {
+      return;
+    }
     router.push(path);
   };
 

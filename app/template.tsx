@@ -6,17 +6,14 @@ import { motion as m } from "framer-motion";
 const pageVariants = {
   initial: {
     opacity: 0,
-    y: 50,
   },
   animate: {
     opacity: 1,
-    y: 0,
   },
   exit: {
     opacity: 0,
-    y: 50,
   },
-  transition: { duration: 0.7, delay: 0.4 },
+  transition: { duration: 0.5 },
 };
 
 const Template = ({ children }: { children: React.ReactNode }) => {
