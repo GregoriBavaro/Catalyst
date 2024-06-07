@@ -42,7 +42,7 @@ const Slider = ({ text, repeatTimes, className, marqueeAnimation }: MarqueeInter
       role="button"
       tabIndex={0}
     >
-      <Marquee pauseOnHover>
+      <Marquee>
         {Array.from({ length: repeatTimes }, (_, index) => (
           <span className="gradientText" key={`${text}-${index}`}>
             {text}

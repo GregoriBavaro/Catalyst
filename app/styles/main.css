@@ -2,6 +2,7 @@
 @import url("./globals/boilerplate.css");
 @import url("./globals/typography.css");
 @import url("./globals/colors.css");
+@import url("./globals/embla.css");
 
 .headingSquare {
   display: block;

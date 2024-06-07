@@ -1,0 +1,28 @@
+.embla {
+  overflow: hidden;
+  cursor: grab;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.embla__controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.embla__buttons {
+  padding: 0 1rem 2rem;
+}
+
+.embla__button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: var(--sand-white);
+  font-weight: 700;
+}
