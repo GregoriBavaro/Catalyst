@@ -20,7 +20,7 @@ const ContactFormCompanyInfo = () => {
         </li>
         <li>
           <HiMiniEnvelope style={{ fontSize: "1.5rem" }} />
-          <span>catalyst.ltd@prton.me</span>
+          <span>catalyst.ltd@proton.me</span>
         </li>
       </ul>
     </div>

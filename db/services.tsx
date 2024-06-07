@@ -31,7 +31,7 @@ export const SERVICES = [
   },
   {
     id: 3,
-    animationDelay: 0.1,
+    animationDelay: 0.4,
     title: "Marketing",
     serviceId: "marketing",
     description:
@@ -41,7 +41,7 @@ export const SERVICES = [
   },
   {
     id: 4,
-    animationDelay: 0.2,
+    animationDelay: 0.5,
     title: "Social media",
     serviceId: "social-media",
     description:
@@ -51,7 +51,7 @@ export const SERVICES = [
   },
   {
     id: 5,
-    animationDelay: 0.3,
+    animationDelay: 0.6,
     title: "Brand",
     serviceId: "brand",
     description:
@@ -61,7 +61,7 @@ export const SERVICES = [
   },
   {
     id: 6,
-    animationDelay: 0.1,
+    animationDelay: 0.7,
     title: "Brand",
     serviceId: "brand",
     description:

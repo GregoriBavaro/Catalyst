@@ -5,6 +5,14 @@
   background-color: var(--dark-transparent-blue);
   border-radius: var(--border-radius);
 
+  .progressbar {
+    background: var(--bright-aqua);
+  }
+
+  .toastContaier {
+    
+  }
+
   .form {
     flex: 2;
     padding: 2rem 2rem 0;

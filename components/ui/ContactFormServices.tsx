@@ -43,15 +43,24 @@ const ContactFormServices = ({
     }));
   };
 
-  const listsAnimation = (id: number) => {
+  const listsAnimation = (id: number, animationDelay: number) => {
     return {
-      initial: { scale: 1 },
+      initial: { scale: 1, y: "5rem" },
       animate: {
         background: checked[id] ? "rgba(255, 255, 255, 0.068)" : "rgba(255, 255, 255, 0)",
+        y: 0,
+      },
+      transition: {
+        duration: 0.55,
+        delay: animationDelay,
+        ease: "easeIn",
+        scale: { delay: 0 },
+        background: { delay: 0 },
       },
       whileTap: { scale: 0.98 },
     };
   };
+
   return (
     <div className={classes.checkboxes}>
       <div>
@@ -59,22 +68,23 @@ const ContactFormServices = ({
         <p>(select one or more)</p>
       </div>
       <ul className={classes.list}>
-        {SERVICES.map(({ id, title }) => (
-          <m.li
-            key={id}
-            {...listsAnimation(id)}
-            className={classes.lists}
-            onClick={() => {
-              handleCheckboxChange(id);
-              const updatedPreferences = checked[id]
-                ? values.preferences.filter((pref) => pref !== title)
-                : [...values.preferences, title];
-              setFieldValue("preferences", updatedPreferences);
-            }}
-          >
-            <Field type="checkbox" name="preferences" value={title} checked={checked[id]} />
-            <span>{title}</span>
-          </m.li>
+        {SERVICES.map(({ id, title, animationDelay }) => (
+          <li key={id}>
+            <m.div
+              {...listsAnimation(id, animationDelay)}
+              className={classes.lists}
+              onClick={() => {
+                handleCheckboxChange(id);
+                const updatedPreferences = checked[id]
+                  ? values.preferences.filter((pref) => pref !== title)
+                  : [...values.preferences, title];
+                setFieldValue("preferences", updatedPreferences);
+              }}
+            >
+              <Field type="checkbox" name="preferences" value={title} checked={checked[id]} />
+              <span>{title}</span>
+            </m.div>
+          </li>
         ))}
       </ul>
     </div>
