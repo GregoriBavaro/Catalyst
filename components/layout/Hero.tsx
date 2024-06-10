@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../common/Button";
 
 import classes from "./Hero.module.scss";
@@ -20,7 +21,9 @@ const Hero = () => {
             marketing solutions ensure your message resonates far and wide. Lets elevate your online
             presence together.
           </p>
-          <Button label="contact" type="button" routeTo="contact" />
+          <Link href="/contact">
+            <Button label="contact" type="button" />
+          </Link>
         </div>
         <div className={classes.pictureContainer}>
           <Image src={growth} alt="growth" priority />

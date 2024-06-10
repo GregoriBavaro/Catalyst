@@ -1,10 +1,10 @@
-import React, { Suspense } from "react";
+import React from "react";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
 import Navigation from "../components/layout/Navigation";
 import Footer from "../components/layout/Footer";
-import Loading from "../components/common/Loading";
+import Providers from "./providers";
 
 import "./styles/main.css";
 
@@ -39,7 +39,7 @@ const RootLayout = ({
       <body className={roboto.className}>
         <Navigation />
         <main>
-          <Suspense fallback={<Loading />}>{children}</Suspense>
+          <Providers>{children}</Providers>
         </main>
         <Footer />
       </body>

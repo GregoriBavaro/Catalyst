@@ -39,7 +39,7 @@ const ContactFormInfo = ({ isSubmitting }: { isSubmitting: boolean }) => {
           <ErrorMessage name="message" component="span" />
         </div>
       </div>
-      <Button type="submit" routeTo="noRoute" label="Submit" disabled={isSubmitting} />
+      <Button type="submit" label="Submit" disabled={isSubmitting} />
     </div>
   );
 };

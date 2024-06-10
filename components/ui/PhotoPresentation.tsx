@@ -2,6 +2,7 @@
 
 import { motion as m } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 import Button from "../common/Button";
 
@@ -46,7 +47,9 @@ const PhotoPresentation = ({
         <div>
           <m.p {...listAnimation(0.4, 0.5)}>{description}</m.p>
         </div>
-        <Button label={buttonLabel} routeTo={routeTo} />
+        <Link href="/contact">
+          <Button label={buttonLabel} />
+        </Link>
       </div>
     </div>
   );
