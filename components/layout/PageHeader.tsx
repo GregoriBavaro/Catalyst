@@ -1,5 +1,3 @@
-import { CSSProperties } from "react";
-
 import classes from "./PageHeader.module.scss";
 
 interface PageHeaderProps {

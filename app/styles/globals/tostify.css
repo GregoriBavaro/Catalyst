@@ -1,5 +1,17 @@
 .Toastify__toast {
   background-color: var(--sand-white) !important;
   color: var(--dark-blue) !important;
-  border-radius: var(--border-radius) !important;
+  border-radius: 0.2rem !important;
+}
+
+.Toastify__toast--success .Toastify__progress-bar--bg {
+  background-color: var(--sand-white);
+}
+
+.Toastify__toast--success .Toastify__toast-body .Toastify__toast-icon svg {
+  fill: var(--dark-blue);
+}
+
+.Toastify__toast--success .Toastify__progress-bar {
+  background-color: var(--dark-blue);
 }

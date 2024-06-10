@@ -47,7 +47,7 @@ const ContactFormServices = ({
     return {
       initial: { scale: 1, y: "5rem", opacity: 0 },
       animate: {
-        background: checked[id] ? "rgba(255, 255, 255, 0.068)" : "rgba(255, 255, 255, 0)",
+        background: checked[id] ? "rgba(255, 255, 255, 0.068)" : "rgb(8, 39, 65)",
         y: 0,
         opacity: 1,
       },
@@ -56,7 +56,7 @@ const ContactFormServices = ({
         delay: animationDelay,
         ease: "easeIn",
         scale: { delay: 0 },
-        background: { delay: 0 },
+        background: { delay: 0, duration: 0 },
       },
       whileTap: { scale: 0.98 },
     };
@@ -68,26 +68,28 @@ const ContactFormServices = ({
         <h5>Service you are interested in</h5>
         <p>(select one or more)</p>
       </div>
-      <ul className={classes.list}>
-        {SERVICES.map(({ id, title, animationDelayContact }) => (
-          <li key={id}>
-            <m.div
-              {...listsAnimation(id, animationDelayContact)}
-              className={classes.lists}
-              onClick={() => {
-                handleCheckboxChange(id);
-                const updatedPreferences = checked[id]
-                  ? values.preferences.filter((pref) => pref !== title)
-                  : [...values.preferences, title];
-                setFieldValue("preferences", updatedPreferences);
-              }}
-            >
-              <Field type="checkbox" name="preferences" value={title} checked={checked[id]} />
-              <span>{title}</span>
-            </m.div>
-          </li>
-        ))}
-      </ul>
+      <div className={classes.listWrapper}>
+        <ul className={classes.list}>
+          {SERVICES.map(({ id, title, animationDelayContact }) => (
+            <li key={id}>
+              <m.div
+                {...listsAnimation(id, animationDelayContact)}
+                className={classes.lists}
+                onClick={() => {
+                  handleCheckboxChange(id);
+                  const updatedPreferences = checked[id]
+                    ? values.preferences.filter((pref) => pref !== title)
+                    : [...values.preferences, title];
+                  setFieldValue("preferences", updatedPreferences);
+                }}
+              >
+                <Field type="checkbox" name="preferences" value={title} checked={checked[id]} />
+                <span>{title}</span>
+              </m.div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
