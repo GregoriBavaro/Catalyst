@@ -1,0 +1,5 @@
+.Toastify__toast {
+  background-color: var(--sand-white) !important;
+  color: var(--dark-blue) !important;
+  border-radius: var(--border-radius) !important;
+}

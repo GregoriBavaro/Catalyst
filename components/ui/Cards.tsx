@@ -39,8 +39,8 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
 
   return (
     <section className={classes.cardsWrapper}>
-      <div className={classes.subName}>
-        <span className="headingSquare" />
+      <div className="subHeadingWrapper">
+        <span className="subHeadingSquare" />
         <h6>{subHeading}</h6>
       </div>
       <h4>{heading}</h4>

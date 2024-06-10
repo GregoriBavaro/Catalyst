@@ -85,7 +85,7 @@ const ContactForm = () => {
           toast.success("Message successfully submitted", tostConfig);
         },
         () => {
-          toast.warn("Failed to send message", tostConfig);
+          toast.error("Failed to send message", tostConfig);
         }
       );
   };

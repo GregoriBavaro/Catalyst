@@ -33,9 +33,9 @@ const LANGUAGES = [
 
 const listAnimation = (delayTime: number, enterDelay: number) => {
   return {
-    initial: { opacity: 0, y: "-120%" },
-    animate: { opacity: 1, y: 0, transition: { delay: enterDelay } },
-    exit: { opacity: 0, y: "-120%", transition: { delay: delayTime } },
+    initial: { opacity: 0, transform: "translateY(120%)" },
+    animate: { opacity: 1, transform: "translateY(0%)", transition: { delay: enterDelay } },
+    exit: { opacity: 0, transform: "translateY(-120%)", transition: { delay: delayTime } },
     transition: { duration: 0.3, delay: delayTime, bounce: 0 },
   };
 };

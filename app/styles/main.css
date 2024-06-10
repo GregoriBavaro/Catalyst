@@ -3,8 +3,16 @@
 @import url("./globals/typography.css");
 @import url("./globals/colors.css");
 @import url("./globals/embla.css");
+@import url("./globals/tostify.css");
 
-.headingSquare {
+.subHeadingWrapper {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: -1rem;
+  width: 100%;
+}
+
+.subHeadingSquare {
   display: block;
   width: 0.5rem;
   height: 1.2rem;

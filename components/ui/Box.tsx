@@ -20,8 +20,8 @@ const Box = ({ heading, subHeading, data }: BoxProps) => {
   return (
     <section className={classes.box}>
       <div className={classes.headingText}>
-        <div>
-          <span className="headingSquare" />
+        <div className="subHeadingWrapper">
+          <span className="subHeadingSquare" />
           <h6>{subHeading}</h6>
         </div>
         <h4>{heading}</h4>

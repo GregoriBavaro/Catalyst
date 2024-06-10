@@ -45,10 +45,11 @@ const ContactFormServices = ({
 
   const listsAnimation = (id: number, animationDelay: number) => {
     return {
-      initial: { scale: 1, y: "5rem" },
+      initial: { scale: 1, y: "5rem", opacity: 0 },
       animate: {
         background: checked[id] ? "rgba(255, 255, 255, 0.068)" : "rgba(255, 255, 255, 0)",
         y: 0,
+        opacity: 1,
       },
       transition: {
         duration: 0.55,
@@ -68,10 +69,10 @@ const ContactFormServices = ({
         <p>(select one or more)</p>
       </div>
       <ul className={classes.list}>
-        {SERVICES.map(({ id, title, animationDelay }) => (
+        {SERVICES.map(({ id, title, animationDelayContact }) => (
           <li key={id}>
             <m.div
-              {...listsAnimation(id, animationDelay)}
+              {...listsAnimation(id, animationDelayContact)}
               className={classes.lists}
               onClick={() => {
                 handleCheckboxChange(id);
