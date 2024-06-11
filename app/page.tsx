@@ -2,6 +2,7 @@ import Hero from "../components/layout/Hero";
 import InfoBox from "../components/common/InfoBox";
 import Cards from "../components/ui/Cards";
 import Box from "../components/ui/Box";
+import GetInTouch from "../components/ui/MouseMoveAnimationContainer";
 
 import { SERVICES } from "../db/services";
 import { WHY_US } from "../db/promos";
@@ -21,6 +22,7 @@ const Home = () => {
         heading="Built by Marketers and Developers, We created Catalyst to elevate your brand to new heights"
         data={WHY_US}
       />
+      <GetInTouch />
     </>
   );
 };
