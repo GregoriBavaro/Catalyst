@@ -10,7 +10,7 @@
   z-index: 1;
   overflow: hidden;
   background-color: var(--dark-transparent-blue);
-  margin-top: 5rem;
+  margin-top: var(--margin-top-components);
   text-align: center;
 
   h3 {

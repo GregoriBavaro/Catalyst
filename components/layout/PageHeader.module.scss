@@ -1,17 +1,41 @@
 .pageHeader {
   padding: 0 0 3rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+
+    li {
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.5;
+      }
+      a {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    li:last-child {
+      pointer-events: none;
+
+      span:after {
+        content: "";
+        display: block;
+        margin-top: 0.2rem;
+        border-bottom: 1px solid var(--bright-aqua);
+      }
+    }
+  }
 
   p {
     opacity: 0.5;
   }
-
-  // &:after {
-  //   content: "";
-  //   display: inline-block;
-  //   position: absolute;
-  //   border-bottom: 1px solid var(--border-gray);
-  //   width: 100%;
-  //   top: calc(100% - 4rem);
-  // }
 }

@@ -1,5 +1,6 @@
 :root {
   --border-radius: 1rem;
+  --margin-top-components: 7rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {

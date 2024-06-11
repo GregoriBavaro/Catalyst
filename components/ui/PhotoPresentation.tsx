@@ -28,7 +28,6 @@ const listAnimation = (delayTime: number, setOpacity: number) => {
 const PhotoPresentation = ({
   image,
   buttonLabel,
-  routeTo,
   header,
   subHeader,
   description,
