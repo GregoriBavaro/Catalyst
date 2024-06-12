@@ -1,11 +1,15 @@
+"use client";
+
 import { notFound } from "next/navigation";
 import { SERVICES } from "../../../db/services";
 
 import PageHeader from "../../../components/layout/PageHeader";
 import PhotoPresentation from "../../../components/ui/PhotoPresentation";
+import Cards from "../../../components/ui/Cards";
+import MouseAnimation from "../../../components/ui/MouseAnimation";
 
 const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
-  const service = SERVICES.find((s) => s.serviceId === params.servicesId);
+  const service = SERVICES.find((s) => s.pathId === params.servicesId);
 
   if (!service) {
     notFound();
@@ -22,6 +26,8 @@ const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
         buttonLabel="Contact"
         routeTo="/contact"
       />
+      <Cards heading={service.componentCardHeader} data={service.services} />
+      <MouseAnimation />
     </>
   );
 };

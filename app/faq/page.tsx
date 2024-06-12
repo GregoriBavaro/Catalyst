@@ -1,5 +1,6 @@
 import Accordion from "../../components/layout/Accordion";
 import PageHeader from "../../components/layout/PageHeader";
+import MouseAnimation from "../../components/ui/MouseAnimation";
 
 import { FAQ_DATA } from "../../db/faq";
 
@@ -13,6 +14,7 @@ const Faq = () => {
         buttonLabel="Contact"
         data={FAQ_DATA}
       />
+      <MouseAnimation />
     </>
   );
 };

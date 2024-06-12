@@ -1,28 +1,31 @@
-.formContainer {
-  display: flex;
-  padding: 1rem;
-  gap: 1rem;
-  background-color: var(--dark-transparent-blue);
-  border-radius: var(--border-radius);
-  max-height: 732px;
+.contactForm {
+  padding: 4rem 0;
 
-  .progressbar {
-    background: var(--bright-aqua);
-  }
+  .contactFormWrapper {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: var(--dark-transparent-blue);
+    border-radius: var(--border-radius);
+    max-height: 732px;
 
-  .toastContaier {
-    
-  }
+    .progressbar {
+      background: var(--bright-aqua);
+    }
 
-  .form {
-    flex: 2;
-    padding: 2rem 2rem 0;
+    .toastContaier {
+    }
 
-    input,
-    textarea {
-      font-family: inherit;
-      color: var(--sand-white);
-      font-size: 1rem;
+    .form {
+      flex: 2;
+      padding: 2rem 2rem 0;
+
+      input,
+      textarea {
+        font-family: inherit;
+        color: var(--sand-white);
+        font-size: 1rem;
+      }
     }
   }
 }

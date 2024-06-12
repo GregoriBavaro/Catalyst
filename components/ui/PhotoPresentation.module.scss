@@ -1,43 +1,48 @@
 .photoPresentation {
-  display: flex;
-  gap: 1rem;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  background-color: var(--dark-transparent-blue);
+  padding: 4rem 0;
 
-  .photoPresentationImgWrapper,
-  .photoPresentationTextWrapper {
-    flex: 1 1 50%;
-  }
-
-  .photoPresentationImgWrapper {
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      object-fit: cover;
-      animation: scaleDown 1.3s ease-out;
-    }
-  }
-
-  .photoPresentationTextWrapper {
-    padding: 6rem 2rem;
+  .photoPresentationWrapper {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--dark-transparent-blue);
+    flex-direction: row-reverse;
 
-    .subHeader {
-      display: flex;
+    .photoPresentationImgWrapper,
+    .photoPresentationTextWrapper {
+      flex: 1 1 50%;
     }
 
-    div {
+    .photoPresentationImgWrapper {
       overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        animation: scaleDown 1.3s ease-out;
+      }
     }
 
-    button {
-      margin-top: 2rem;
+    .photoPresentationTextWrapper {
+      padding: 6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .subHeader {
+        display: flex;
+      }
+
+      div {
+        overflow: hidden;
+      }
+
+      button {
+        margin-top: 2rem;
+      }
     }
   }
 }

@@ -6,9 +6,9 @@ import { motion as m } from "framer-motion";
 
 import Button from "../common/Button";
 
-import classes from "./MouseMoveAnimationContainer.module.scss";
+import classes from "./MouseAnimation.module.scss";
 
-const GetInTouch: React.FC = () => {
+const MouseAnimation = () => {
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
 
   const [offsetX, setOffsetX] = useState<number>(0);
@@ -29,22 +29,25 @@ const GetInTouch: React.FC = () => {
   }, [mousePosition]);
 
   return (
-    <div className={classes.getInTouch}>
-      <h3>Start building your dream today</h3>
-      <p>Get in touch to learn how to elevate your business and take it to the next level</p>
-      <Link href="/contact">
-        <Button label="Get in touch" />
-      </Link>
-      <m.div
-        className={classes.circleContainer}
-        style={{ transform: `translate(${offsetX}px, ${offsetY}px)` }}
-      >
-        <m.div className={classes.circle1} />
-        <m.div className={classes.circle2} />
-        <m.div className={classes.circle3} />
-      </m.div>
-    </div>
+    <section className={classes.mouseAnimation}>
+      <div className={classes.mouseAnimationWrapper}>
+        <h3>Start building your dream today</h3>
+        <p>Get in touch to learn how to elevate your business and take it to the next level</p>
+        <Link href="/contact">
+          <Button label="Get in touch" />
+        </Link>
+        <m.div
+          className={classes.circleContainer}
+          style={{ transform: `translate(${offsetX}px, ${offsetY}px)` }}
+        >
+          <m.div className={classes.circle1} />
+          <m.div className={classes.circle2} />
+          <m.div className={classes.circle3} />
+          <m.div className={classes.circle4} />
+        </m.div>
+      </div>
+    </section>
   );
 };
 
-export default GetInTouch;
+export default MouseAnimation;

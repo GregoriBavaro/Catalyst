@@ -9,10 +9,9 @@ import classes from "./CardItem.module.scss";
 
 interface CardItemProps {
   id: number;
-  icon: string;
   title: string;
   description: string;
-  path: string;
+  path?: string;
   animationDelay: number;
   showAllCards: boolean;
   setCardHeight?: (height: number) => void;
@@ -20,7 +19,6 @@ interface CardItemProps {
 
 const CardItem = ({
   id,
-  icon,
   title,
   description,
   path,
@@ -50,16 +48,22 @@ const CardItem = ({
       transition={{ duration: 0.3, delay: animationDelay, ease: "easeIn" }}
       className={classes.cardItem}
     >
-      <Link href={path}>
-        {icon && <span>{icon}</span>}
-        <h6>{title}</h6>
-        <p>{description}</p>
-        <ArrowButton
-          label="learn more"
-          classNameWrapper={classes.learnMore}
-          classNameIcon={classes.icon}
-        />
-      </Link>
+      {path ? (
+        <Link href={path}>
+          <h6>{title}</h6>
+          <p>{description}</p>
+          <ArrowButton
+            label="learn more"
+            classNameWrapper={classes.learnMore}
+            classNameIcon={classes.icon}
+          />
+        </Link>
+      ) : (
+        <>
+          <h6>{title}</h6>
+          <p>{description}</p>
+        </>
+      )}
     </m.li>
   );
 };

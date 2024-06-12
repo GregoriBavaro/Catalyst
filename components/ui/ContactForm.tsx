@@ -100,43 +100,45 @@ const ContactForm = () => {
   return (
     <>
       <ToastContainer />
-      <div className={classes.formContainer}>
-        <ContactFormCompanyInfo />
-        <Formik
-          initialValues={initialValues}
-          onSubmit={handleSubmit}
-          validationSchema={validationSchema}
-        >
-          {({ isSubmitting, setFieldValue, values }) => (
-            <Form className={classes.form}>
-              <div className="embla" ref={emblaRef}>
-                <div className="embla__container">
-                  <div className="embla__slide">
-                    <ContactFormServices
-                      values={values}
-                      setFieldValue={setFieldValue}
-                      checked={checked}
-                      setChecked={setChecked}
-                    />
+      <section className={classes.contactForm}>
+        <div className={classes.contactFormWrapper}>
+          <ContactFormCompanyInfo />
+          <Formik
+            initialValues={initialValues}
+            onSubmit={handleSubmit}
+            validationSchema={validationSchema}
+          >
+            {({ isSubmitting, setFieldValue, values }) => (
+              <Form className={classes.form}>
+                <div className="embla" ref={emblaRef}>
+                  <div className="embla__container">
+                    <div className="embla__slide">
+                      <ContactFormServices
+                        values={values}
+                        setFieldValue={setFieldValue}
+                        checked={checked}
+                        setChecked={setChecked}
+                      />
+                    </div>
+                    <div className="embla__slide">
+                      {isSubmitting ? (
+                        <Loading styles={loadingStyles} isLoading={isSubmitting} />
+                      ) : (
+                        <ContactFormInfo isSubmitting={isSubmitting} />
+                      )}
+                    </div>
                   </div>
-                  <div className="embla__slide">
-                    {isSubmitting ? (
-                      <Loading styles={loadingStyles} isLoading={isSubmitting} />
-                    ) : (
-                      <ContactFormInfo isSubmitting={isSubmitting} />
-                    )}
+                  <div className="embla__controls">
+                    <div className="embla__buttons">
+                      <ToggleButton label={buttonLabel} onClick={onButtonClick} />
+                    </div>
                   </div>
                 </div>
-                <div className="embla__controls">
-                  <div className="embla__buttons">
-                    <ToggleButton label={buttonLabel} onClick={onButtonClick} />
-                  </div>
-                </div>
-              </div>
-            </Form>
-          )}
-        </Formik>
-      </div>
+              </Form>
+            )}
+          </Formik>
+        </div>
+      </section>
     </>
   );
 };

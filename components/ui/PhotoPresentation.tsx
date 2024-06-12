@@ -33,24 +33,26 @@ const PhotoPresentation = ({
   description,
 }: PhotoPresentationProps) => {
   return (
-    <div className={classes.photoPresentation}>
-      <div className={classes.photoPresentationImgWrapper}>
-        <Image src={image} alt="presentation-image" priority />
-      </div>
-      <div className={classes.photoPresentationTextWrapper}>
-        <div className="subHeadingWrapper">
-          <span className="subHeadingSquare" />
-          <h6>{subHeader}</h6>
+    <section className={classes.photoPresentation}>
+      <div className={classes.photoPresentationWrapper}>
+        <div className={classes.photoPresentationImgWrapper}>
+          <Image src={image} alt="presentation-image" priority />
         </div>
-        <h4>{header}</h4>
-        <div>
-          <m.p {...listAnimation(0.4, 0.5)}>{description}</m.p>
+        <div className={classes.photoPresentationTextWrapper}>
+          <div className="subHeadingWrapper">
+            <span className="subHeadingSquare" />
+            <h6>{subHeader}</h6>
+          </div>
+          <h4>{header}</h4>
+          <div>
+            <m.p {...listAnimation(0.4, 0.5)}>{description}</m.p>
+          </div>
+          <Link href="/contact">
+            <Button label={buttonLabel} />
+          </Link>
         </div>
-        <Link href="/contact">
-          <Button label={buttonLabel} />
-        </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

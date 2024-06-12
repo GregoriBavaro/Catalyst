@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../common/Button";
+import InfoBox from "../common/InfoBox";
 
 import classes from "./Hero.module.scss";
 
@@ -29,6 +30,7 @@ const Hero = () => {
           <Image src={growth} alt="growth" priority />
         </div>
       </div>
+      <InfoBox />
     </section>
   );
 };

@@ -12,14 +12,13 @@ import classes from "./Cards.module.scss";
 interface CardsProps {
   data: {
     id: number;
-    icon: string;
     title: string;
     description: string;
-    path: string;
+    path?: string;
     animationDelay: number;
   }[];
   heading: string;
-  subHeading: string;
+  subHeading?: string;
 }
 const Cards = ({ data, heading, subHeading }: CardsProps) => {
   const [showAllCards, setShowAllCards] = useState<boolean>(false);
@@ -38,38 +37,41 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
   };
 
   return (
-    <section className={classes.cardsWrapper}>
-      <div className="subHeadingWrapper">
-        <span className="subHeadingSquare" />
-        <h6>{subHeading}</h6>
+    <section className={classes.cards}>
+      <div className={classes.cardsWrapper}>
+        {subHeading && (
+          <div className="subHeadingWrapper">
+            <span className="subHeadingSquare" />
+            <h6>{subHeading}</h6>
+          </div>
+        )}
+        <h4>{heading}</h4>
+        <m.ul {...ulAnimation}>
+          {data.map(({ id, title, description, path, animationDelay }) => (
+            <CardItem
+              key={id}
+              id={id}
+              title={title}
+              description={description}
+              path={path}
+              animationDelay={animationDelay}
+              setCardHeight={id === 0 ? setFirstCardHeight : undefined}
+              showAllCards={showAllCards}
+            />
+          ))}
+        </m.ul>
+        {data.length > 6 && (
+          <button
+            type="button"
+            onClick={handleToggleShowAllCards}
+            aria-label={showAllCards ? "Show Less" : "Show More"}
+          >
+            <RiArrowDownWideFill
+              style={{ transform: showAllCards ? "rotate(-180deg)" : "rotate(0deg)" }}
+            />
+          </button>
+        )}
       </div>
-      <h4>{heading}</h4>
-      <m.ul {...ulAnimation}>
-        {data.map(({ id, icon, title, description, path, animationDelay }) => (
-          <CardItem
-            key={id}
-            id={id}
-            icon={icon}
-            title={title}
-            description={description}
-            path={path}
-            animationDelay={animationDelay}
-            setCardHeight={id === 0 ? setFirstCardHeight : undefined}
-            showAllCards={showAllCards}
-          />
-        ))}
-      </m.ul>
-      {data.length > 6 && (
-        <button
-          type="button"
-          onClick={handleToggleShowAllCards}
-          aria-label={showAllCards ? "Show Less" : "Show More"}
-        >
-          <RiArrowDownWideFill
-            style={{ transform: showAllCards ? "rotate(-180deg)" : "rotate(0deg)" }}
-          />
-        </button>
-      )}
     </section>
   );
 };

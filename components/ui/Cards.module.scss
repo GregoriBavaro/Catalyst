@@ -2,60 +2,46 @@
   transition: $property $duration $ease;
 }
 
-.cardsWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
+.cards {
   padding: 4rem 0;
 
-  button {
-    all: unset;
-    text-align: center;
-    width: fit-content;
-    cursor: pointer;
+  .cardsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 
-    svg {
-      transition: 0.3s;
-      font-size: 3rem;
-    }
-
-    &:hover svg {
-      scale: 1.3;
-    }
-  }
-
-  h4 {
-    margin-right: auto;
-  }
-
-  ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    overflow: hidden;
-
-    li {
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      border: 1px solid transparent;
-      color: var(--white);
+    button {
+      all: unset;
+      text-align: center;
+      width: fit-content;
       cursor: pointer;
-      transition: all 0.3s;
 
-      a {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        height: 100%;
+      svg {
+        transition: 0.3s;
+        font-size: 3rem;
+      }
+
+      &:hover svg {
+        scale: 1.3;
       }
     }
-  }
 
-  @media (max-width: 1100px) {
+    h4 {
+      margin-right: auto;
+    }
+
     ul {
-      grid-template-columns: repeat(1, 1fr);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      overflow: hidden;
+    }
+
+    @media (max-width: 1100px) {
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 }

@@ -10,7 +10,7 @@ import { RiHomeLine } from "react-icons/ri";
 import classes from "./PageHeader.module.scss";
 
 interface PageHeaderProps {
-  header: string;
+  header?: string;
 }
 
 const PageHeader = ({ header }: PageHeaderProps) => {

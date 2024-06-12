@@ -1,55 +1,59 @@
 .accordion {
-  display: flex;
-  gap: 1rem;
-  background-color: var(--dark-transparent-blue);
-  border-radius: var(--border-radius);
-  padding: 1rem;
-
-  .text {
-    flex: 1;
+  padding: 4rem 0;
+  
+  .accordionWrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
     background-color: var(--dark-transparent-blue);
     border-radius: var(--border-radius);
-    padding: 3rem 2rem;
+    padding: 1rem;
 
-    .subTextAndButton {
+    .text {
+      flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      justify-content: space-between;
+      gap: 2rem;
+      background-color: var(--dark-transparent-blue);
+      border-radius: var(--border-radius);
+      padding: 3rem 2rem;
 
-      h6 {
-        max-width: 20ch;
+      .subTextAndButton {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        h6 {
+          max-width: 20ch;
+        }
       }
     }
-  }
 
-  .list {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+    .list {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
 
-    li {
-      border-bottom: 1px solid var(--border-gray);
-      padding: 1.5rem 0;
-      cursor: pointer;
-      overflow: hidden;
+      li {
+        border-bottom: 1px solid var(--border-gray);
+        padding: 1.5rem 0;
+        cursor: pointer;
+        overflow: hidden;
 
-      &:last-child {
-        border-bottom: none;
-      }
+        &:last-child {
+          border-bottom: none;
+        }
 
-      .title {
-        display: flex;
-        justify-content: space-between;
-      }
+        .title {
+          display: flex;
+          justify-content: space-between;
+        }
 
-      .description {
-        p {
-          padding: 2rem 0 0;
+        .description {
+          p {
+            padding: 2rem 0 0;
+          }
         }
       }
     }

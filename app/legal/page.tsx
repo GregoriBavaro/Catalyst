@@ -1,5 +1,6 @@
 import PageHeader from "../../components/layout/PageHeader";
 import Accordion from "../../components/layout/Accordion";
+import MouseAnimation from "../../components/ui/MouseAnimation";
 
 import { LEGAL_DATA } from "../../db/legal";
 
@@ -8,6 +9,7 @@ const Legal = () => {
     <>
       <PageHeader header="Legal notice" />
       <Accordion heading="Disclaimer" data={LEGAL_DATA} showButtonAndSubText="none" />
+      <MouseAnimation />
     </>
   );
 };

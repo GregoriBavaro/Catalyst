@@ -66,32 +66,34 @@ const Accordion = ({
 
   return (
     <section className={classes.accordion}>
-      <div className={classes.text}>
-        <h5>{heading}</h5>
-        <div className={classes.subTextAndButton} style={{ display: showButtonAndSubText }}>
-          <h6>{subHeading}</h6>
-          <Link href="contact">
-            <Button label={buttonLabel} />
-          </Link>
+      <div className={classes.accordionWrapper}>
+        <div className={classes.text}>
+          <h5>{heading}</h5>
+          <div className={classes.subTextAndButton} style={{ display: showButtonAndSubText }}>
+            <h6>{subHeading}</h6>
+            <Link href="contact">
+              <Button label={buttonLabel} />
+            </Link>
+          </div>
         </div>
+        <ul className={classes.list}>
+          {data.map(({ id, title, description }) => (
+            <li key={id} onClick={() => handleClickedTopic(id)} role="presentation">
+              <div className={classes.title}>
+                <h6>{title}</h6>
+                <PlusButton trigger={clickedTopic[id]} />
+              </div>
+              <AnimatePresence>
+                {clickedTopic[id] && (
+                  <m.div {...topicStyles} className={classes.description}>
+                    <p>{description}</p>
+                  </m.div>
+                )}
+              </AnimatePresence>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className={classes.list}>
-        {data.map(({ id, title, description }) => (
-          <li key={id} onClick={() => handleClickedTopic(id)} role="presentation">
-            <div className={classes.title}>
-              <h6>{title}</h6>
-              <PlusButton trigger={clickedTopic[id]} />
-            </div>
-            <AnimatePresence>
-              {clickedTopic[id] && (
-                <m.div {...topicStyles} className={classes.description}>
-                  <p>{description}</p>
-                </m.div>
-              )}
-            </AnimatePresence>
-          </li>
-        ))}
-      </ul>
     </section>
   );
 };
