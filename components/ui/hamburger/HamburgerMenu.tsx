@@ -3,8 +3,8 @@
 import React from "react";
 import { Spiral as Hamburger } from "hamburger-react";
 import { motion as m, AnimatePresence } from "framer-motion";
-import { useHamburgerMenu } from "../../store/store";
-import useWindowSize from "../../hooks/use-WindowSize";
+import { useHamburgerMenu } from "../../../store/store";
+import useWindowSize from "../../../hooks/use-WindowSize";
 
 import HamburgerItems from "./HamburgerItems";
 

@@ -1,9 +1,5 @@
-"use client";
-
-import { useRef } from "react";
-import { motion as m, useInView } from "framer-motion";
-
-import ArrowButton from "../common/ArrowButton";
+import ArrowButton from "../common/buttons/ArrowButton";
+import InViewAnimation from "../common/animations/InViewAnimation";
 
 import classes from "./Box.module.scss";
 
@@ -14,9 +10,6 @@ interface BoxProps {
 }
 
 const Box = ({ heading, subHeading, data }: BoxProps) => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: true });
-
   return (
     <section className={classes.box}>
       <div className={classes.boxWrapper}>
@@ -31,19 +24,11 @@ const Box = ({ heading, subHeading, data }: BoxProps) => {
         <ul>
           {data.map(({ id, title, text, animationDelay }) => (
             <li key={id}>
-              <m.div
-                ref={ref}
-                initial={{ opacity: 0, y: "5rem" }}
-                animate={{
-                  opacity: isInView ? 1 : 0,
-                  y: isInView ? 0 : "5rem",
-                }}
-                transition={{ duration: 0.3, delay: animationDelay, ease: "easeIn" }}
-              >
+              <InViewAnimation animationDelay={animationDelay}>
                 <span className="number">0{id + 1} /</span>
                 <h5>{title}</h5>
                 <p>{text}</p>
-              </m.div>
+              </InViewAnimation>
             </li>
           ))}
         </ul>

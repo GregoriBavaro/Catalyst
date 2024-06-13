@@ -210,7 +210,7 @@ export const SERVICES = [
   },
   {
     id: 3,
-    animationDelay: 0.4,
+    animationDelay: 0.1,
     animationDelayContact: 0.4,
     title: "Marketing",
     pathId: "marketing",
@@ -277,7 +277,7 @@ export const SERVICES = [
   },
   {
     id: 4,
-    animationDelay: 0.5,
+    animationDelay: 0.2,
     animationDelayContact: 0.5,
     title: "Social media",
     pathId: "social-media",
@@ -344,7 +344,7 @@ export const SERVICES = [
   },
   {
     id: 5,
-    animationDelay: 0.6,
+    animationDelay: 0.3,
     animationDelayContact: 0.6,
     title: "Brand identity",
     pathId: "brand-identity",

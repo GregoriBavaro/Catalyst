@@ -5,7 +5,7 @@ import { SERVICES } from "../../../db/services";
 
 import PageHeader from "../../../components/layout/PageHeader";
 import PhotoPresentation from "../../../components/ui/PhotoPresentation";
-import Cards from "../../../components/ui/Cards";
+import Cards from "../../../components/ui/cards/Cards";
 import MouseAnimation from "../../../components/ui/MouseAnimation";
 
 const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {

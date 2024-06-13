@@ -1,6 +1,6 @@
 import Hero from "../components/layout/Hero";
 import InfoBox from "../components/common/InfoBox";
-import Cards from "../components/ui/Cards";
+import Cards from "../components/ui/cards/Cards";
 import Box from "../components/ui/Box";
 import MouseAnimation from "../components/ui/MouseAnimation";
 

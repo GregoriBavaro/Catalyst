@@ -1,5 +1,5 @@
 import { ErrorMessage, Field } from "formik";
-import Button from "../common/Button";
+import Button from "../../common/buttons/Button";
 
 import classes from "./ContactFormFields.module.scss";
 

@@ -6,17 +6,17 @@ import { ToastContainer, toast, ToastOptions, Slide } from "react-toastify";
 import useEmblaCarousel from "embla-carousel-react";
 import { Formik, Form, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import { ToggleButton, usePrevNextButtons } from "../../hooks/use-PrevNextButtons";
+import { ToggleButton, usePrevNextButtons } from "../../../hooks/use-PrevNextButtons";
 
 import ContactFormInfo from "./ContactFormFields";
 import ContactFormServices from "./ContactFormServices";
 import ContactFormCompanyInfo from "./ContactFormCompanyInfo";
-import Loading from "../common/Loading";
+import Loading from "../../common/Loading";
 
 import classes from "./ContactForm.module.scss";
 import "react-toastify/dist/ReactToastify.css";
 
-import { SERVICES } from "../../db/services";
+import { SERVICES } from "../../../db/services";
 
 interface FormValues {
   name: string;

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { GrLinkUp } from "react-icons/gr";
 
-import Slider from "../common/Marquee";
-import Selector from "./Selector";
+import Slider from "../../common/Marquee";
+import Selector from "../Selector";
 
 import classes from "./HamburgerItems.module.scss";
 

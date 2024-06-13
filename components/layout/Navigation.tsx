@@ -4,7 +4,7 @@ import { motion as m } from "framer-motion";
 import useScrollPosition from "../../hooks/use-ScrollPosition";
 import useScrollDirection from "../../hooks/use-ScrollDirection";
 
-import HamburgerMenu from "../ui/HamburgerMenu";
+import HamburgerMenu from "../ui/hamburger/HamburgerMenu";
 import Logo from "./Logo";
 
 import classes from "./Navigation.module.scss";

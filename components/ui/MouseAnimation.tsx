@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { motion as m } from "framer-motion";
 
-import Button from "../common/Button";
+import Button from "../common/buttons/Button";
 
 import classes from "./MouseAnimation.module.scss";
 

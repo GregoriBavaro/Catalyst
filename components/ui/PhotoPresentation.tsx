@@ -4,7 +4,7 @@ import { motion as m } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-import Button from "../common/Button";
+import Button from "../common/buttons/Button";
 
 import classes from "./PhotoPresentation.module.scss";
 

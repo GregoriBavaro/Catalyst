@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { motion as m } from "framer-motion";
 
 import { RiArrowDownWideFill } from "react-icons/ri";
 
 import CardItem from "./CardItem";
+import CardsItemWrapper from "./CardsItemWrapper";
 
 import classes from "./Cards.module.scss";
 
@@ -28,14 +28,6 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
     setShowAllCards((prevState) => !prevState);
   };
 
-  const effectiveHeight = firstCardHeight ?? 0;
-  const calculateHeight = effectiveHeight * 2 + 40;
-
-  const ulAnimation = {
-    initial: { height: "auto" },
-    animate: { height: showAllCards ? "auto" : `${calculateHeight}px` },
-  };
-
   return (
     <section className={classes.cards}>
       <div className={classes.cardsWrapper}>
@@ -46,7 +38,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
           </div>
         )}
         <h4>{heading}</h4>
-        <m.ul {...ulAnimation}>
+        <CardsItemWrapper showAllCards={showAllCards} firstCardHeight={firstCardHeight}>
           {data.map(({ id, title, description, path, animationDelay }) => (
             <CardItem
               key={id}
@@ -59,7 +51,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
               showAllCards={showAllCards}
             />
           ))}
-        </m.ul>
+        </CardsItemWrapper>
         {data.length > 6 && (
           <button
             type="button"

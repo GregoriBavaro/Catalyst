@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion as m, AnimatePresence } from "framer-motion";
-import Button from "../common/Button";
-import PlusButton from "../common/PlusButton";
+import Button from "../common/buttons/Button";
+import PlusButton from "../common/buttons/PlusButton";
 
 import classes from "./Accordion.module.scss";
 
