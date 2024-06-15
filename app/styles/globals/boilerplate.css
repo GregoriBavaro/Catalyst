@@ -26,6 +26,7 @@ body {
   background: var(--background-color);
   background-image: var(--background-image);
   user-select: none;
+  overflow-x: hidden;
 }
 
 html:has(.requires-no-scroll),

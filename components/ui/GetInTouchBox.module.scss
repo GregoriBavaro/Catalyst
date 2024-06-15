@@ -30,23 +30,13 @@
       z-index: 4;
     }
 
-    .circleContainer {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
     .circle1 {
       position: absolute;
       border-radius: 50%;
       background-color: var(--dark-transparent-blue);
-      z-index: 4;
+      z-index: 3;
       width: 20em;
       height: 20em;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
 
     .circle2 {
@@ -56,33 +46,24 @@
       z-index: 3;
       width: 35em;
       height: 35em;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
     }
 
     .circle3 {
       position: absolute;
       border-radius: 50%;
       background-color: var(--dark-transparent-blue);
-      z-index: 2;
+      z-index: 3;
       width: 50em;
       height: 50em;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
     }
 
     .circle4 {
       position: absolute;
       border-radius: 50%;
       background-color: var(--dark-transparent-blue);
-      z-index: 1;
-      width:70em;
-      height:70em;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      z-index: 3;
+      width: 70em;
+      height: 70em;
     }
   }
 }

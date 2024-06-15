@@ -16,7 +16,7 @@ import Loading from "../../common/Loading";
 import classes from "./ContactForm.module.scss";
 import "react-toastify/dist/ReactToastify.css";
 
-import { SERVICES } from "../../../db/services";
+import { SERVICES } from "../../../db/services/services";
 
 interface FormValues {
   name: string;

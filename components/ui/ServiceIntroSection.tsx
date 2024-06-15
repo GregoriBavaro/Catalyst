@@ -1,20 +1,34 @@
-"use client";
-
 import { motion as m } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { StaticImageData } from "next/image";
 
 import Button from "../common/buttons/Button";
+import StackingCardsAnimation from "../common/animations/StackingCardsAnimation";
 
-import classes from "./PhotoPresentation.module.scss";
+import classes from "./ServiceIntroSection.module.scss";
+
+interface ServiceData {
+  id: number;
+  icon: StaticImageData;
+  title: string;
+  description: string;
+  scaleStart: number;
+  scaleEnd: number;
+  xStart: string;
+  xEnd: string;
+  yStart: string;
+  yEnd: string;
+  rotateStart: string;
+  rotateEnd: string;
+}
 
 interface PhotoPresentationProps {
-  image: StaticImageData;
   buttonLabel: string;
   routeTo: string;
   header: string;
   subHeader: string;
   description: string;
+  serviceData: ServiceData[];
 }
 
 const listAnimation = (delayTime: number, setOpacity: number) => {
@@ -26,18 +40,16 @@ const listAnimation = (delayTime: number, setOpacity: number) => {
 };
 
 const PhotoPresentation = ({
-  image,
   buttonLabel,
   header,
   subHeader,
   description,
+  serviceData,
 }: PhotoPresentationProps) => {
   return (
     <section className={classes.photoPresentation}>
       <div className={classes.photoPresentationWrapper}>
-        <div className={classes.photoPresentationImgWrapper}>
-          <Image src={image} alt="presentation-image" priority />
-        </div>
+        <StackingCardsAnimation data={serviceData} />
         <div className={classes.photoPresentationTextWrapper}>
           <div className="subHeadingWrapper">
             <span className="subHeadingSquare" />

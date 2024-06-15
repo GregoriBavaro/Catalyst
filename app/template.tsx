@@ -13,7 +13,7 @@ const pageVariants = {
   exit: {
     opacity: 0,
   },
-  transition: { duration: 0.5 },
+  transition: { duration: 0.2 },
 };
 
 const Template = ({ children }: { children: React.ReactNode }) => {

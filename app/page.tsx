@@ -1,10 +1,9 @@
 import Hero from "../components/layout/Hero";
-import InfoBox from "../components/common/InfoBox";
 import Cards from "../components/ui/cards/Cards";
 import Box from "../components/ui/Box";
-import MouseAnimation from "../components/ui/MouseAnimation";
+import MouseAnimation from "../components/ui/GetInTouchBox";
 
-import { SERVICES } from "../db/services";
+import { SERVICES } from "../db/services/services";
 import { WHY_US } from "../db/promos";
 
 const Home = () => {

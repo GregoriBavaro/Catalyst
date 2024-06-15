@@ -4,7 +4,7 @@ import { motion as m } from "framer-motion";
 
 import classes from "./ContactFormServices.module.scss";
 
-import { SERVICES } from "../../../db/services";
+import { SERVICES } from "../../../db/services/services";
 
 interface FormValues {
   name: string;

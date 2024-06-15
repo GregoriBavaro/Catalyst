@@ -16,16 +16,14 @@ const InViewAnimation = ({
   return (
     <m.div
       ref={ref}
-      initial={{ opacity: 0, y: "5rem" }}
+      initial={{ y: "7rem" }}
       animate={{
-        opacity: isInView ? 1 : 0,
-        y: isInView ? 0 : "5rem",
+        y: isInView ? 0 : "7rem",
       }}
       transition={{
-        duration: 0.2,
+        duration: 0.3,
         delay: animationDelay,
-        ease: "easeIn",
-        opacity: { duration: 0.3, delay: animationDelay + 0.2 },
+        ease: "easeInOut",
       }}
     >
       {children}

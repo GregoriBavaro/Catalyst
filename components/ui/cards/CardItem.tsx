@@ -3,7 +3,7 @@ import Link from "next/link";
 import useWindowSize from "../../../hooks/use-WindowSize";
 
 import ArrowButton from "../../common/buttons/ArrowButton";
-import InViewAnimation from "../../common/animations/InViewAnimation";
+import InViewAnimation from "../../common/animations/SlideUpAnimation";
 
 import classes from "./CardItem.module.scss";
 

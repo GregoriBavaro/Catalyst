@@ -1,6 +1,6 @@
 import PageHeader from "../../components/layout/PageHeader";
 import Accordion from "../../components/layout/Accordion";
-import MouseAnimation from "../../components/ui/MouseAnimation";
+import MouseAnimation from "../../components/ui/GetInTouchBox";
 
 import { LEGAL_DATA } from "../../db/legal";
 
