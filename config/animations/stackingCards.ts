@@ -1,3 +1,8 @@
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import useWindowSize from "../../hooks/use-WindowSize";
+
 interface CardAnimationConfig {
   scaleStart: number;
   scaleEnd: number;
@@ -15,35 +20,39 @@ interface StackingCardsConfig {
   cardThree: CardAnimationConfig;
 }
 
-export const stackingCards: StackingCardsConfig = {
-  cardOne: {
-    scaleStart: 0.85,
-    scaleEnd: 1,
-    xStart: "0%",
-    xEnd: "10%",
-    yStart: "5vh",
-    yEnd: "10vh",
-    rotateStart: "-10deg",
-    rotateEnd: "20deg",
-  },
-  cardTwo: {
-    scaleStart: 0.9,
-    scaleEnd: 0.8,
-    xStart: "25%",
-    xEnd: "125%",
-    yStart: "10vh",
-    yEnd: "10vh",
-    rotateStart: "0deg",
-    rotateEnd: "40deg",
-  },
-  cardThree: {
-    scaleStart: 1.03,
-    scaleEnd: 0.6,
-    xStart: "53%",
-    xEnd: "230%",
-    yStart: "8vh",
-    yEnd: "10vh",
-    rotateStart: "10deg",
-    rotateEnd: "-10deg",
-  },
+export const stackingCards = (): StackingCardsConfig => {
+  // const size = useWindowSize();
+
+  return {
+    cardOne: {
+      scaleStart: 1,
+      scaleEnd: 0.80,
+      xStart: "15%",
+      xEnd: "0%",
+      yStart: "5vh",
+      yEnd: "10vh",
+      rotateStart: "0deg",
+      rotateEnd: "-15deg",
+    },
+    cardTwo: {
+      scaleStart: 0.95,
+      scaleEnd: 0.9,
+      xStart: "60%",
+      xEnd: "22%",
+      yStart: "7vh",
+      yEnd: "12vh",
+      rotateStart: "10deg",
+      rotateEnd: "0deg",
+    },
+    cardThree: {
+      scaleStart: 0.8,
+      scaleEnd: 1,
+      xStart: "100%",
+      xEnd: "45%",
+      yStart: "3vh",
+      yEnd: "10vh",
+      rotateStart: "0deg",
+      rotateEnd: "10deg",
+    },
+  };
 };

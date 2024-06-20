@@ -1,14 +1,15 @@
-.photoPresentation {
+.pageIntro {
   padding: 4rem 0;
 
-  .photoPresentationWrapper {
+  .pageIntroWrapper {
     display: flex;
     gap: 1rem;
     border-radius: var(--border-radius);
     background-color: var(--dark-transparent-blue);
     flex-direction: row-reverse;
+    padding: 0 2rem;
 
-    .photoPresentationImgWrapper {
+    .pageIntroImgWrapper {
       position: relative;
       flex: 1 1 50%;
 
@@ -58,7 +59,7 @@
       }
     }
 
-    .photoPresentationTextWrapper {
+    .pageIntroTextWrapper {
       padding: 6rem 2rem;
       display: flex;
       flex-direction: column;

@@ -39,7 +39,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
         )}
         <h4>{heading}</h4>
         <CardsItemWrapper showAllCards={showAllCards} firstCardHeight={firstCardHeight}>
-          {data.map(({ id, title, description, path, animationDelay }) => (
+          {data?.map(({ id, title, description, path, animationDelay }) => (
             <CardItem
               key={id}
               id={id}
@@ -52,7 +52,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
             />
           ))}
         </CardsItemWrapper>
-        {data.length > 6 && (
+        {data?.length > 6 && (
           <button
             type="button"
             onClick={handleToggleShowAllCards}

@@ -1,12 +1,11 @@
-"use client";
-
 import { notFound } from "next/navigation";
 import { SERVICES } from "../../../db/services/services";
 
 import PageHeader from "../../../components/layout/PageHeader";
-import PhotoPresentation from "../../../components/ui/ServiceIntroSection";
+import PageIntro from "../../../components/ui/PageIntro";
 import Cards from "../../../components/ui/cards/Cards";
-import MouseAnimation from "../../../components/ui/GetInTouchBox";
+import GetInTouch from "../../../components/ui/GetInTouchBox";
+import StackingCardsAnimation from "../../../components/common/animations/StackingCardsAnimation";
 
 const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
   const service = SERVICES.find((s) => s.pathId === params.servicesId);
@@ -18,16 +17,17 @@ const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
   return (
     <>
       <PageHeader header={service.title} />
-      <PhotoPresentation
+      <PageIntro
         header={service.componentHeader}
         subHeader={service.componentSubHeader}
         description={service.componentDescription}
         buttonLabel="Contact"
         routeTo="/contact"
-        serviceData={service.serviceData}
-      />
+      >
+        <StackingCardsAnimation data={service.serviceData} />
+      </PageIntro>
       <Cards heading={service.componentCardHeader} data={service.services} />
-      <MouseAnimation />
+      <GetInTouch />
     </>
   );
 };

@@ -11,19 +11,19 @@ const InViewAnimation = ({
   animationDelay: number;
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, margin: "200px 0px" });
 
   return (
     <m.div
       ref={ref}
-      initial={{ y: "7rem" }}
+      initial={{ y: "100%" }}
       animate={{
-        y: isInView ? 0 : "7rem",
+        y: isInView ? 0 : "100%",
       }}
       transition={{
         duration: 0.3,
         delay: animationDelay,
-        ease: "easeInOut",
+        ease: "easeOut",
       }}
     >
       {children}

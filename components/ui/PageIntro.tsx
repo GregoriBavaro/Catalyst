@@ -1,34 +1,21 @@
+"use client";
+
+import React from "react";
 import { motion as m } from "framer-motion";
 import Link from "next/link";
-import { StaticImageData } from "next/image";
 
 import Button from "../common/buttons/Button";
-import StackingCardsAnimation from "../common/animations/StackingCardsAnimation";
 
-import classes from "./ServiceIntroSection.module.scss";
+import classes from "./PageIntro.module.scss";
 
-interface ServiceData {
-  id: number;
-  icon: StaticImageData;
-  title: string;
-  description: string;
-  scaleStart: number;
-  scaleEnd: number;
-  xStart: string;
-  xEnd: string;
-  yStart: string;
-  yEnd: string;
-  rotateStart: string;
-  rotateEnd: string;
-}
-
-interface PhotoPresentationProps {
+interface PageIntroProps {
   buttonLabel: string;
   routeTo: string;
   header: string;
   subHeader: string;
   description: string;
-  serviceData: ServiceData[];
+  wrapperStyle?: {};
+  children: React.ReactNode;
 }
 
 const listAnimation = (delayTime: number, setOpacity: number) => {
@@ -39,18 +26,19 @@ const listAnimation = (delayTime: number, setOpacity: number) => {
   };
 };
 
-const PhotoPresentation = ({
+const PageIntro = ({
   buttonLabel,
   header,
   subHeader,
   description,
-  serviceData,
-}: PhotoPresentationProps) => {
+  wrapperStyle,
+  children,
+}: PageIntroProps) => {
   return (
-    <section className={classes.photoPresentation}>
-      <div className={classes.photoPresentationWrapper}>
-        <StackingCardsAnimation data={serviceData} />
-        <div className={classes.photoPresentationTextWrapper}>
+    <section className={classes.pageIntro}>
+      <div className={classes.pageIntroWrapper} style={{ ...wrapperStyle }}>
+        {children}
+        <div className={classes.pageIntroTextWrapper}>
           <div className="subHeadingWrapper">
             <span className="subHeadingSquare" />
             <h6>{subHeader}</h6>
@@ -68,4 +56,4 @@ const PhotoPresentation = ({
   );
 };
 
-export default PhotoPresentation;
+export default PageIntro;

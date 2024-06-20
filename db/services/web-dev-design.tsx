@@ -1,5 +1,3 @@
-import { stackingCards } from "../../config/animations/";
-
 import code from "../../public/images/icons/code.png";
 import web from "../../public/images/icons/web.png";
 import responsive from "../../public/images/icons/responsive.png";
@@ -19,14 +17,12 @@ export const webDevDesign = {
       icon: code,
       title: "Custom development.",
       description: "Using next generation frameworks like Next.js",
-      ...stackingCards.cardOne,
     },
     {
       id: 1,
       icon: web,
       title: "SEO",
       description: "SEO-friendly websites with server-side rendering and static site generation.",
-      ...stackingCards.cardTwo,
     },
     {
       id: 2,
@@ -34,7 +30,6 @@ export const webDevDesign = {
       title: "Responsive design",
       description:
         "Responsive design makes websites work well on any device by adjusting layouts and images automatically.",
-      ...stackingCards.cardThree,
     },
   ],
   services: [
@@ -62,21 +57,21 @@ export const webDevDesign = {
     {
       id: 3,
       title: "SEO",
-      animationDelay: 0.4,
+      animationDelay: 0.1,
       description:
         "At Catalyst we offer specialized SEO services, leveraging the power of Next.js to optimize websites and web applications for maximum search engine visibility and organic traffic growth. Next.js provides server-side rendering (SSR) and static site generation (SSG), which are crucial for improving SEO performance.",
     },
     {
       id: 4,
       title: "UI/UX Design",
-      animationDelay: 0.5,
+      animationDelay: 0.2,
       description:
         "At Catalyst, we specialize in creating captivating user experiences through innovative UI/UX design. Our custom solutions are crafted to engage users and drive results, ensuring seamless interaction and maximum satisfaction. Elevate your digital presence with our tailored approach to UI/UX.",
     },
     {
       id: 5,
       title: "Performance Optimization",
-      animationDelay: 0.6,
+      animationDelay: 0.3,
       description:
         "We specialize in optimizing website performance to ensure lightning-fast load times and seamless user experiences. Our expert team implements a range of strategies, from code optimization to server configuration, to maximize speed and efficiency. Elevate your online presence with our performance optimization solutions.",
     },
