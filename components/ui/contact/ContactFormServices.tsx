@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { Field, FormikErrors } from "formik";
 import { motion as m } from "framer-motion";
+import { serviceCards } from "../../../config/animations";
 
 import classes from "./ContactFormServices.module.scss";
 
@@ -62,6 +63,25 @@ const ContactFormServices = ({
     };
   };
 
+  const {
+    webDevDesign,
+    performanceOptimization,
+    seo,
+    marketing,
+    socialMedia,
+    brandIdentity,
+    socialMediaAutomation,
+  } = serviceCards();
+  const cardsConfig = [
+    webDevDesign,
+    performanceOptimization,
+    seo,
+    marketing,
+    socialMedia,
+    brandIdentity,
+    socialMediaAutomation,
+  ];
+
   return (
     <div className={classes.checkboxes}>
       <div>
@@ -70,24 +90,28 @@ const ContactFormServices = ({
       </div>
       <div className={classes.listWrapper}>
         <ul className={classes.list}>
-          {SERVICES.map(({ id, title, animationDelayContact }) => (
-            <li key={id}>
-              <m.div
-                {...listsAnimation(id, animationDelayContact)}
-                className={classes.lists}
-                onClick={() => {
-                  handleCheckboxChange(id);
-                  const updatedPreferences = checked[id]
-                    ? values.preferences.filter((pref) => pref !== title)
-                    : [...values.preferences, title];
-                  setFieldValue("preferences", updatedPreferences);
-                }}
-              >
-                <Field type="checkbox" name="preferences" value={title} checked={checked[id]} />
-                <span>{title}</span>
-              </m.div>
-            </li>
-          ))}
+          {SERVICES.map(({ id, title }) => {
+            const { animationDelayContact } = cardsConfig[id];
+
+            return (
+              <li key={id}>
+                <m.div
+                  {...listsAnimation(id, animationDelayContact)}
+                  className={classes.lists}
+                  onClick={() => {
+                    handleCheckboxChange(id);
+                    const updatedPreferences = checked[id]
+                      ? values.preferences.filter((pref) => pref !== title)
+                      : [...values.preferences, title];
+                    setFieldValue("preferences", updatedPreferences);
+                  }}
+                >
+                  <Field type="checkbox" name="preferences" value={title} checked={checked[id]} />
+                  <span>{title}</span>
+                </m.div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

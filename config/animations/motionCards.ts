@@ -10,16 +10,16 @@ interface CardAnimationConfig {
   yEnd: string;
 }
 
-interface inMotionCardsConfig {
+interface InMotionCardsConfig {
   cardOne: CardAnimationConfig;
   cardTwo: CardAnimationConfig;
   cardThree: CardAnimationConfig;
 }
 
-export const motionCards = (): inMotionCardsConfig => {
+export const motionCards = (): InMotionCardsConfig => {
   const size = useWindowSize();
 
-  const [motionCardsConfig, setStackingCardsConfig] = useState<inMotionCardsConfig>({
+  const [motionCardsConfig, setStackingCardsConfig] = useState<InMotionCardsConfig>({
     cardOne: {
       scaleStart: 0.6,
       scaleEnd: 1,

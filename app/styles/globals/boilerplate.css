@@ -65,3 +65,9 @@ input:-webkit-autofill:active {
     padding: calc(128px + 2rem) 3rem 0;
   }
 }
+
+@media (max-width: 768px) {
+  main {
+    padding: calc(128px + 2rem) 2rem 0;
+  }
+}

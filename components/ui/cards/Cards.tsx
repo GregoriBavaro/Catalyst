@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-
 import { RiArrowDownWideFill } from "react-icons/ri";
+
+import { serviceCards } from "../../../config/animations";
 
 import CardItem from "./CardItem";
 import CardsItemWrapper from "./CardsItemWrapper";
@@ -15,7 +16,6 @@ interface CardsProps {
     title: string;
     description: string;
     path?: string;
-    animationDelay: number;
   }[];
   heading: string;
   subHeading?: string;
@@ -28,6 +28,25 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
     setShowAllCards((prevState) => !prevState);
   };
 
+  const {
+    webDevDesign,
+    performanceOptimization,
+    seo,
+    marketing,
+    socialMedia,
+    brandIdentity,
+    socialMediaAutomation,
+  } = serviceCards();
+  const cardsConfig = [
+    webDevDesign,
+    performanceOptimization,
+    seo,
+    marketing,
+    socialMedia,
+    brandIdentity,
+    socialMediaAutomation,
+  ];
+
   return (
     <section className={classes.cards}>
       <div className={classes.cardsWrapper}>
@@ -39,18 +58,22 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
         )}
         <h4>{heading}</h4>
         <CardsItemWrapper showAllCards={showAllCards} firstCardHeight={firstCardHeight}>
-          {data?.map(({ id, title, description, path, animationDelay }) => (
-            <CardItem
-              key={id}
-              id={id}
-              title={title}
-              description={description}
-              path={path}
-              animationDelay={animationDelay}
-              setCardHeight={id === 0 ? setFirstCardHeight : undefined}
-              showAllCards={showAllCards}
-            />
-          ))}
+          {data?.map(({ id, title, description, path }) => {
+            const { animationDelay } = cardsConfig[id];
+
+            return (
+              <CardItem
+                key={id}
+                id={id}
+                title={title}
+                description={description}
+                path={path}
+                animationDelay={animationDelay}
+                setCardHeight={id === 0 ? setFirstCardHeight : undefined}
+                showAllCards={showAllCards}
+              />
+            );
+          })}
         </CardsItemWrapper>
         {data?.length > 6 && (
           <button

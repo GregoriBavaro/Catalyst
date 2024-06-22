@@ -14,7 +14,7 @@ const CardsItemWrapper = ({ children, showAllCards, firstCardHeight }: CardsItem
   const calculateHeight = effectiveHeight * 2 + 40;
 
   const ulAnimation = {
-    initial: { height: "auto" },
+    initial: false,
     animate: { height: showAllCards ? "auto" : `${calculateHeight}px` },
   };
 
