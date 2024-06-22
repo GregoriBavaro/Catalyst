@@ -17,7 +17,7 @@
     max-width: 70%;
     border-radius: var(--border-radius);
     background-color: var(--dark-transparent-blue);
-    transition: 0.5s ease;
+    transition: 0.5s ease-out;
 
     .motionCardsTextWrapper {
       width: 100%;
@@ -45,6 +45,10 @@
         height: 6rem;
         object-fit: cover;
       }
+    }
+
+    @media (max-width: 1300px) {
+      max-width: unset;
     }
   }
 }

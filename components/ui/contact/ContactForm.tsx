@@ -11,7 +11,7 @@ import { ToggleButton, usePrevNextButtons } from "../../../hooks/use-PrevNextBut
 import ContactFormInfo from "./ContactFormFields";
 import ContactFormServices from "./ContactFormServices";
 import ContactFormCompanyInfo from "./ContactFormCompanyInfo";
-import Loading from "../../common/Loading";
+import Loading from "../../common/loading/Loading";
 
 import classes from "./ContactForm.module.scss";
 import "react-toastify/dist/ReactToastify.css";

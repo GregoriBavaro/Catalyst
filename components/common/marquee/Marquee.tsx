@@ -4,7 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Marquee from "react-fast-marquee";
 import { motion as m } from "framer-motion";
-import { useHamburgerMenu } from "../../store/store";
+import { useHamburgerMenu } from "../../../store/store";
 
 import classes from "./Marquee.module.scss";
 

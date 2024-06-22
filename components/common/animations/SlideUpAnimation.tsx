@@ -16,9 +16,9 @@ const InViewAnimation = ({
   return (
     <m.div
       ref={ref}
-      initial={{ y: "100%" }}
+      initial={{ y: "70%" }}
       animate={{
-        y: isInView ? 0 : "100%",
+        y: isInView ? 0 : "70%",
       }}
       transition={{
         duration: 0.3,

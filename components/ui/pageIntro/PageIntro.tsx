@@ -4,7 +4,7 @@ import React from "react";
 import { motion as m } from "framer-motion";
 import Link from "next/link";
 
-import Button from "../common/buttons/Button";
+import Button from "../../common/buttons/Button";
 
 import classes from "./PageIntro.module.scss";
 

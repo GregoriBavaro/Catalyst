@@ -3,14 +3,14 @@ import Link from "next/link";
 
 import { FaRegCopyright } from "react-icons/fa6";
 
-import Slider from "../common/Marquee";
+import Slider from "../../common/marquee/Marquee";
 
-import logo from "../../public/images/logo/catalyst-logo-two.png";
+import logo from "../../../public/images/logo/catalyst-logo-two.png";
 
 import classes from "./Footer.module.scss";
 
-import { FOOTER_DATA } from "../../db/footer";
-import { SOCIAL } from "../../db/social";
+import { FOOTER_DATA } from "../../../db/footer";
+import { SOCIAL } from "../../../db/social";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

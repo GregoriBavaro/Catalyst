@@ -21,7 +21,7 @@ const StackingCardsAnimation = ({ data }: StackingCardsProps) => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 0.1", "1.18 1"],
+    offset: ["0 0.3", "1.18 1"],
   });
 
   const GetTransform = (end: string | number, start: string | number) => {
@@ -39,7 +39,7 @@ const StackingCardsAnimation = ({ data }: StackingCardsProps) => {
 
         const scale = GetTransform(scaleEnd, scaleStart);
         const x = GetTransform(xEnd, xStart);
-        const bottom = GetTransform(yEnd, yStart);
+        const marginBottom = GetTransform(yEnd, yStart);
         const rotate = GetTransform(rotateEnd, rotateStart);
 
         return (
@@ -49,12 +49,12 @@ const StackingCardsAnimation = ({ data }: StackingCardsProps) => {
             style={{
               scale,
               left: x,
-              bottom,
+              marginBottom,
               rotate,
             }}
           >
             <div className={classes.stackingCardsIcon}>
-              <Image src={icon} alt={title} />
+              <Image src={icon} alt={title} priority />
             </div>
             <div className={classes.stackingCardsTextWrapper}>
               <h5>{title}</h5>

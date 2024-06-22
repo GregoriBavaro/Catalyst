@@ -1,7 +1,7 @@
-import PageHeader from "../../components/layout/PageHeader";
-import GetInTouchBox from "../../components/ui/GetInTouchBox";
-import PageIntro from "../../components/ui/PageIntro";
-import InMotionCards from "../../components/common/animations/MotionCardsAnimation";
+import PageHeader from "../../components/layout/pageHeader/PageHeader";
+import GetInTouchBox from "../../components/ui/getInTouch/GetInTouchBox";
+import PageIntro from "../../components/ui/pageIntro/PageIntro";
+import MotionCards from "../../components/common/animations/MotionCardsAnimation";
 
 import { VALUES_DATA } from "../../db/values";
 
@@ -17,7 +17,7 @@ const About = () => {
         routeTo="/contact"
         wrapperStyle={{ alignItems: "center" }}
       >
-        <InMotionCards data={VALUES_DATA} />
+        <MotionCards data={VALUES_DATA} />
       </PageIntro>
       <GetInTouchBox />
     </>

@@ -1,5 +1,8 @@
 .stackingCardsWrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1 1 70%;
 
   li:nth-child(2) {
@@ -21,7 +24,6 @@
     padding: 3rem 2rem;
     gap: 2rem;
     justify-content: space-between;
-
 
     .stackingCardsTextWrapper {
       width: 100%;
@@ -50,5 +52,10 @@
         object-fit: cover;
       }
     }
+  }
+
+  @media (max-width: 1300px) {
+    min-height: 200px;
+    margin-bottom: 9rem;
   }
 }

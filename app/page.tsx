@@ -1,7 +1,7 @@
-import Hero from "../components/layout/Hero";
+import Hero from "../components/layout/hero/Hero";
 import Cards from "../components/ui/cards/Cards";
-import Box from "../components/ui/Box";
-import MouseAnimation from "../components/ui/GetInTouchBox";
+import Box from "../components/ui/box/Box";
+import MouseAnimation from "../components/ui/getInTouch/GetInTouchBox";
 
 import { SERVICES } from "../db/services/services";
 import { WHY_US } from "../db/promos";

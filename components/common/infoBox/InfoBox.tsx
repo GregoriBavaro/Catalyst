@@ -3,7 +3,7 @@
 import React from "react";
 
 import { FaPlus } from "react-icons/fa";
-import AnimatedNumbers from "./animations/NumberAnimation";
+import AnimatedNumbers from "../animations/NumberAnimation";
 
 import classes from "./InfoBox.module.scss";
 

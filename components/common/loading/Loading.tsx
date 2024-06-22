@@ -6,7 +6,7 @@ import Lottie from "lottie-react";
 
 import classes from "./Loading.module.scss";
 
-import loading from "../../public/animations/loading.json";
+import loading from "../../../public/animations/loading.json";
 
 interface LoadingProps {
   styles?: CSSProperties;

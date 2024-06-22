@@ -1,11 +1,11 @@
 "use client";
 
 import { motion as m } from "framer-motion";
-import useScrollPosition from "../../hooks/use-ScrollPosition";
-import useScrollDirection from "../../hooks/use-ScrollDirection";
+import useScrollPosition from "../../../hooks/use-ScrollPosition";
+import useScrollDirection from "../../../hooks/use-ScrollDirection";
 
-import HamburgerMenu from "../ui/hamburger/HamburgerMenu";
-import Logo from "./Logo";
+import HamburgerMenu from "../../ui/hamburger/HamburgerMenu";
+import Logo from "../logo/Logo";
 
 import classes from "./Navigation.module.scss";
 

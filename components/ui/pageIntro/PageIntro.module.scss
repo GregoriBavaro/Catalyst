@@ -1,0 +1,50 @@
+.pageIntro {
+  padding: 4rem 0;
+
+  .pageIntroWrapper {
+    display: flex;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--dark-transparent-blue);
+    flex-direction: row-reverse;
+    padding: 0 2rem;
+
+    .pageIntroTextWrapper {
+      padding: 6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      flex: 1 1 50%;
+
+      .subHeader {
+        display: flex;
+      }
+
+      div {
+        overflow: hidden;
+      }
+
+      button {
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 1300px) {
+        flex: 0;
+        padding: 6rem 2rem 4rem;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}

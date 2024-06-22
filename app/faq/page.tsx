@@ -1,6 +1,6 @@
-import Accordion from "../../components/layout/Accordion";
-import PageHeader from "../../components/layout/PageHeader";
-import MouseAnimation from "../../components/ui/GetInTouchBox";
+import Accordion from "../../components/layout/accordion/Accordion";
+import PageHeader from "../../components/layout/pageHeader/PageHeader";
+import MouseAnimation from "../../components/ui/getInTouch/GetInTouchBox";
 
 import { FAQ_DATA } from "../../db/faq";
 

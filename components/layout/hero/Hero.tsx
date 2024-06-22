@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../common/buttons/Button";
-import InfoBox from "../common/InfoBox";
+import Button from "../../common/buttons/Button";
+import InfoBox from "../../common/infoBox/InfoBox";
 
 import classes from "./Hero.module.scss";
 
-import growth from "../../public/images/media/growth1.png";
+import growth from "../../../public/images/media/growth1.png";
 
 const Hero = () => {
   return (

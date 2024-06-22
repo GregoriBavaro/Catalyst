@@ -3,11 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import { useHamburgerMenu } from "../../store/store";
+import { useHamburgerMenu } from "../../../store/store";
 
 import classes from "./Logo.module.scss";
 
-import logo from "../../public/images/logo/catalyst-logo-two.png";
+import logo from "../../../public/images/logo/catalyst-logo-two.png";
 
 const Logo = () => {
   const { isOpen, setOpen } = useHamburgerMenu();

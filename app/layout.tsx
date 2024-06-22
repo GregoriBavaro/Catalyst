@@ -2,13 +2,13 @@ import React from "react";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 
-import Navigation from "../components/layout/Navigation";
-import Footer from "../components/layout/Footer";
+import Navigation from "../components/layout/navigation/Navigation";
+import Footer from "../components/layout/footer/Footer";
 import Providers from "./providers";
 
 import "./styles/main.css";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "Catalyst",

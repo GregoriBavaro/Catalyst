@@ -3,7 +3,7 @@
 import Lottie from "lottie-react";
 import { CSSProperties } from "react";
 
-import PageHeader from "../components/layout/PageHeader";
+import PageHeader from "../components/layout/pageHeader/PageHeader";
 
 import notFound from "../public/animations/404.json";
 
