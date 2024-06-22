@@ -23,43 +23,64 @@ export const motionCards = (): inMotionCardsConfig => {
     cardOne: {
       scaleStart: 0.6,
       scaleEnd: 1,
-      yStart: "300%",
-      yEnd: "-120%",
+      yStart: "280%",
+      yEnd: "-200%",
     },
     cardTwo: {
       scaleStart: 0.5,
       scaleEnd: 1,
-      yStart: "280%",
-      yEnd: "-120%",
+      yStart: "300%",
+      yEnd: "-200%",
     },
     cardThree: {
       scaleStart: 0.4,
       scaleEnd: 1,
-      yStart: "260%",
-      yEnd: "-120%",
+      yStart: "220%",
+      yEnd: "-160%",
     },
   });
 
   useEffect(() => {
-    if ((size.width ?? 1300) < 1300) {
+    if ((size.width ?? 1300) < 1300 && (size.width ?? 950) > 950) {
       setStackingCardsConfig({
         cardOne: {
-          scaleStart: 0.6,
+          scaleStart: 1,
           scaleEnd: 1,
-          yStart: "80%",
-          yEnd: "-120%",
+          yStart: "40%",
+          yEnd: "0%",
         },
         cardTwo: {
-          scaleStart: 0.5,
+          scaleStart: 1,
           scaleEnd: 1,
-          yStart: "55%",
-          yEnd: "-100%",
+          yStart: "80%",
+          yEnd: "0%",
         },
         cardThree: {
-          scaleStart: 0.4,
+          scaleStart: 1,
           scaleEnd: 1,
-          yStart: "10%",
-          yEnd: "-70%",
+          yStart: "120%",
+          yEnd: "0%",
+        },
+      });
+    } else if ((size.width ?? 950) < 950) {
+      setStackingCardsConfig({
+        cardOne: {
+          scaleStart: 1,
+          scaleEnd: 1,
+          yStart: "40%",
+          yEnd: "-50%",
+        },
+        cardTwo: {
+          scaleStart: 1,
+          scaleEnd: 1,
+          yStart: "55%",
+          yEnd: "-50%",
+        },
+        cardThree: {
+          scaleStart: 1,
+          scaleEnd: 1,
+          yStart: "77%",
+          yEnd: "-50%",
         },
       });
     }

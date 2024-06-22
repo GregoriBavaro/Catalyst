@@ -58,4 +58,13 @@
     min-height: 200px;
     margin-bottom: 9rem;
   }
+
+  @media (max-width: 1300px) {
+    min-height: 300px;
+    margin-bottom: 6rem;
+  }
+
+  @media (max-width: 1060px) {
+    display: none;
+  }
 }

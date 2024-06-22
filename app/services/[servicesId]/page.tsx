@@ -6,6 +6,7 @@ import PageIntro from "../../../components/ui/pageIntro/PageIntro";
 import Cards from "../../../components/ui/cards/Cards";
 import GetInTouch from "../../../components/ui/getInTouch/GetInTouchBox";
 import StackingCardsAnimation from "../../../components/common/animations/StackingCardsAnimation";
+import MotionCardsAnimation from "../../../components/common/animations/MotionCardsAnimation";
 
 const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
   const service = SERVICES.find((s) => s.pathId === params.servicesId);
@@ -25,6 +26,9 @@ const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
         routeTo="/contact"
       >
         <StackingCardsAnimation data={service.serviceData} />
+        <span className="serviceMotionCard">
+          <MotionCardsAnimation data={service.serviceData} />
+        </span>
       </PageIntro>
       <Cards heading={service.componentCardHeader} data={service.services} />
       <GetInTouch />

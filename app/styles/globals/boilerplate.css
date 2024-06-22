@@ -60,5 +60,8 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-
-
+@media (max-width: 950px) {
+  main {
+    padding: calc(128px + 2rem) 3rem 0;
+  }
+}

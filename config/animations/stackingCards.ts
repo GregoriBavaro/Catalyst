@@ -189,7 +189,7 @@ export const stackingCards = (): StackingCardsConfig => {
           scaleEnd: 0.8,
         },
       });
-    } else if ((size.width ?? 1300) < 1300) {
+    } else if ((size.width ?? 1300) < 1300 && (size.width ?? 1180) > 1180) {
       setStackingCardsConfig({
         cardOne: {
           xStart: "40%",
@@ -216,6 +216,39 @@ export const stackingCards = (): StackingCardsConfig => {
           xEnd: "70%",
           yStart: "0rem",
           yEnd: "1rem",
+          rotateStart: "0deg",
+          rotateEnd: "10deg",
+          scaleStart: 0.8,
+          scaleEnd: 1,
+        },
+      });
+    } else if ((size.width ?? 1180) < 1180) {
+      setStackingCardsConfig({
+        cardOne: {
+          xStart: "25%",
+          xEnd: "7%",
+          yStart: "0rem",
+          yEnd: "0rem",
+          rotateStart: "0deg",
+          rotateEnd: "-15deg",
+          scaleStart: 1,
+          scaleEnd: 0.8,
+        },
+        cardTwo: {
+          xStart: "68%",
+          xEnd: "30%",
+          yStart: "0rem",
+          yEnd: "3rem",
+          rotateStart: "10deg",
+          rotateEnd: "0deg",
+          scaleStart: 0.95,
+          scaleEnd: 0.9,
+        },
+        cardThree: {
+          xStart: "108%",
+          xEnd: "58%",
+          yStart: "0rem",
+          yEnd: "0rem",
           rotateStart: "0deg",
           rotateEnd: "10deg",
           scaleStart: 0.8,
