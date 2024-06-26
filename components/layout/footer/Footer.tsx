@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaRegCopyright } from "react-icons/fa6";
 
 import Slider from "../../common/marquee/Marquee";
+import FooterList from "./FooterList";
 
 import logo from "../../../public/images/logo/catalyst-logo-two.png";
 
@@ -26,20 +27,7 @@ const Footer = () => {
             </div>
             <p>Empower Your Aspirations</p>
           </div>
-          <ul className={classes.footerList}>
-            {FOOTER_DATA.map(({ index, title, links }) => (
-              <li key={index}>
-                <p>{title}</p>
-                <ul className={classes.footerLinkList}>
-                  {links.map(({ id, linksTitle, link }) => (
-                    <li key={id}>
-                      <Link href={link}>{linksTitle}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
+          <FooterList />
           <div className={classes.footerPreferences}>
             <span>Preferences</span>
           </div>

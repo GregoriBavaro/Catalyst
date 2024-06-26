@@ -1,6 +1,6 @@
 export const FOOTER_DATA = [
   {
-    index: 0,
+    id: 0,
     title: "Services",
     links: [
       { id: 0, linksTitle: "Web development & Design", link: "/services/web-dev-design" },
@@ -11,7 +11,7 @@ export const FOOTER_DATA = [
     ],
   },
   {
-    index: 1,
+    id: 1,
     title: "Company",
     links: [
       { id: 0, linksTitle: "Contact", link: "/contact" },
@@ -20,7 +20,7 @@ export const FOOTER_DATA = [
     ],
   },
   {
-    index: 2,
+    id: 2,
     title: "Legal",
     links: [
       { id: 1, linksTitle: "Terms", link: "/terms" },

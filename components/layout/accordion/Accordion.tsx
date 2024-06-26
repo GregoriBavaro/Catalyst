@@ -16,6 +16,38 @@ interface AccordionProps {
   data: { id: number; title: string; description: string }[];
 }
 
+const topicStyles = {
+  initial: {
+    height: 0,
+    opacity: 0,
+  },
+  animate: {
+    height: "auto",
+    opacity: 1,
+    transition: {
+      height: {
+        duration: 0.4,
+      },
+      opacity: {
+        duration: 0.25,
+        delay: 0.15,
+      },
+    },
+  },
+  exit: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      height: {
+        duration: 0.4,
+      },
+      opacity: {
+        duration: 0.25,
+      },
+    },
+  },
+};
+
 const Accordion = ({
   heading,
   subHeading,
@@ -30,38 +62,6 @@ const Accordion = ({
       ...prev,
       [id]: !prev[id],
     }));
-  };
-
-  const topicStyles = {
-    initial: {
-      height: 0,
-      opacity: 0,
-    },
-    animate: {
-      height: "auto",
-      opacity: 1,
-      transition: {
-        height: {
-          duration: 0.4,
-        },
-        opacity: {
-          duration: 0.25,
-          delay: 0.15,
-        },
-      },
-    },
-    exit: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        height: {
-          duration: 0.4,
-        },
-        opacity: {
-          duration: 0.25,
-        },
-      },
-    },
   };
 
   return (
