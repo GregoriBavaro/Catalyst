@@ -64,5 +64,9 @@
     @media (max-width: 1000px) {
       padding: 4rem;
     }
+
+    @media (max-width: 768px) {
+      padding: 2rem 1rem 1rem;
+    }
   }
 }

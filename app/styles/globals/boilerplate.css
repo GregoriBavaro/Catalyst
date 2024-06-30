@@ -68,6 +68,6 @@ input:-webkit-autofill:active {
 
 @media (max-width: 768px) {
   main {
-    padding: calc(128px + 2rem) 2rem 0;
+    padding: calc(128px + 2rem) 1.5rem 0;
   }
 }
