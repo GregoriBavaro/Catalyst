@@ -1,7 +1,7 @@
 :root {
   --black: rgb(0, 0, 0);
   --dark-blue: rgb(1, 19, 31);
-  --dark-transparent-blue:rgba(9, 56, 89, 0.241);
+  --dark-transparent-blue: rgba(9, 56, 89, 0.241);
   --dark-purple: rgb(11, 31, 57);
   --bright-aqua: rgb(97, 235, 235);
   --light-cyan: rgb(182, 255, 254);
@@ -10,6 +10,7 @@
   --white-gray: rgb(182, 179, 179);
   --border-gray: rgba(226, 232, 240, 0.258);
   --background-image: linear-gradient(to right, var(--dark-purple) 0%, var(--dark-blue) 100%);
+  --theme-color: var(--dark-blue);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,7 @@
     --text-color: var(--white);
     --background-color: var(--dark-blue);
     --background-image: linear-gradient(to right, var(--dark-purple) 0%, var(--dark-blue) 100%);
+    --theme-color: var(--dark-blue);
   }
 }
 
