@@ -71,16 +71,3 @@ input:-webkit-autofill:active {
     padding: calc(128px + 2rem) 1.5rem 0;
   }
 }
-
-@media (max-width: 768px) {
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 30px; /* Adjust the height as needed */
-    background: var(--background-image);
-    z-index: 9999; /* Ensure it stays on top */
-  }
-}
