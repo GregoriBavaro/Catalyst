@@ -71,3 +71,16 @@ input:-webkit-autofill:active {
     padding: calc(128px + 2rem) 1.5rem 0;
   }
 }
+
+@media (max-width: 768px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px; /* Adjust the height as needed */
+    background: linear-gradient(0deg, rgba(1,19,31,0) 0%, rgba(1,19,31,0.9156454818255427) 47%, rgba(1,19,31,1) 70%);
+    z-index: 9999; /* Ensure it stays on top */
+  }
+}
