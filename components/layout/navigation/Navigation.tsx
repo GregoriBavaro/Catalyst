@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion as m } from "framer-motion";
 import useScrollPosition from "../../../hooks/use-ScrollPosition";
 import useScrollDirection from "../../../hooks/use-ScrollDirection";
@@ -23,6 +24,11 @@ const Navigation = () => {
     },
     transition: { duration: 0.5 },
   };
+
+  useEffect(() => {
+    const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--theme-color");
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", themeColor.trim());
+  }, []);
 
   return (
     <m.header {...navigationStyles} className={classes.header}>
