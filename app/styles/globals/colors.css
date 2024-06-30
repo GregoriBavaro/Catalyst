@@ -24,9 +24,10 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --text-color: var(--dark-blue);
-    --background-color: var(--white);
-    --background-image: linear-gradient(to right, var(--sand-white) 0%, var(--white) 100%);
+    --text-color: var(--white);
+    --background-color: var(--dark-blue);
+    --background-image: linear-gradient(to right, var(--dark-purple) 0%, var(--dark-blue) 100%);
+    --theme-color: var(--dark-blue);
   }
 }
 
