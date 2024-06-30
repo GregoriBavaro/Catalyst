@@ -1,3 +1,15 @@
+@mixin respond-to($media) {
+  @if $media == "medium" {
+    @media (max-width: 960px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
 .infoBox {
   padding: 4rem 0;
   pointer-events: none;
@@ -10,7 +22,7 @@
     .infoBoxControls {
       display: none;
 
-      @media (max-width: 768px) {
+      @include respond-to(small) {
         display: block;
         padding: 0 1rem;
       }
@@ -54,7 +66,7 @@
           max-width: 100%;
         }
 
-        @media (max-width: 768px) {
+        @include respond-to(small) {
           min-width: 100%;
           background-color: var(--dark-transparent-blue);
           border-radius: var(--border-radius);
@@ -63,17 +75,18 @@
       }
     }
 
-    @media (max-width: 960px) {
+    @include respond-to(medium) {
       padding: 2rem 2rem;
     }
 
-    @media (max-width: 768px) {
+    @include respond-to(small) {
       padding: 1.5rem 0;
       background-color: unset;
     }
   }
 
-  @media (max-width: 768px) {
+  @include respond-to(small) {
+    padding: 3rem 0;
     pointer-events: auto;
   }
 }

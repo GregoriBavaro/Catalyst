@@ -40,14 +40,9 @@
         flex-direction: column;
         flex: 1;
         padding: 0 2rem 0 0;
+        width: 13rem;
 
         div {
-          width: 13rem;
-
-          @include respond-to(medium) {
-            width: unset;
-          }
-
           img {
             max-width: 7rem;
             width: 100%;
@@ -56,14 +51,15 @@
 
             @include respond-to(medium) {
               margin-left: unset;
-              max-width: 10rem;
+              max-width: 100%;
+              width: unset;
             }
           }
         }
 
         p {
           @include respond-to(medium) {
-            font-size: var(--fs-100);
+            font-size: 100%;
           }
         }
 
@@ -71,6 +67,8 @@
           padding: 0;
           align-items: center;
           justify-content: center;
+          max-width: 13rem;
+          width: unset;
         }
       }
 

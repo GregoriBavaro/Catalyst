@@ -2,6 +2,14 @@
   transition: $property $duration $ease;
 }
 
+@mixin respond-to($media) {
+  @if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
 .cards {
   padding: 4rem 0;
 
@@ -31,5 +39,9 @@
     h4 {
       margin-right: auto;
     }
+  }
+
+  @include respond-to(small) {
+    padding: 3rem 0;
   }
 }

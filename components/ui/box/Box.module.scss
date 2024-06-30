@@ -1,3 +1,19 @@
+@mixin respond-to($media) {
+  @if $media == "large" {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if $media == "medium" {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
 .box {
   padding: 4rem 0;
 
@@ -52,21 +68,25 @@
         }
       }
 
-      @media (max-width: 1300px) {
+      @include respond-to(large) {
         grid-template-columns: repeat(1, 1fr);
       }
     }
 
-    @media (max-width: 1300px) {
+    @include respond-to(large) {
       padding: 5rem 4rem;
     }
 
-    @media (max-width: 1000px) {
+    @include respond-to(medium) {
       padding: 4rem;
     }
 
-    @media (max-width: 768px) {
-      padding: 2rem 1rem 1rem;
+    @include respond-to(small) {
+      padding: 2rem 1.5rem 1rem;
     }
+  }
+
+  @include respond-to(small) {
+    padding: 3rem 0;
   }
 }

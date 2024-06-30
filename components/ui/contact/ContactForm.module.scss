@@ -1,3 +1,19 @@
+@mixin respond-to($media) {
+  @if $media == "large" {
+    @media (max-width: 1020px) {
+      @content;
+    }
+  } @else if $media == "medium" {
+    @media (max-width: 870px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
 .contactForm {
   padding: 4rem 0;
 
@@ -13,9 +29,6 @@
       background: var(--bright-aqua);
     }
 
-    .toastContaier {
-    }
-
     .form {
       flex: 2;
       padding: 2rem 2rem 0;
@@ -26,6 +39,24 @@
         color: var(--sand-white);
         font-size: 1rem;
       }
+
+      @include respond-to(large) {
+        padding: 2rem 0.5rem;
+      }
+
+      @include respond-to(medium) {
+        padding: 0;
+      }
     }
+
+    @include respond-to(medium) {
+      flex-direction: column;
+      max-height: unset;
+      gap: 3rem;
+    }
+  }
+
+  @include respond-to(small) {
+    padding: 3rem 0;
   }
 }

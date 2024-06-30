@@ -1,3 +1,15 @@
+@mixin respond-to($media) {
+  @if $media == "large" {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
 .pageIntro {
   padding: 4rem 0;
 
@@ -28,15 +40,27 @@
         margin-top: 2rem;
       }
 
-      @media (max-width: 1300px) {
+      @include respond-to(large) {
         flex: 0;
         padding: 6rem 2rem 4rem;
       }
+
+      @include respond-to(small) {
+        padding: 2rem 0;
+      }
     }
 
-    @media (max-width: 1300px) {
+    @include respond-to(large) {
       flex-direction: column-reverse;
     }
+
+    @include respond-to(small) {
+      padding: 0rem 1.5rem;
+    }
+  }
+
+  @include respond-to(small) {
+    padding: 3rem 0;
   }
 }
 

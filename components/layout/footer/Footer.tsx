@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { FaRegCopyright } from "react-icons/fa6";
 
@@ -10,7 +9,6 @@ import logo from "../../../public/images/logo/catalyst-logo-two.png";
 
 import classes from "./Footer.module.scss";
 
-import { FOOTER_DATA } from "../../../db/footer";
 import { SOCIAL } from "../../../db/social";
 
 const Footer = () => {
