@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, ToastOptions, Slide } from "react-toastify";
 import useEmblaCarousel from "embla-carousel-react";
 import { Formik, Form, FormikHelpers } from "formik";
@@ -56,31 +57,58 @@ const ContactForm = () => {
     transition: Slide,
   };
 
-  const handleSubmit = async (
+  const EMAIL_JS_SERVICE = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE;
+  const EMAIL_JS_TEMPLATE = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE;
+  const EMAIL_JS_PUBLIC_PASS = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_PASS;
+
+  if (!EMAIL_JS_SERVICE || !EMAIL_JS_TEMPLATE || !EMAIL_JS_PUBLIC_PASS) {
+    console.error("EmailJS environment variables are not set properly.");
+  }
+
+  console.log(EMAIL_JS_PUBLIC_PASS)
+
+  const handleSubmit = (
     values: FormValues,
     { setSubmitting, resetForm }: FormikHelpers<FormValues>
   ) => {
-    try {
-      const response = await fetch("/api/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-
-      if (response.ok) {
-        toast.success("Message successfully submitted", tostConfig);
-      } else {
-        toast.error("Failed to send message", tostConfig);
-      }
-    } catch (error) {
-      toast.error("An error occurred", tostConfig);
-    } finally {
+    if (!EMAIL_JS_SERVICE || !EMAIL_JS_TEMPLATE || !EMAIL_JS_PUBLIC_PASS) {
+      toast.error(
+        "Email service is not configured properly. Please contact us to fix the problem",
+        tostConfig
+      );
       setSubmitting(false);
-      resetForm();
-      setChecked(Object.fromEntries(SERVICES.map(({ id }) => [id, false])));
+      return;
     }
+
+    const preferencesObjects = values.preferences.map((preference) => ({ name: preference }));
+
+    emailjs
+      .send(
+        EMAIL_JS_SERVICE,
+        EMAIL_JS_TEMPLATE,
+        {
+          name: values.name,
+          email: values.email,
+          phone: values.phone,
+          subject: values.subject,
+          message: values.message,
+          preferences: preferencesObjects,
+        },
+        EMAIL_JS_PUBLIC_PASS
+      )
+      .then(
+        () => {
+          toast.success("Message successfully submitted", tostConfig);
+        },
+        () => {
+          toast.error("Failed to send message", tostConfig);
+        }
+      )
+      .finally(() => {
+        setSubmitting(false);
+        resetForm();
+        setChecked(Object.fromEntries(SERVICES.map(({ id }) => [id, false])));
+      });
   };
 
   const loadingStyles = {
