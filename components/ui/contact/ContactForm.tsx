@@ -61,12 +61,6 @@ const ContactForm = () => {
   const EMAIL_JS_TEMPLATE = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE;
   const EMAIL_JS_PUBLIC_PASS = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_PASS;
 
-  if (!EMAIL_JS_SERVICE || !EMAIL_JS_TEMPLATE || !EMAIL_JS_PUBLIC_PASS) {
-    console.error("EmailJS environment variables are not set properly.");
-  }
-
-  console.log(EMAIL_JS_PUBLIC_PASS)
-
   const handleSubmit = (
     values: FormValues,
     { setSubmitting, resetForm }: FormikHelpers<FormValues>
