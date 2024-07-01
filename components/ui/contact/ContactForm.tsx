@@ -1,7 +1,6 @@
-"use client";
+"use client"
 
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { ToastContainer, toast, ToastOptions, Slide } from "react-toastify";
 import useEmblaCarousel from "embla-carousel-react";
 import { Formik, Form, FormikHelpers } from "formik";
@@ -57,47 +56,31 @@ const ContactForm = () => {
     transition: Slide,
   };
 
-  const EMAIL_JS_SERVICE = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE;
-  const EMAIL_JS__TEMPLATE = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE;
-  const EMAIL_JS_PUBLIC_PASS = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_PASS;
-
-  console.log(EMAIL_JS_SERVICE);
-  console.log(EMAIL_JS__TEMPLATE);
-  console.log(EMAIL_JS_PUBLIC_PASS);
-
-  const handleSubmit = (
+  const handleSubmit = async (
     values: FormValues,
     { setSubmitting, resetForm }: FormikHelpers<FormValues>
   ) => {
-    const preferencesObjects = values.preferences.map((preference) => ({ name: preference }));
-
-    emailjs
-      .send(
-        "service_7258vua",
-        "template_j42t50w",
-        {
-          name: values.name,
-          email: values.email,
-          phone: values.phone,
-          subject: values.subject,
-          message: values.message,
-          preferences: preferencesObjects,
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        "D7JVJyPhITgUHk0mk"
-      )
-      .then(
-        () => {
-          toast.success("Message successfully submitted", tostConfig);
-        },
-        () => {
-          toast.error("Failed to send message", tostConfig);
-        }
-      )
-      .finally(() => {
-        setSubmitting(false);
-        resetForm();
-        setChecked(Object.fromEntries(SERVICES.map(({ id }) => [id, false])));
+        body: JSON.stringify(values),
       });
+
+      if (response.ok) {
+        toast.success("Message successfully submitted", tostConfig);
+      } else {
+        toast.error("Failed to send message", tostConfig);
+      }
+    } catch (error) {
+      toast.error("An error occurred", tostConfig);
+    } finally {
+      setSubmitting(false);
+      resetForm();
+      setChecked(Object.fromEntries(SERVICES.map(({ id }) => [id, false])));
+    }
   };
 
   const loadingStyles = {
