@@ -57,6 +57,14 @@ const ContactForm = () => {
     transition: Slide,
   };
 
+  const EMAIL_JS_SERVICE = process.env.REACT_APP_EMAIL_JS_SERVICE;
+  const EMAIL_JS__TEMPLATE = process.env.REACT_APP_EMAIL_JS_TEMPLATE;
+  const EMAIL_JS_PUBLIC_PASS = process.env.REACT_APP_EMAIL_JS_PUBLIC_PASS;
+
+  console.log(EMAIL_JS_SERVICE);
+  console.log(EMAIL_JS__TEMPLATE);
+  console.log(EMAIL_JS_PUBLIC_PASS);
+
   const handleSubmit = (
     values: FormValues,
     { setSubmitting, resetForm }: FormikHelpers<FormValues>
