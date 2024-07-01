@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { ToastContainer, toast, ToastOptions, Slide } from "react-toastify";
@@ -61,10 +61,10 @@ const ContactForm = () => {
     { setSubmitting, resetForm }: FormikHelpers<FormValues>
   ) => {
     try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
       });
