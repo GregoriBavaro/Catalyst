@@ -27,6 +27,23 @@ interface FormValues {
   preferences: string[];
 }
 
+const initialValues: FormValues = {
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+  preferences: [],
+};
+
+const validationSchema = Yup.object({
+  name: Yup.string().required("Name is required"),
+  email: Yup.string().required("Email is required").email("Invalid email address"),
+  phone: Yup.string(),
+  subject: Yup.string().required("Subject is required"),
+  message: Yup.string().required("Message is required"),
+});
+
 const ContactForm = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel();
 
@@ -36,24 +53,7 @@ const ContactForm = () => {
 
   const { buttonLabel, onButtonClick } = usePrevNextButtons(emblaApi);
 
-  const initialValues: FormValues = {
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-    preferences: [],
-  };
-
-  const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
-    email: Yup.string().required("Email is required").email("Invalid email address"),
-    phone: Yup.string(),
-    subject: Yup.string().required("Subject is required"),
-    message: Yup.string().required("Message is required"),
-  });
-
-  const tostConfig: ToastOptions = {
+  const toastConfig: ToastOptions = {
     transition: Slide,
   };
 
@@ -68,7 +68,7 @@ const ContactForm = () => {
     if (!EMAIL_JS_SERVICE || !EMAIL_JS_TEMPLATE || !EMAIL_JS_PUBLIC_PASS) {
       toast.error(
         "Email service is not configured properly. Please contact us to fix the problem",
-        tostConfig
+        toastConfig
       );
       setSubmitting(false);
       return;
@@ -92,10 +92,10 @@ const ContactForm = () => {
       )
       .then(
         () => {
-          toast.success("Message successfully submitted", tostConfig);
+          toast.success("Message successfully submitted", toastConfig);
         },
         () => {
-          toast.error("Failed to send message", tostConfig);
+          toast.error("Failed to send message", toastConfig);
         }
       )
       .finally(() => {
