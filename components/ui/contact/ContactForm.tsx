@@ -61,8 +61,6 @@ const ContactForm = () => {
   const EMAIL_JS_TEMPLATE = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE;
   const EMAIL_JS_PUBLIC_PASS = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_PASS;
 
-  // console.log(EMAIL_JS_SERVICE);
-
   const handleSubmit = (
     values: FormValues,
     { setSubmitting, resetForm }: FormikHelpers<FormValues>
