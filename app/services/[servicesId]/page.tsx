@@ -1,5 +1,3 @@
-"use client";
-
 import { notFound } from "next/navigation";
 import { SERVICES } from "../../../db/services/services";
 
@@ -10,8 +8,31 @@ import GetInTouch from "../../../components/ui/getInTouch/GetInTouchBox";
 import StackingCardsAnimation from "../../../components/common/animations/StackingCardsAnimation";
 import MotionCardsAnimation from "../../../components/common/animations/MotionCardsAnimation";
 
-const ServicesDetails = ({ params }: { params: { servicesId: string } }) => {
-  const service = SERVICES.find((s) => s.pathId === params.servicesId);
+interface Service {
+  id: number;
+  title: string;
+  pathId: string;
+  path: string;
+  componentHeader: string;
+  componentSubHeader: string;
+  componentDescription: string;
+  componentCardHeader: string;
+  serviceData: any;
+  services: any;
+}
+
+const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
+  const service = SERVICES.find((s) => s.pathId === serviceId);
+
+  if (!service) {
+    return null;
+  }
+
+  return service;
+};
+
+const ServicesDetails = async ({ params }: { params: { servicesId: string } }) => {
+  const service = await fetchServiceData(params.servicesId);
 
   if (!service) {
     notFound();
