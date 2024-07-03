@@ -7,7 +7,6 @@
     align-items: flex-start;
     gap: 1rem;
     height: 100%;
-    padding: 2rem;
     border-radius: var(--border-radius);
     background-color: var(--dark-transparent-blue);
     border: 1px solid transparent;
@@ -21,6 +20,7 @@
       align-items: flex-start;
       gap: 1rem;
       height: 100%;
+      padding: 2rem;
     }
 
     p {

@@ -46,8 +46,17 @@ const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
   return service;
 };
 
-const ServicesDetails = async ({ params }: { params: { servicesId: string } }) => {
-  const service = await fetchServiceData(params.servicesId);
+export async function generateMetadata({ params }: { params: { serviceId: string } }) {
+  const service = await fetchServiceData(params.serviceId);
+
+  return {
+    title: service?.title,
+    description: service?.componentDescription,
+  };
+}
+
+const ServicesDetails = async ({ params }: { params: { serviceId: string } }) => {
+  const service = await fetchServiceData(params.serviceId);
 
   if (!service) {
     notFound();
