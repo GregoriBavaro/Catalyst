@@ -9,19 +9,6 @@ import GetInTouch from "../../../components/ui/getInTouch/GetInTouchBox";
 import StackingCardsAnimation from "../../../components/common/animations/StackingCardsAnimation";
 import MotionCardsAnimation from "../../../components/common/animations/MotionCardsAnimation";
 
-interface Service {
-  id: number;
-  title: string;
-  pathId: string;
-  path: string;
-  componentHeader: string;
-  componentSubHeader: string;
-  componentDescription: string;
-  componentCardHeader: string;
-  serviceData: ServiceData[];
-  services: ServiceServices[];
-}
-
 interface ServiceData {
   id: number;
   icon: StaticImageData;
@@ -34,6 +21,19 @@ interface ServiceServices {
   title: string;
   animationDelay: number;
   description: string;
+}
+
+interface Service {
+  id: number;
+  title: string;
+  pathId: string;
+  path: string;
+  componentHeader: string;
+  componentSubHeader: string;
+  componentDescription: string;
+  componentCardHeader: string;
+  serviceData: ServiceData[];
+  services: ServiceServices[];
 }
 
 const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
