@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { StaticImageData } from "next/image";
 import { SERVICES } from "../../../db/services/services";
 
 import PageHeader from "../../../components/layout/pageHeader/PageHeader";
@@ -17,8 +18,22 @@ interface Service {
   componentSubHeader: string;
   componentDescription: string;
   componentCardHeader: string;
-  serviceData: any;
-  services: any;
+  serviceData: ServiceData[];
+  services: ServiceServices[];
+}
+
+interface ServiceData {
+  id: number;
+  icon: StaticImageData;
+  title: string;
+  description: string;
+}
+
+interface ServiceServices {
+  id: number;
+  title: string;
+  animationDelay: number;
+  description: string;
 }
 
 const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
