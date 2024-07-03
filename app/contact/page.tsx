@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const Contact = () => {
   return (
     <>
-      <PageHeader header="Lets connect!" />
+      <PageHeader header="Lets connect" />
       <ContactForm />
     </>
   );

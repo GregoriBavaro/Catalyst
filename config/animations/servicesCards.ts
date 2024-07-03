@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import useWindowSize from "../../hooks/use-WindowSize";
 
 interface ServiceCardConfig {
-  animationDelay: number;
+  animationDelayHome: number;
   animationDelayContact: number;
 }
 
@@ -23,32 +23,32 @@ export const serviceCards = (): ServiceCards => {
 
   const [serviceCardsConfig, setServiceCardsConfig] = useState<ServiceCards>({
     webDevDesign: {
-      animationDelay: 0.1,
-      animationDelayContact: 0.1,
+      animationDelayHome: 0.1,
+      animationDelayContact: 0.05,
     },
     performanceOptimization: {
-      animationDelay: 0.2,
-      animationDelayContact: 0.2,
+      animationDelayHome: 0.2,
+      animationDelayContact: 0.1,
     },
     seo: {
-      animationDelay: 0.3,
-      animationDelayContact: 0.3,
+      animationDelayHome: 0.3,
+      animationDelayContact: 0.15,
     },
     marketing: {
-      animationDelay: 0.4,
-      animationDelayContact: 0.4,
+      animationDelayHome: 0.4,
+      animationDelayContact: 0.20,
     },
     socialMedia: {
-      animationDelay: 0.5,
-      animationDelayContact: 0.5,
+      animationDelayHome: 0.5,
+      animationDelayContact: 0.25,
     },
     brandIdentity: {
-      animationDelay: 0.6,
-      animationDelayContact: 0.6,
+      animationDelayHome: 0.6,
+      animationDelayContact: 0.30,
     },
     socialMediaAutomation: {
-      animationDelay: 0.1,
-      animationDelayContact: 0.7,
+      animationDelayHome: 0.1,
+      animationDelayContact: 0.35,
     },
   });
 
@@ -58,31 +58,31 @@ export const serviceCards = (): ServiceCards => {
         ...prevConfig,
         webDevDesign: {
           ...prevConfig.webDevDesign,
-          animationDelay: 0.1,
+          animationDelayHome: 0.1,
         },
         performanceOptimization: {
           ...prevConfig.performanceOptimization,
-          animationDelay: 0.2,
+          animationDelayHome: 0.2,
         },
         seo: {
           ...prevConfig.seo,
-          animationDelay: 0.3,
+          animationDelayHome: 0.3,
         },
         marketing: {
           ...prevConfig.marketing,
-          animationDelay: 0.4,
+          animationDelayHome: 0.4,
         },
         socialMedia: {
           ...prevConfig.socialMedia,
-          animationDelay: 0.1,
+          animationDelayHome: 0.1,
         },
         brandIdentity: {
           ...prevConfig.brandIdentity,
-          animationDelay: 0.2,
+          animationDelayHome: 0.2,
         },
         socialMediaAutomation: {
           ...prevConfig.socialMediaAutomation,
-          animationDelay: 0.3,
+          animationDelayHome: 0.3,
         },
       }));
     } else if ((size.width ?? 768) < 768) {
@@ -90,31 +90,31 @@ export const serviceCards = (): ServiceCards => {
         ...prevConfig,
         webDevDesign: {
           ...prevConfig.webDevDesign,
-          animationDelay: 0.1,
+          animationDelayHome: 0.1,
         },
         performanceOptimization: {
           ...prevConfig.performanceOptimization,
-          animationDelay: 0.2,
+          animationDelayHome: 0.2,
         },
         seo: {
           ...prevConfig.seo,
-          animationDelay: 0.1,
+          animationDelayHome: 0.1,
         },
         marketing: {
           ...prevConfig.marketing,
-          animationDelay: 0.2,
+          animationDelayHome: 0.2,
         },
         socialMedia: {
           ...prevConfig.socialMedia,
-          animationDelay: 0.3,
+          animationDelayHome: 0.3,
         },
         brandIdentity: {
           ...prevConfig.brandIdentity,
-          animationDelay: 0.4,
+          animationDelayHome: 0.4,
         },
         socialMediaAutomation: {
           ...prevConfig.socialMediaAutomation,
-          animationDelay: 0.5,
+          animationDelayHome: 0.5,
         },
       }));
     }
@@ -122,31 +122,31 @@ export const serviceCards = (): ServiceCards => {
 
   return {
     webDevDesign: {
-      animationDelay: serviceCardsConfig.webDevDesign.animationDelay,
+      animationDelayHome: serviceCardsConfig.webDevDesign.animationDelayHome,
       animationDelayContact: serviceCardsConfig.webDevDesign.animationDelayContact,
     },
     performanceOptimization: {
-      animationDelay: serviceCardsConfig.performanceOptimization.animationDelay,
+      animationDelayHome: serviceCardsConfig.performanceOptimization.animationDelayHome,
       animationDelayContact: serviceCardsConfig.performanceOptimization.animationDelayContact,
     },
     seo: {
-      animationDelay: serviceCardsConfig.seo.animationDelay,
+      animationDelayHome: serviceCardsConfig.seo.animationDelayHome,
       animationDelayContact: serviceCardsConfig.seo.animationDelayContact,
     },
     marketing: {
-      animationDelay: serviceCardsConfig.marketing.animationDelay,
+      animationDelayHome: serviceCardsConfig.marketing.animationDelayHome,
       animationDelayContact: serviceCardsConfig.marketing.animationDelayContact,
     },
     socialMedia: {
-      animationDelay: serviceCardsConfig.socialMedia.animationDelay,
+      animationDelayHome: serviceCardsConfig.socialMedia.animationDelayHome,
       animationDelayContact: serviceCardsConfig.socialMedia.animationDelayContact,
     },
     brandIdentity: {
-      animationDelay: serviceCardsConfig.brandIdentity.animationDelay,
+      animationDelayHome: serviceCardsConfig.brandIdentity.animationDelayHome,
       animationDelayContact: serviceCardsConfig.brandIdentity.animationDelayContact,
     },
     socialMediaAutomation: {
-      animationDelay: serviceCardsConfig.socialMediaAutomation.animationDelay,
+      animationDelayHome: serviceCardsConfig.socialMediaAutomation.animationDelayHome,
       animationDelayContact: serviceCardsConfig.socialMediaAutomation.animationDelayContact,
     },
   };

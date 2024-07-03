@@ -77,7 +77,12 @@ const ServicesDetails = async ({ params }: { params: { serviceId: string } }) =>
           <MotionCardsAnimation data={service.serviceData} />
         </span>
       </PageIntro>
-      <Cards heading={service.componentCardHeader} data={service.services} />
+      <Cards
+        heading={service.componentCardHeader}
+        data={service.services}
+        showCards={false}
+        animationType="animationDelayHome"
+      />
       <GetInTouch />
     </>
   );

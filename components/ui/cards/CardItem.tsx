@@ -50,10 +50,10 @@ const CardItem = ({
             />
           </Link>
         ) : (
-          <>
+          <div className={classes.noHrefCard}>
             <h6>{title}</h6>
             <p>{description}</p>
-          </>
+          </div>
         )}
       </InViewAnimation>
     </li>

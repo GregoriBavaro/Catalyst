@@ -14,6 +14,8 @@ const Home = () => {
         subHeading="What we specialize in"
         heading="Find out why our clients trust us to deliver outstanding results in marketing and web development."
         data={SERVICES}
+        showCards={false}
+        animationType="animationDelayHome"
       />
       <Box
         subHeading="Why Catalyst"

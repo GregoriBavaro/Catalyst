@@ -27,7 +27,7 @@ const Hero = () => {
           </Link>
         </div>
         <div className={classes.pictureContainer}>
-          <Image src={growth} alt="growth" />
+          <Image src={growth} alt="growth" priority />
         </div>
       </div>
       <InfoBox />

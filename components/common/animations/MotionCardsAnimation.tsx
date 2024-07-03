@@ -48,7 +48,7 @@ const MotionCards = ({ data }: MotionCardsProps) => {
             }}
           >
             <div className={classes.motionCardsIcon}>
-              <Image src={icon} alt={title} />
+              <Image src={icon} alt={title} priority />
             </div>
             <div className={classes.motionCardsTextWrapper}>
               <h5>{title}</h5>

@@ -6,10 +6,13 @@
   cursor: pointer;
 
   img {
-    // scale: 0.4;
     max-width: 100%;
     height: auto;
     width: auto;
     object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    width: 7rem;
   }
 }

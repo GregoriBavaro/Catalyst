@@ -19,9 +19,11 @@ interface CardsProps {
   }[];
   heading: string;
   subHeading?: string;
+  showCards: boolean;
+  animationType: "animationDelayHome" | "animationDelayContact";
 }
-const Cards = ({ data, heading, subHeading }: CardsProps) => {
-  const [showAllCards, setShowAllCards] = useState<boolean>(false);
+const Cards = ({ data, heading, subHeading, showCards, animationType }: CardsProps) => {
+  const [showAllCards, setShowAllCards] = useState<boolean>(showCards);
   const [firstCardHeight, setFirstCardHeight] = useState<number | null>(null);
 
   const handleToggleShowAllCards = () => {
@@ -37,6 +39,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
     brandIdentity,
     socialMediaAutomation,
   } = serviceCards();
+
   const cardsConfig = [
     webDevDesign,
     performanceOptimization,
@@ -59,7 +62,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
         <h4>{heading}</h4>
         <CardsItemWrapper showAllCards={showAllCards} firstCardHeight={firstCardHeight}>
           {data?.map(({ id, title, description, path }) => {
-            const { animationDelay } = cardsConfig[id];
+            const animationDelay = cardsConfig[id][animationType];
 
             return (
               <CardItem
@@ -75,7 +78,7 @@ const Cards = ({ data, heading, subHeading }: CardsProps) => {
             );
           })}
         </CardsItemWrapper>
-        {data?.length > 6 && (
+        {data?.length > 6 && !showCards && (
           <button
             type="button"
             onClick={handleToggleShowAllCards}

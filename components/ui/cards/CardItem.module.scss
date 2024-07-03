@@ -1,6 +1,10 @@
 .cardItem {
   height: 100%;
 
+  .noHrefCard {
+    padding: 2rem;
+  }
+
   div:nth-child(1) {
     display: flex;
     flex-direction: column;
