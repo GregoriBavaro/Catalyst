@@ -1,8 +1,9 @@
 {
+  "version": 2,
   "routes": [
     {
       "src": "/services/(.*)",
-      "dest": "/services/[servicesId]"
+      "dest": "/services/[servicesId]?servicesId=$1"
     }
   ]
 }
