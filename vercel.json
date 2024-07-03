@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/services/(.*)",
-      "dest": "/services/[servicesId]?servicesId=$1"
+      "dest": "/services/[serviceId]?serviceId=$1"
     }
   ]
 }

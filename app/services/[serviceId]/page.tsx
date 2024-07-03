@@ -46,14 +46,14 @@ const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
   return service;
 };
 
-export async function generateMetadata({ params }: { params: { serviceId: string } }) {
+export const generateMetadata = async ({ params }: { params: { serviceId: string } }) => {
   const service = await fetchServiceData(params.serviceId);
 
   return {
     title: service?.title,
     description: service?.componentDescription,
   };
-}
+};
 
 const ServicesDetails = async ({ params }: { params: { serviceId: string } }) => {
   const service = await fetchServiceData(params.serviceId);

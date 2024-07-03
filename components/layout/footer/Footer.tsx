@@ -21,7 +21,7 @@ const Footer = () => {
         <div className={classes.logoListWrapper}>
           <div className={classes.footerLogo}>
             <div>
-              <Image src={logo} alt="logo" priority />
+              <Image src={logo} alt="logo" />
             </div>
             <p>Empower Your Aspirations</p>
           </div>
