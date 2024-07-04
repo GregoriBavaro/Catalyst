@@ -56,9 +56,9 @@ const languagesAnimation = {
 
 const MarqueeAnimation = {
   initial: { y: "120%" },
-  animate: { y: "0%", transition: { duration: 0.3, delay: 0.6 } },
+  animate: { y: "0%", transition: { duration: 0.1, delay: 0.6 } },
   exit: { y: "120%" },
-  transition: { duration: 0.3, delay: 0 },
+  transition: { duration: 0.1, delay: 0 },
 };
 
 const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
