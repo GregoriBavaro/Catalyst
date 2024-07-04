@@ -55,9 +55,9 @@ const languagesAnimation = {
 };
 
 const MarqueeAnimation = {
-  initial: { transform: "translateY(120%)" },
-  animate: { transform: "translateY(0%)", transition: { duration: 0.3, delay: 0.6 } },
-  exit: { transform: "translateY(120%)" },
+  initial: { y: "120%" },
+  animate: { y: "0%", transition: { duration: 0.3, delay: 0.6 } },
+  exit: { y: "120%" },
   transition: { duration: 0.3, delay: 0 },
 };
 
