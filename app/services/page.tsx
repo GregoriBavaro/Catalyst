@@ -4,6 +4,8 @@ import PageHeader from "../../components/layout/pageHeader/PageHeader";
 import Cards from "../../components/ui/cards/Cards";
 import MouseAnimation from "../../components/ui/getInTouch/GetInTouchBox";
 
+import classes from "./Services.module.scss";
+
 import { SERVICES } from "../../db/services/services";
 
 export const metadata: Metadata = {
@@ -22,6 +24,7 @@ const Services = () => {
         data={SERVICES}
         showCards
         animationType="animationDelayContact"
+        classWrapper={classes.cardsWrapper}
       />
       <MouseAnimation />
     </>

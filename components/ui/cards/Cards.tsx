@@ -21,8 +21,16 @@ interface CardsProps {
   subHeading?: string;
   showCards: boolean;
   animationType: "animationDelayHome" | "animationDelayContact";
+  classWrapper?: string;
 }
-const Cards = ({ data, heading, subHeading, showCards, animationType }: CardsProps) => {
+const Cards = ({
+  data,
+  heading,
+  subHeading,
+  showCards,
+  animationType,
+  classWrapper,
+}: CardsProps) => {
   const [showAllCards, setShowAllCards] = useState<boolean>(showCards);
   const [firstCardHeight, setFirstCardHeight] = useState<number | null>(null);
 
@@ -52,7 +60,7 @@ const Cards = ({ data, heading, subHeading, showCards, animationType }: CardsPro
 
   return (
     <section className={classes.cards}>
-      <div className={classes.cardsWrapper}>
+      <div className={`${classes.cardsWrapper} ${classWrapper}`}>
         {subHeading && (
           <div className="subHeadingWrapper">
             <span className="subHeadingSquare" />

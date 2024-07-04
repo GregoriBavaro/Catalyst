@@ -1,3 +1,27 @@
+@mixin respond-to($media) {
+  @if $media == "large" {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if $media == "medium" {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $media == "extra-small" {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else if $media == "small-height" {
+    @media (max-height: 480px) and (max-width: 670px) {
+      @content;
+    }
+  }
+}
+
 .hamburgerItems {
   display: flex;
   flex-direction: column;
@@ -44,6 +68,14 @@
             gap: 1rem;
           }
         }
+
+        @include respond-to(small) {
+          gap: 1.5rem;
+        }
+
+        @include respond-to("extra-small") {
+          gap: 1rem;
+        }
       }
 
       .paths {
@@ -54,6 +86,15 @@
           line-height: 3rem;
           transition: 0.3s;
           cursor: pointer;
+
+          @include respond-to(large) {
+            font-size: var(--fs-500);
+            line-height: unset;
+          }
+
+          @include respond-to(small-height) {
+            font-size: var(--fs-300);
+          }
         }
 
         .title:hover {
@@ -62,6 +103,14 @@
 
         .number {
           color: var(--light-cyan);
+
+          @include respond-to(small) {
+            font-size: var(--fs-200);
+          }
+
+          @include respond-to(small-height) {
+            font-size: var(--fs-100);
+          }
         }
       }
 
@@ -78,6 +127,10 @@
 
             svg {
               transform: rotate(40deg);
+
+              @include respond-to(small) {
+                font-size: 0.6rem;
+              }
             }
           }
         }
@@ -89,17 +142,56 @@
           cursor: pointer;
           opacity: 0.5;
           transition: 0.3s;
+
+          @include respond-to(small) {
+            font-size: 0.6rem;
+          }
         }
 
         .title:hover {
           opacity: 1;
         }
+
+        @include respond-to(small) {
+          gap: 0.4rem;
+        }
+      }
+
+      @include respond-to(small) {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        padding: 0 0 0 0.5rem;
       }
     }
 
     .horizontalLine {
       height: 1px;
       background-color: var(--border-gray);
+    }
+
+    @include respond-to(small) {
+      padding: 3rem 1rem 0;
+      height: 100%;
+      gap: 1rem;
+    }
+
+    @include respond-to(small-height) {
+      padding: 0 1rem;
+    }
+  }
+
+  @include respond-to(small) {
+    padding: 6rem 0 0;
+    gap: 1rem;
+  }
+
+  & div:nth-child(2) {
+    span {
+      @include respond-to(small-height) {
+        font-size: var(--fs-800);
+      }
     }
   }
 }

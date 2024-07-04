@@ -1,0 +1,33 @@
+@mixin respond-to($media) {
+  @if $media == "large" {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if $media == "medium" {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+.cardsWrapper {
+  background-color: var(--dark-transparent-blue);
+  border-radius: var(--border-radius);
+  padding: 5rem 6rem;
+
+  @include respond-to(large) {
+    padding: 5rem 4rem;
+  }
+
+  @include respond-to(medium) {
+    padding: 4rem;
+  }
+
+  @include respond-to(small) {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+}
