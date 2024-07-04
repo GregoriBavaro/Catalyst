@@ -68,19 +68,19 @@ export const motionCards = (): InMotionCardsConfig => {
           scaleStart: 1,
           scaleEnd: 1,
           yStart: "40%",
-          yEnd: "-50%",
+          yEnd: "-35%",
         },
         cardTwo: {
           scaleStart: 1,
           scaleEnd: 1,
-          yStart: "55%",
-          yEnd: "-50%",
+          yStart: "40%",
+          yEnd: "-35%",
         },
         cardThree: {
           scaleStart: 1,
           scaleEnd: 1,
-          yStart: "77%",
-          yEnd: "-50%",
+          yStart: "40%",
+          yEnd: "-35%",
         },
       });
     }

@@ -46,7 +46,7 @@
       }
 
       @include respond-to(small) {
-        padding: 2rem 0;
+        padding: 1.7rem 0;
       }
     }
 
@@ -55,7 +55,7 @@
     }
 
     @include respond-to(small) {
-      padding: 0rem 1.5rem;
+      padding: 0rem 1rem;
     }
   }
 

@@ -71,6 +71,10 @@
       @include respond-to(large) {
         grid-template-columns: repeat(1, 1fr);
       }
+
+      @include respond-to(small) {
+        gap: 1rem;
+      }
     }
 
     @include respond-to(large) {
@@ -82,7 +86,7 @@
     }
 
     @include respond-to(small) {
-      padding: 2rem 1.5rem 1.5rem;
+      padding: 1.7rem 1rem 1rem;
     }
   }
 
