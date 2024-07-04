@@ -26,7 +26,6 @@ interface ServiceServices {
 interface Service {
   id: number;
   title: string;
-  pathId: string;
   path: string;
   componentHeader: string;
   componentSubHeader: string;
@@ -37,7 +36,7 @@ interface Service {
 }
 
 const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
-  const service = SERVICES.find((s) => s.pathId === serviceId);
+  const service = SERVICES.find((s) => s.path === serviceId);
 
   if (!service) {
     return null;

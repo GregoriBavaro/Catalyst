@@ -40,7 +40,7 @@ const CardItem = ({
     <li key={id} ref={ref} className={classes.cardItem}>
       <InViewAnimation animationDelay={animationDelay}>
         {path ? (
-          <Link href={path}>
+          <Link href={`/services/${path}`}>
             <h6>{title}</h6>
             <p>{description}</p>
             <ArrowButton
