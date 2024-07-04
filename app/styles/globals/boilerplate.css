@@ -70,5 +70,11 @@ input:-webkit-autofill:active {
   main {
     padding: calc(128px + 2rem) 1.2rem 0;
   }
-}
 
+  html:has(.requires-no-scroll),
+  body:has(.requires-no-scroll) {
+    overflow: unset;
+    touch-action: unset;
+    -webkit-overflow-scrolling: unset !important;
+  }
+}
