@@ -9,12 +9,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-  }
-}
 
-@media (max-width: 768px) {
-  .header {
-    nav {
+    @media (max-width: 768px) {
       padding: 1rem;
     }
   }
