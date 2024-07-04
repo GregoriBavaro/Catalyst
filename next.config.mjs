@@ -5,7 +5,6 @@ const nextConfig = {
   //   appDir: true,
   // },
   images: { formats: ["image/avif", "image/webp"] },
-  target: "serverless",
   trailingSlash: true,
 };
 
