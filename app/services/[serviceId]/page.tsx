@@ -8,6 +8,7 @@ import Cards from "../../../components/ui/cards/Cards";
 import GetInTouch from "../../../components/ui/getInTouch/GetInTouchBox";
 import StackingCardsAnimation from "../../../components/common/animations/StackingCardsAnimation";
 import MotionCardsAnimation from "../../../components/common/animations/MotionCardsAnimation";
+import ParallaxScrollAnimation from "../../../components/common/animations/ParallaxScrollAnimation";
 
 interface ServiceData {
   id: number;
@@ -23,6 +24,12 @@ interface ServiceServices {
   description: string;
 }
 
+interface ServicePhases {
+  id: number;
+  title: string;
+  description: string;
+}
+
 interface Service {
   id: number;
   title: string;
@@ -33,6 +40,7 @@ interface Service {
   componentCardHeader: string;
   serviceData: ServiceData[];
   services: ServiceServices[];
+  servicePhases: ServicePhases[];
 }
 
 const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
@@ -77,11 +85,12 @@ const ServicesDetails = async ({ params }: { params: { serviceId: string } }) =>
         </span>
       </PageIntro>
       <Cards
-        heading={service.componentCardHeader}
+        heading="We provide a wide range of tailored solutions to meet your business needs."
         data={service.services}
-        showCards={false}
+        showCards
         animationType="animationDelayHome"
       />
+      <ParallaxScrollAnimation data={service.servicePhases} />
       <GetInTouch />
     </>
   );

@@ -47,3 +47,13 @@ h5 {
 h6 {
   font-size: var(--fs-200);
 }
+
+@media (max-width: 470px) {
+  h4 {
+    font-size: var(--fs-300);
+  }
+
+  h6 {
+    font-size: var(--fs-100);
+  }
+}

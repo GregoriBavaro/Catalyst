@@ -2,7 +2,7 @@ import code from "../../public/images/icons/code.png";
 import web from "../../public/images/icons/web.png";
 import responsive from "../../public/images/icons/responsive.png";
 
-export const socialMedia = {
+export const socialMediaService = {
   description:
     "Enhance your online presence with targeted, creative social media strategies that build a loyal following and amplify your brand’s voice.",
   componentSubHeader: "Experts in social media",
@@ -14,72 +14,116 @@ export const socialMedia = {
     {
       id: 0,
       icon: code,
-      title: "Custom development.",
-      description: "Using next generation frameworks like Next.js",
+      title: "Strategy Development",
+      description:
+        "Creating customized social media strategies to align with your business objectives.",
     },
     {
       id: 1,
       icon: web,
-      title: "SEO",
-      description: "SEO-friendly websites with server-side rendering and static site generation.",
+      title: "Content Creation",
+      description: "Crafting engaging and relevant content to captivate your audience.",
     },
     {
       id: 2,
       icon: responsive,
-      title: "Responsive design",
+      title: "Analytics and Reporting",
       description:
-        "Responsive design makes websites work well on any device by adjusting layouts and images automatically.",
+        "Providing detailed analytics and insights to measure performance and optimize strategies.",
     },
   ],
   services: [
     {
       id: 0,
-      title: "Custom development",
+      title: "Strategy Development",
       animationDelay: 0.1,
       description:
-        "At Catalyst we provide custom development services, creating websites and web applications from the ground up using HTML, CSS, JavaScript, React, and frameworks like Next.js. This method offers unmatched flexibility and control, enabling us to develop highly tailored solutions that perfectly align with the unique needs of our clients or projects.",
+        "At Catalyst, we develop comprehensive social media strategies tailored to your brand's goals and audience. Our approach involves thorough research, competitive analysis, and a deep understanding of your target market to create a plan that drives engagement and growth.",
     },
     {
       id: 1,
-      title: "Responsive design",
+      title: "Content Creation",
       animationDelay: 0.2,
       description:
-        "We specialize in crafting responsive designs using Next.js and SCSS, ensuring that your websites and web applications adapt seamlessly to various screen sizes and devices. Leveraging Next.js's dynamic capabilities and SCSS's powerful styling features, we create visually stunning and highly functional designs that engage users across all platforms.",
+        "Our team specializes in creating compelling social media content that resonates with your audience. We leverage the latest trends and best practices to produce high-quality visuals, videos, and copy that capture attention and drive interaction.",
     },
     {
       id: 2,
-      title: "Landing pages",
+      title: "Community Management",
       animationDelay: 0.3,
       description:
-        "We specialize in creating custom landing pages using Next.js, designed to captivate visitors and drive conversions. Next.js offers powerful features such as server-side rendering (SSR) and static site generation (SSG), ensuring that your landing pages load quickly and perform exceptionally well across all devices.",
+        "We manage your social media communities with a focus on building relationships and fostering engagement. Our services include responding to comments, engaging with followers, and creating a positive brand presence across all social platforms.",
     },
     {
       id: 3,
-      title: "SEO",
+      title: "Paid Social Advertising",
       animationDelay: 0.1,
       description:
-        "At Catalyst we offer specialized SEO services, leveraging the power of Next.js to optimize websites and web applications for maximum search engine visibility and organic traffic growth. Next.js provides server-side rendering (SSR) and static site generation (SSG), which are crucial for improving SEO performance.",
+        "Maximize your reach with targeted social media advertising. We design and manage ad campaigns on platforms like Facebook, Instagram, and LinkedIn, ensuring your ads reach the right audience at the right time to drive conversions and ROI.",
     },
     {
       id: 4,
-      title: "UI/UX Design",
+      title: "Analytics and Reporting",
       animationDelay: 0.2,
       description:
-        "At Catalyst, we specialize in creating captivating user experiences through innovative UI/UX design. Our custom solutions are crafted to engage users and drive results, ensuring seamless interaction and maximum satisfaction. Elevate your digital presence with our tailored approach to UI/UX.",
+        "We provide in-depth analytics and reporting to track the performance of your social media efforts. Our insights help you understand what's working, what needs improvement, and how to optimize your strategy for better results.",
     },
     {
       id: 5,
-      title: "Performance Optimization",
+      title: "Influencer Collaboration",
       animationDelay: 0.3,
       description:
-        "We specialize in optimizing website performance to ensure lightning-fast load times and seamless user experiences. Our expert team implements a range of strategies, from code optimization to server configuration, to maximize speed and efficiency. Elevate your online presence with our performance optimization solutions.",
+        "Partner with influencers to amplify your brand's reach and credibility. We identify and connect with influencers who align with your brand values and can effectively promote your products or services to their audience.",
+    },
+  ],
+  servicePhases: [
+    {
+      id: 0,
+      title: "Platform Selection and Setup",
+      description:
+        "Select appropriate social media platforms based on target audience demographics and business objectives. Set up profiles and optimize them for branding.",
+    },
+    {
+      id: 1,
+      title: "Content Strategy Development",
+      description:
+        "Develop a content strategy that defines themes, goals, and types of content to be shared across social media channels.",
+    },
+    {
+      id: 2,
+      title: "Content Creation and Curation",
+      description:
+        "Create original content such as posts, images, videos, and stories. Curate relevant content from other sources to engage the audience.",
+    },
+    {
+      id: 3,
+      title: "Community Engagement",
+      description:
+        "Interact with followers, respond to comments and messages, and actively engage in conversations to build relationships and grow the community.",
+    },
+    {
+      id: 4,
+      title: "Social Media Advertising",
+      description:
+        "Plan and execute paid advertising campaigns on social media platforms to increase reach, engagement, and conversions.",
+    },
+    {
+      id: 5,
+      title: "Analytics and Performance Tracking",
+      description:
+        "Monitor key metrics such as reach, engagement, and conversion rates. Use analytics insights to refine strategies and optimize performance.",
     },
     {
       id: 6,
-      title: "Analytics and Tracking",
-      animationDelay: 0.1,
+      title: "Influencer Partnerships",
       description:
-        "At Catalyst, we specialize in implementing comprehensive analytics and tracking solutions to provide valuable insights into user behavior and website performance. From setting up Google Analytics to advanced tracking systems, we help you make data-driven decisions and drive growth. Harness the power of analytics with our tailored solutions.",
+        "Collaborate with influencers and brand advocates to leverage their reach and credibility in promoting products or services.",
+    },
+    {
+      id: 7,
+      title: "Campaign Management",
+      description:
+        "Plan and manage social media campaigns, including promotions, contests, and special events to drive engagement and brand visibility.",
     },
   ],
 };

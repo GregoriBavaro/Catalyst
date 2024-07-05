@@ -17,15 +17,13 @@
 .cardsWrapper {
   background-color: var(--dark-transparent-blue);
   border-radius: var(--border-radius);
-  padding: 5rem 6rem;
+  padding: 5rem 4rem;
 
   @include respond-to(large) {
-    padding: 5rem 4rem;
+    padding: 3rem 2rem;
   }
 
-  @include respond-to(medium) {
-    padding: 4rem;
-  }
+  
 
   @include respond-to(small) {
     padding: 1.7rem 1rem 1rem;

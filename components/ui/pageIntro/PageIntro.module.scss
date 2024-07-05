@@ -42,7 +42,7 @@
 
       @include respond-to(large) {
         flex: 0;
-        padding: 6rem 2rem 4rem;
+        padding: 3rem 0 4rem;
       }
 
       @include respond-to(small) {

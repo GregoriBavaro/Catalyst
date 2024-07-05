@@ -8,7 +8,7 @@ const InViewAnimation = ({
   animationDelay,
 }: {
   children: React.ReactNode;
-  animationDelay: number;
+  animationDelay: number | undefined;
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "200px 0px" });

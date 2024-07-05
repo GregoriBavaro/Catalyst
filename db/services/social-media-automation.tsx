@@ -82,4 +82,54 @@ export const socialMediaAutomation = {
         "At Catalyst, we specialize in implementing comprehensive analytics and tracking solutions to provide valuable insights into user behavior and website performance. From setting up Google Analytics to advanced tracking systems, we help you make data-driven decisions and drive growth. Harness the power of analytics with our tailored solutions.",
     },
   ],
+  servicePhases: [
+    {
+      id: 0,
+      title: "Platform Selection and Setup",
+      description:
+        "Select social media platforms based on target audience and business goals. Set up accounts and profiles.",
+    },
+    {
+      id: 1,
+      title: "Content Strategy Development",
+      description:
+        "Develop a content strategy outlining themes, types of content, and posting schedules tailored to each platform.",
+    },
+    {
+      id: 2,
+      title: "Content Creation and Scheduling",
+      description:
+        "Create high-quality, engaging content including posts, images, videos, and stories. Schedule content using automation tools.",
+    },
+    {
+      id: 3,
+      title: "Automation Tool Integration",
+      description:
+        "Integrate and configure social media automation tools to streamline publishing, monitoring, and engagement.",
+    },
+    {
+      id: 4,
+      title: "Community Engagement",
+      description:
+        "Engage with followers, respond to comments and messages, and foster community interactions.",
+    },
+    {
+      id: 5,
+      title: "Analytics and Performance Tracking",
+      description:
+        "Monitor key metrics such as reach, engagement, and conversion rates. Use analytics to refine strategies and optimize performance.",
+    },
+    {
+      id: 6,
+      title: "Campaign Management",
+      description:
+        "Plan and execute social media campaigns including promotions, contests, and influencer partnerships.",
+    },
+    {
+      id: 7,
+      title: "Continuous Optimization and Adaptation",
+      description:
+        "Continuously review and optimize social media strategies based on performance data, platform updates, and audience feedback.",
+    },
+  ],
 };

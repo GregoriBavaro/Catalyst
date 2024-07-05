@@ -2,7 +2,7 @@ import code from "../../public/images/icons/code.png";
 import web from "../../public/images/icons/web.png";
 import responsive from "../../public/images/icons/responsive.png";
 
-export const seo = {
+export const seoService = {
   description:
     "Boost your search engine rankings and drive organic traffic with our proven SEO strategies, including keyword optimization and technical SEO.",
 
@@ -15,72 +15,131 @@ export const seo = {
     {
       id: 0,
       icon: code,
-      title: "Custom development.",
-      description: "Using next generation frameworks like Next.js",
+      title: "On-Page SEO",
+      description:
+        "Optimizing website content and HTML source code for improved search engine rankings.",
     },
     {
       id: 1,
       icon: web,
-      title: "SEO",
-      description: "SEO-friendly websites with server-side rendering and static site generation.",
+      title: "Technical SEO",
+      description:
+        "Improving website structure, speed, and performance to enhance search engine visibility.",
     },
     {
       id: 2,
       icon: responsive,
-      title: "Responsive design",
+      title: "Link Building",
       description:
-        "Responsive design makes websites work well on any device by adjusting layouts and images automatically.",
+        "Earning high-quality backlinks from reputable websites to boost authority and improve search engine rankings.",
     },
   ],
   services: [
     {
       id: 0,
-      title: "Custom development",
+      title: "On-Page SEO",
       animationDelay: 0.1,
       description:
-        "At Catalyst we provide custom development services, creating websites and web applications from the ground up using HTML, CSS, JavaScript, React, and frameworks like Next.js. This method offers unmatched flexibility and control, enabling us to develop highly tailored solutions that perfectly align with the unique needs of our clients or projects.",
+        "Optimize your website's on-page elements to improve search engine visibility and user experience. We analyze and optimize content, meta tags, headings, and internal linking structures to ensure your pages are relevant and rank well for targeted keywords.",
     },
     {
       id: 1,
-      title: "Responsive design",
+      title: "Technical SEO",
       animationDelay: 0.2,
       description:
-        "We specialize in crafting responsive designs using Next.js and SCSS, ensuring that your websites and web applications adapt seamlessly to various screen sizes and devices. Leveraging Next.js's dynamic capabilities and SCSS's powerful styling features, we create visually stunning and highly functional designs that engage users across all platforms.",
+        "Improve your website's technical aspects to enhance search engine crawling and indexing. We optimize site speed, fix crawl errors, implement schema markup, and ensure mobile-friendliness to boost your site's visibility and rankings.",
     },
     {
       id: 2,
-      title: "Landing pages",
+      title: "Local SEO",
       animationDelay: 0.3,
       description:
-        "We specialize in creating custom landing pages using Next.js, designed to captivate visitors and drive conversions. Next.js offers powerful features such as server-side rendering (SSR) and static site generation (SSG), ensuring that your landing pages load quickly and perform exceptionally well across all devices.",
+        "Increase your visibility in local search results with our local SEO services. We optimize your Google My Business profile, create local citations, and manage reviews to attract local customers and drive foot traffic to your business.",
     },
     {
       id: 3,
-      title: "SEO",
+      title: "SEO Audits",
       animationDelay: 0.1,
       description:
-        "At Catalyst we offer specialized SEO services, leveraging the power of Next.js to optimize websites and web applications for maximum search engine visibility and organic traffic growth. Next.js provides server-side rendering (SSR) and static site generation (SSG), which are crucial for improving SEO performance.",
+        "Conduct comprehensive SEO audits to identify opportunities for improvement. We analyze website performance, keyword rankings, backlink profile, and competitor strategies to develop actionable insights and optimize your SEO strategy.",
     },
     {
       id: 4,
-      title: "UI/UX Design",
+      title: "Content Marketing",
       animationDelay: 0.2,
       description:
-        "At Catalyst, we specialize in creating captivating user experiences through innovative UI/UX design. Our custom solutions are crafted to engage users and drive results, ensuring seamless interaction and maximum satisfaction. Elevate your digital presence with our tailored approach to UI/UX.",
+        "Create valuable content that attracts and engages your target audience. Our content marketing strategies include keyword research, content creation, and promotion to drive organic traffic and improve search engine rankings.",
     },
     {
       id: 5,
-      title: "Performance Optimization",
+      title: "SEO Consulting",
       animationDelay: 0.3,
       description:
-        "We specialize in optimizing website performance to ensure lightning-fast load times and seamless user experiences. Our expert team implements a range of strategies, from code optimization to server configuration, to maximize speed and efficiency. Elevate your online presence with our performance optimization solutions.",
+        "Receive expert guidance and strategic recommendations with our SEO consulting services. We provide personalized strategies, performance analysis, and ongoing support to help you achieve your SEO goals and maximize ROI.",
     },
     {
       id: 6,
-      title: "Analytics and Tracking",
+      title: "E-commerce SEO",
       animationDelay: 0.1,
       description:
-        "At Catalyst, we specialize in implementing comprehensive analytics and tracking solutions to provide valuable insights into user behavior and website performance. From setting up Google Analytics to advanced tracking systems, we help you make data-driven decisions and drive growth. Harness the power of analytics with our tailored solutions.",
+        "Optimize your e-commerce website for search engines and drive organic traffic to your online store. We implement SEO best practices for product pages, categories, and navigation to improve visibility and increase sales.",
+    },
+    {
+      id: 7,
+      title: "SEO Reporting",
+      animationDelay: 0.2,
+      description:
+        "Track and measure the success of your SEO campaigns with comprehensive reporting. We provide detailed insights into keyword rankings, traffic trends, and conversion rates to inform strategic decisions and optimize campaign performance.",
+    },
+  ],
+  servicePhases: [
+    {
+      id: 0,
+      title: "Keyword Research and Analysis",
+      description:
+        "Conduct thorough research to identify relevant keywords and phrases for targeting and optimization.",
+    },
+    {
+      id: 1,
+      title: "On-Page Optimization",
+      description:
+        "Optimize website content, meta tags, headings, and URLs to improve relevance and visibility for targeted keywords.",
+    },
+    {
+      id: 2,
+      title: "Technical SEO Audit",
+      description:
+        "Perform an audit to optimize technical aspects such as site structure, internal linking, and mobile-friendliness.",
+    },
+    {
+      id: 3,
+      title: "Off-Page SEO and Link Building",
+      description:
+        "Build high-quality backlinks and establish authority through guest blogging, partnerships, and social media.",
+    },
+    {
+      id: 4,
+      title: "Local SEO Optimization",
+      description:
+        "Optimize for local search results with local citations, Google My Business optimization, and local content creation.",
+    },
+    {
+      id: 5,
+      title: "Content Strategy and Creation",
+      description:
+        "Develop a content strategy focused on creating valuable, relevant, and engaging content for both users and search engines.",
+    },
+    {
+      id: 6,
+      title: "Monitoring and Reporting",
+      description:
+        "Monitor SEO performance metrics, track keyword rankings, and generate reports to measure success and identify opportunities.",
+    },
+    {
+      id: 7,
+      title: "Continuous Optimization and Adaptation",
+      description:
+        "Continuously optimize SEO strategies based on analytics insights, algorithm updates, and industry trends.",
     },
   ],
 };

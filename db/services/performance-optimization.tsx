@@ -2,7 +2,7 @@ import code from "../../public/images/icons/code.png";
 import web from "../../public/images/icons/web.png";
 import responsive from "../../public/images/icons/responsive.png";
 
-export const performanceOptimization = {
+export const performanceOptimizationService = {
   description:
     "Keep your website secure and up-to-date with regular updates, backups, and performance monitoring.",
 
@@ -15,72 +15,131 @@ export const performanceOptimization = {
     {
       id: 0,
       icon: code,
-      title: "Custom development.",
-      description: "Using next generation frameworks like Next.js",
+      title: "Code Optimization",
+      description:
+        "Optimizing code structure and reducing unnecessary complexity for improved performance.",
     },
     {
       id: 1,
       icon: web,
-      title: "SEO",
-      description: "SEO-friendly websites with server-side rendering and static site generation.",
+      title: "Server Configuration",
+      description:
+        "Configuring server settings to maximize speed and reliability for your website.",
     },
     {
       id: 2,
       icon: responsive,
-      title: "Responsive design",
+      title: "Image Optimization",
       description:
-        "Responsive design makes websites work well on any device by adjusting layouts and images automatically.",
+        "Compressing and optimizing images to reduce load times without compromising visual quality.",
     },
   ],
   services: [
     {
       id: 0,
-      title: "Custom development",
+      title: "Code Optimization",
       animationDelay: 0.1,
       description:
-        "At Catalyst we provide custom development services, creating websites and web applications from the ground up using HTML, CSS, JavaScript, React, and frameworks like Next.js. This method offers unmatched flexibility and control, enabling us to develop highly tailored solutions that perfectly align with the unique needs of our clients or projects.",
+        "Enhance your website's performance with our code optimization services. We analyze and refactor code to improve efficiency, reduce load times, and enhance overall user experience. Our approach focuses on optimizing front-end and back-end code to ensure smooth functionality and faster page rendering.",
     },
     {
       id: 1,
-      title: "Responsive design",
+      title: "Server Configuration",
       animationDelay: 0.2,
       description:
-        "We specialize in crafting responsive designs using Next.js and SCSS, ensuring that your websites and web applications adapt seamlessly to various screen sizes and devices. Leveraging Next.js's dynamic capabilities and SCSS's powerful styling features, we create visually stunning and highly functional designs that engage users across all platforms.",
+        "We optimize server configurations to deliver fast and reliable performance. Our experts fine-tune server settings, implement caching mechanisms, and optimize server-side processes to minimize response times and handle traffic spikes effectively.",
     },
     {
       id: 2,
-      title: "Landing pages",
+      title: "Image Optimization",
       animationDelay: 0.3,
       description:
-        "We specialize in creating custom landing pages using Next.js, designed to captivate visitors and drive conversions. Next.js offers powerful features such as server-side rendering (SSR) and static site generation (SSG), ensuring that your landing pages load quickly and perform exceptionally well across all devices.",
+        "Improve your website's load times with our image optimization services. We compress and optimize images without compromising quality, ensuring fast page load times and a smooth user experience. Our techniques reduce file sizes while maintaining visual clarity, making your website visually appealing and performant.",
     },
     {
       id: 3,
-      title: "SEO",
+      title: "Database Optimization",
       animationDelay: 0.1,
       description:
-        "At Catalyst we offer specialized SEO services, leveraging the power of Next.js to optimize websites and web applications for maximum search engine visibility and organic traffic growth. Next.js provides server-side rendering (SSR) and static site generation (SSG), which are crucial for improving SEO performance.",
+        "Optimize database performance to enhance your website's responsiveness and efficiency. We analyze database queries, optimize indexing, and implement caching strategies to reduce query times and improve data retrieval speed. Our solutions ensure your website handles data seamlessly and delivers optimal performance.",
     },
     {
       id: 4,
-      title: "UI/UX Design",
+      title: "Front-end Performance",
       animationDelay: 0.2,
       description:
-        "At Catalyst, we specialize in creating captivating user experiences through innovative UI/UX design. Our custom solutions are crafted to engage users and drive results, ensuring seamless interaction and maximum satisfaction. Elevate your digital presence with our tailored approach to UI/UX.",
+        "Enhance front-end performance with our comprehensive optimization strategies. We optimize HTML, CSS, and JavaScript code, minify files, and leverage browser caching to reduce page load times and improve user interactions. Our solutions ensure your website delivers a fast and responsive user experience across all devices.",
     },
     {
       id: 5,
-      title: "Performance Optimization",
+      title: "Mobile Optimization",
       animationDelay: 0.3,
       description:
-        "We specialize in optimizing website performance to ensure lightning-fast load times and seamless user experiences. Our expert team implements a range of strategies, from code optimization to server configuration, to maximize speed and efficiency. Elevate your online presence with our performance optimization solutions.",
+        "Optimize your website for mobile devices to ensure optimal performance and usability. We implement responsive design principles, optimize touch interactions, and streamline content delivery for mobile users. Our mobile optimization services enhance user experience and engagement on smartphones and tablets.",
     },
     {
       id: 6,
-      title: "Analytics and Tracking",
+      title: "Content Delivery Network (CDN)",
       animationDelay: 0.1,
       description:
-        "At Catalyst, we specialize in implementing comprehensive analytics and tracking solutions to provide valuable insights into user behavior and website performance. From setting up Google Analytics to advanced tracking systems, we help you make data-driven decisions and drive growth. Harness the power of analytics with our tailored solutions.",
+        "Accelerate content delivery and improve website performance with a Content Delivery Network (CDN). We integrate and configure CDNs to cache content, reduce latency, and enhance global accessibility. Our CDN solutions ensure fast and reliable content delivery to users worldwide.",
+    },
+    {
+      id: 7,
+      title: "Performance Monitoring",
+      animationDelay: 0.2,
+      description:
+        "Monitor and optimize website performance with our performance monitoring services. We implement tools to track key metrics, identify performance bottlenecks, and make data-driven optimizations. Our continuous monitoring ensures your website maintains peak performance and user satisfaction.",
+    },
+  ],
+  servicePhases: [
+    {
+      id: 0,
+      title: "Performance Audit",
+      description:
+        "Conduct a comprehensive audit to identify performance bottlenecks and areas for improvement.",
+    },
+    {
+      id: 1,
+      title: "Code Optimization",
+      description:
+        "Optimize codebase by refactoring, reducing redundancy, and improving algorithms for efficiency.",
+    },
+    {
+      id: 2,
+      title: "Server Optimization",
+      description:
+        "Optimize server configuration, caching mechanisms, and database queries for faster response times.",
+    },
+    {
+      id: 3,
+      title: "Image and Asset Optimization",
+      description:
+        "Optimize images, videos, and other assets to reduce file sizes and improve page load times.",
+    },
+    {
+      id: 4,
+      title: "Front-end Optimization",
+      description:
+        "Improve front-end performance by minimizing render-blocking resources, leveraging browser caching, and optimizing CSS and JavaScript.",
+    },
+    {
+      id: 5,
+      title: "Testing and Benchmarking",
+      description:
+        "Perform rigorous testing to benchmark performance improvements and ensure consistency across different environments.",
+    },
+    {
+      id: 6,
+      title: "Deployment of Optimized Solutions",
+      description:
+        "Deploy optimized code, configurations, and assets to production environments with proper monitoring and fallback strategies.",
+    },
+    {
+      id: 7,
+      title: "Continuous Monitoring and Fine-tuning",
+      description:
+        "Monitor performance metrics continuously and fine-tune optimizations based on real-time data and user feedback.",
     },
   ],
 };

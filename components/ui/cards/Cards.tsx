@@ -16,6 +16,7 @@ interface CardsProps {
     title: string;
     description: string;
     path?: string;
+    animationDelay?: number;
   }[];
   heading: string;
   subHeading?: string;
@@ -69,8 +70,12 @@ const Cards = ({
         )}
         <h4>{heading}</h4>
         <CardsItemWrapper showAllCards={showAllCards} firstCardHeight={firstCardHeight}>
-          {data?.map(({ id, title, description, path }) => {
-            const animationDelay = cardsConfig[id][animationType];
+          {data?.map(({ id, title, description, path, animationDelay: animationService }) => {
+            let animationDelay = animationService;
+
+            if (!animationService) {
+              animationDelay = cardsConfig[id][animationType];
+            }
 
             return (
               <CardItem

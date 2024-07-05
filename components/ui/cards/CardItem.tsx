@@ -12,7 +12,7 @@ interface CardItemProps {
   title: string;
   description: string;
   path?: string;
-  animationDelay: number;
+  animationDelay: number | undefined;
   showAllCards: boolean;
   setCardHeight?: (height: number) => void;
 }

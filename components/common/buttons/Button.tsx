@@ -5,9 +5,16 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
   className?: string;
+  buttonWidth?: string;
 }
 
-const Button = ({ label, type = "button", disabled = false, className }: ButtonProps) => {
+const Button = ({
+  label,
+  type = "button",
+  disabled = false,
+  className,
+  buttonWidth,
+}: ButtonProps) => {
   const buttonType = type === undefined ? "button" : type;
 
   return (
@@ -17,6 +24,7 @@ const Button = ({ label, type = "button", disabled = false, className }: ButtonP
         type={buttonType}
         disabled={disabled}
         className={`${classes.button} ${className}`}
+        style={{ width: buttonWidth }}
       >
         <span className={classes.circle} aria-hidden="true">
           <span className={`${classes.icon} ${classes.arrow}`} />

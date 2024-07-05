@@ -1,3 +1,19 @@
+@mixin respond-to($media) {
+  @if $media == "large" {
+    @media (max-width: 1300px) {
+      @content;
+    }
+  } @else if $media == "medium" {
+    @media (max-width: 950px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
 .motionCardsWrapper {
   flex: 1 1 50%;
   display: flex;
@@ -28,7 +44,7 @@
       gap: 1rem;
 
       h5 {
-        font-weight: 300;
+        font-weight: 100;
       }
 
       p {
@@ -46,24 +62,29 @@
         width: 6rem;
         height: 6rem;
         object-fit: cover;
+
+        @include respond-to(medium) {
+          width: 4rem;
+          height: 4rem;
+        }
       }
     }
 
-    @media (max-width: 1300px) {
+    @include respond-to(large) {
       max-width: 50%;
       padding: 2rem;
       flex: 1;
     }
 
-    @media (max-width: 950px) {
-      padding: 3rem;
+    @include respond-to(medium) {
+      padding: 2rem;
       min-height: unset;
       max-width: unset;
       min-width: calc(100% - 4rem);
     }
   }
 
-  @media (max-width: 1300px) {
+  @include respond-to(large) {
     width: 100%;
     max-height: unset;
     flex-direction: row;
@@ -71,7 +92,7 @@
     padding: 0 0 2rem;
   }
 
-  @media (max-width: 950px) {
+  @include respond-to(medium) {
     flex-direction: column;
     padding: 0;
   }

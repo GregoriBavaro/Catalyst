@@ -2,7 +2,7 @@ import code from "../../public/images/icons/code.png";
 import web from "../../public/images/icons/web.png";
 import responsive from "../../public/images/icons/responsive.png";
 
-export const brandIdentity = {
+export const brandIdentityService = {
   description:
     "Define and communicate your brand identity with cohesive visual elements, messaging, and guidelines that resonate with your audience.",
   componentSubHeader: "Experts in creating brand identity",
@@ -14,72 +14,117 @@ export const brandIdentity = {
     {
       id: 0,
       icon: code,
-      title: "Custom development.",
-      description: "Using next generation frameworks like Next.js",
+      title: "Brand Strategy",
+      description:
+        "Developing a clear and compelling brand strategy that defines your brand’s mission, vision, and values.",
     },
     {
       id: 1,
       icon: web,
-      title: "SEO",
-      description: "SEO-friendly websites with server-side rendering and static site generation.",
+      title: "Visual Identity",
+      description:
+        "Crafting a distinctive visual identity including logo, color palette, typography, and imagery.",
     },
     {
       id: 2,
       icon: responsive,
-      title: "Responsive design",
+      title: "Brand Guidelines",
       description:
-        "Responsive design makes websites work well on any device by adjusting layouts and images automatically.",
+        "Creating comprehensive brand guidelines to ensure consistency across all marketing materials.",
     },
   ],
   services: [
     {
       id: 0,
-      title: "Custom development",
+      title: "Brand Strategy",
       animationDelay: 0.1,
       description:
-        "At Catalyst we provide custom development services, creating websites and web applications from the ground up using HTML, CSS, JavaScript, React, and frameworks like Next.js. This method offers unmatched flexibility and control, enabling us to develop highly tailored solutions that perfectly align with the unique needs of our clients or projects.",
+        "At Catalyst, we develop a clear and compelling brand strategy that serves as the foundation for all your branding efforts. Our process involves deep research and collaboration to define your brand’s mission, vision, and values, ensuring a strong and cohesive brand identity.",
     },
     {
       id: 1,
-      title: "Responsive design",
+      title: "Visual Identity",
       animationDelay: 0.2,
       description:
-        "We specialize in crafting responsive designs using Next.js and SCSS, ensuring that your websites and web applications adapt seamlessly to various screen sizes and devices. Leveraging Next.js's dynamic capabilities and SCSS's powerful styling features, we create visually stunning and highly functional designs that engage users across all platforms.",
+        "Our team specializes in crafting distinctive visual identities that capture the essence of your brand. From logo design to color palettes, typography, and imagery, we ensure every visual element aligns with your brand’s personality and message.",
     },
     {
       id: 2,
-      title: "Landing pages",
+      title: "Brand Messaging",
       animationDelay: 0.3,
       description:
-        "We specialize in creating custom landing pages using Next.js, designed to captivate visitors and drive conversions. Next.js offers powerful features such as server-side rendering (SSR) and static site generation (SSG), ensuring that your landing pages load quickly and perform exceptionally well across all devices.",
+        "We help you articulate your brand’s unique story and values through compelling messaging. Our services include developing taglines, key messages, and brand narratives that resonate with your audience and differentiate you from competitors.",
     },
     {
       id: 3,
-      title: "SEO",
+      title: "Brand Guidelines",
       animationDelay: 0.1,
       description:
-        "At Catalyst we offer specialized SEO services, leveraging the power of Next.js to optimize websites and web applications for maximum search engine visibility and organic traffic growth. Next.js provides server-side rendering (SSR) and static site generation (SSG), which are crucial for improving SEO performance.",
+        "Ensure consistency across all your marketing materials with comprehensive brand guidelines. We create detailed guidelines that cover everything from logo usage to color schemes, typography, and tone of voice, ensuring a cohesive brand experience.",
     },
     {
       id: 4,
-      title: "UI/UX Design",
+      title: "Brand Audit",
       animationDelay: 0.2,
       description:
-        "At Catalyst, we specialize in creating captivating user experiences through innovative UI/UX design. Our custom solutions are crafted to engage users and drive results, ensuring seamless interaction and maximum satisfaction. Elevate your digital presence with our tailored approach to UI/UX.",
+        "We conduct thorough brand audits to evaluate your current brand identity and identify areas for improvement. Our audits cover all aspects of your brand, including visual elements, messaging, and customer perception, providing actionable insights to enhance your brand.",
     },
     {
       id: 5,
-      title: "Performance Optimization",
+      title: "Rebranding",
       animationDelay: 0.3,
       description:
-        "We specialize in optimizing website performance to ensure lightning-fast load times and seamless user experiences. Our expert team implements a range of strategies, from code optimization to server configuration, to maximize speed and efficiency. Elevate your online presence with our performance optimization solutions.",
+        "Refresh your brand identity with our rebranding services. Whether you need a complete overhaul or a subtle update, we help you reinvent your brand to stay relevant and appealing to your target audience.",
+    },
+  ],
+  servicePhases: [
+    {
+      id: 0,
+      title: "Brand Discovery",
+      description:
+        "Understand the client's business, values, mission, target audience, and competition.",
+    },
+    {
+      id: 1,
+      title: "Market Research and Analysis",
+      description:
+        "Conduct research to analyze market trends, consumer behavior, and competitor strategies.",
+    },
+    {
+      id: 2,
+      title: "Brand Strategy Development",
+      description:
+        "Define the brand's positioning, unique selling propositions (USPs), and messaging strategy.",
+    },
+    {
+      id: 3,
+      title: "Visual Identity Design",
+      description:
+        "Create visual elements such as logos, color palettes, typography, and brand guidelines.",
+    },
+    {
+      id: 4,
+      title: "Brand Asset Creation",
+      description:
+        "Design collateral materials including business cards, letterheads, and digital assets.",
+    },
+    {
+      id: 5,
+      title: "Brand Implementation",
+      description:
+        "Apply the new brand identity across all touchpoints, ensuring consistency and brand integrity.",
     },
     {
       id: 6,
-      title: "Analytics and Tracking",
-      animationDelay: 0.1,
+      title: "Brand Launch and Promotion",
       description:
-        "At Catalyst, we specialize in implementing comprehensive analytics and tracking solutions to provide valuable insights into user behavior and website performance. From setting up Google Analytics to advanced tracking systems, we help you make data-driven decisions and drive growth. Harness the power of analytics with our tailored solutions.",
+        "Develop strategies for launching the new brand identity and promoting it to the target audience.",
+    },
+    {
+      id: 7,
+      title: "Monitoring and Evolution",
+      description:
+        "Monitor brand performance, gather feedback, and evolve strategies to strengthen brand equity.",
     },
   ],
 };

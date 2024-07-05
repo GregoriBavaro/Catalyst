@@ -1,9 +1,9 @@
-import { webDevDesign } from "./web-dev-design";
-import { performanceOptimization } from "./performance-optimization";
-import { seo } from "./seo";
-import { marketing } from "./marketing";
-import { socialMedia } from "./social-media";
-import { brandIdentity } from "./brand-identity";
+import { webDevDesignService } from "./web-dev-design";
+import { performanceOptimizationService } from "./performance-optimization";
+import { seoService } from "./seo";
+import { marketingService } from "./marketing";
+import { socialMediaService } from "./social-media";
+import { brandIdentityService } from "./brand-identity";
 import { socialMediaAutomation } from "./social-media-automation";
 
 export const SERVICES = [
@@ -11,38 +11,38 @@ export const SERVICES = [
     id: 0,
     title: "Web development & design",
     path: "web-dev-design",
-    ...webDevDesign,
+    ...webDevDesignService,
   },
   {
     id: 1,
     title: "Website maintenance",
     path: "website-maintenance",
-    ...performanceOptimization,
+    ...performanceOptimizationService,
   },
   {
     id: 2,
     title: "SEO",
     pathId: "seo",
     path: "seo",
-    ...seo,
+    ...seoService,
   },
   {
     id: 3,
     title: "Marketing",
     path: "marketing",
-    ...marketing,
+    ...marketingService,
   },
   {
     id: 4,
-    title: "Social media",
-    path: "social-media",
-    ...socialMedia,
+    title: "Social media management",
+    path: "social-media-management",
+    ...socialMediaService,
   },
   {
     id: 5,
     title: "Brand identity",
     path: "brand-identity",
-    ...brandIdentity,
+    ...brandIdentityService,
   },
   {
     id: 6,

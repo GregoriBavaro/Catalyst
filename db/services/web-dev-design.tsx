@@ -2,7 +2,7 @@ import code from "../../public/images/icons/code.png";
 import web from "../../public/images/icons/web.png";
 import responsive from "../../public/images/icons/responsive.png";
 
-export const webDevDesign = {
+export const webDevDesignService = {
   description:
     "Transform your vision into a stunning, responsive website that delivers an exceptional user experience on any device.",
 
@@ -81,6 +81,61 @@ export const webDevDesign = {
       animationDelay: 0.1,
       description:
         "At Catalyst, we specialize in implementing comprehensive analytics and tracking solutions to provide valuable insights into user behavior and website performance. From setting up Google Analytics to advanced tracking systems, we help you make data-driven decisions and drive growth. Harness the power of analytics with our tailored solutions.",
+    },
+    {
+      id: 7,
+      title: "CMS Integration",
+      animationDelay: 0.2,
+      description:
+        "Integrate flexible content management systems (CMS) into your website with ease. We leverage Next.js's capabilities to seamlessly integrate popular CMS platforms, empowering you to manage and update content effortlessly.",
+    },
+  ],
+  servicePhases: [
+    {
+      id: 0,
+      title: "Requirement Gathering and Analysis",
+      description: "Collect and analyze project requirements, user needs, and business objectives.",
+    },
+    {
+      id: 1,
+      title: "Conceptualization and Ideation",
+      description:
+        "Brainstorm ideas, define the app concept, and create initial wireframes or prototypes.",
+    },
+    {
+      id: 2,
+      title: "UI/UX Design",
+      description:
+        "Design the user interface (UI) and user experience (UX) to ensure intuitive navigation and usability.",
+    },
+    {
+      id: 3,
+      title: "Architecture and Technical Design",
+      description: "Define the app architecture, database structure, and technical specifications.",
+    },
+    {
+      id: 4,
+      title: "Development and Coding",
+      description:
+        "Write code, implement features, and integrate functionalities based on design and technical requirements.",
+    },
+    {
+      id: 5,
+      title: "Testing and Quality Assurance",
+      description:
+        "Conduct thorough testing to identify and fix bugs, ensure functionality, and achieve quality standards.",
+    },
+    {
+      id: 6,
+      title: "Deployment and Launch",
+      description:
+        "Deploy the app to production servers, configure environments, and launch it on app stores or platforms.",
+    },
+    {
+      id: 7,
+      title: "Post-Launch Support and Maintenance",
+      description:
+        "Provide ongoing support, monitor app performance, and implement updates or enhancements.",
     },
   ],
 };
