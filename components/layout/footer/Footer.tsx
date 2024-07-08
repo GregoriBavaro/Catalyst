@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useSplashScreen } from "@/store/store";
-
 import { FaRegCopyright } from "react-icons/fa6";
+import { useSplashScreen } from "../../../store/store";
 
 import Slider from "../../common/marquee/Marquee";
 import FooterList from "./FooterList";
