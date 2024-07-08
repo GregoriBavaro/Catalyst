@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion as m, useInView } from "framer-motion";
 
-const InViewAnimation = ({
+const SlideUpAnimation = ({
   children,
   animationDelay,
 }: {
@@ -23,7 +23,7 @@ const InViewAnimation = ({
       transition={{
         duration: 0.3,
         delay: animationDelay,
-        ease: "easeOut",
+        ease: [0.65, 0, 0.35, 1],
       }}
     >
       {children}
@@ -31,4 +31,4 @@ const InViewAnimation = ({
   );
 };
 
-export default InViewAnimation;
+export default SlideUpAnimation;

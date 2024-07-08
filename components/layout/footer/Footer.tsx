@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useSplashScreen } from "@/store/store";
 
 import { FaRegCopyright } from "react-icons/fa6";
 
@@ -13,6 +16,11 @@ import { SOCIAL } from "../../../db/social";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { isActive } = useSplashScreen();
+
+  if (isActive) {
+    return null;
+  }
 
   return (
     <section className={classes.footer}>

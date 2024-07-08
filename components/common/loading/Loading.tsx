@@ -17,7 +17,7 @@ const Loading = ({ styles, isLoading }: LoadingProps) => {
   const loadingAnimation = {
     initial: { opacity: 0, scale: 0 },
     animate: { opacity: isLoading ? 1 : 0, scale: isLoading ? 1 : 0 },
-    transition: { duration: 0.5 },
+    transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
   };
 
   return (

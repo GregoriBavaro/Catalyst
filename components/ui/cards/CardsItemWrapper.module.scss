@@ -5,7 +5,7 @@
   align-items: stretch;
   overflow: hidden;
 
-  @media (max-width: 950px) {
+  @media (max-width: 1110px) {
     grid-template-columns: repeat(2, 1fr);
   }
 

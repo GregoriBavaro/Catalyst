@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Button from "../../common/buttons/Button";
-import CirclesAnimation from "../../common/animations/CirclesAnimation";
+import CirclesAnimation from "../../common/animations/circlesAnimation/CirclesAnimation";
 
 import classes from "./GetInTouchBox.module.scss";
 

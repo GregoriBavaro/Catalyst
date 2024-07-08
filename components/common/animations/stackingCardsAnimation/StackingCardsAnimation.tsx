@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion as m, useTransform, useScroll } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { stackingCards } from "../../../config/animations";
+import { stackingCards } from "../../../../config/animations";
 
 import classes from "./StackingCardsAnimation.module.scss";
 

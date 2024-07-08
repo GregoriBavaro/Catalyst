@@ -50,7 +50,7 @@ const Selector = ({ data, animation }: SelectorInterface) => {
       initial: { opacity: 0, y: "-5rem" },
       animate: { opacity: 1, y: 0 },
       exit: { opacity: 0, y: "-5rem", transition: { delay: delayTime } },
-      transition: { duration: 0.3, delay: delayTime },
+      transition: { duration: 0.3, delay: delayTime, ease: [0.65, 0, 0.35, 1] },
     };
   };
 

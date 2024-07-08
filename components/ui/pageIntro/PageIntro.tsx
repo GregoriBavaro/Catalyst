@@ -22,7 +22,7 @@ const listAnimation = (delayTime: number, setOpacity: number) => {
   return {
     initial: { opacity: 0, transform: "translateY(120%)" },
     animate: { opacity: setOpacity, transform: "translateY(0%)" },
-    transition: { duration: 0.3, delay: delayTime, bounce: 0 },
+    transition: { duration: 0.3, delay: delayTime, bounce: 0, ease: [0.65, 0, 0.35, 1] },
   };
 };
 

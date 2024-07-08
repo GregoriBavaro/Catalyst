@@ -44,7 +44,7 @@ const HamburgerMenu = () => {
         opacity: { delay: 0.79 },
       },
     },
-    transition: { duration: 4 },
+    transition: { duration: 4, ease: [0.65, 0, 0.35, 1] },
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {

@@ -6,9 +6,9 @@ import PageHeader from "../../../components/layout/pageHeader/PageHeader";
 import PageIntro from "../../../components/ui/pageIntro/PageIntro";
 import Cards from "../../../components/ui/cards/Cards";
 import GetInTouch from "../../../components/ui/getInTouch/GetInTouchBox";
-import StackingCardsAnimation from "../../../components/common/animations/StackingCardsAnimation";
-import MotionCardsAnimation from "../../../components/common/animations/MotionCardsAnimation";
-import ParallaxScrollAnimation from "../../../components/common/animations/ParallaxScrollAnimation";
+import StackingCardsAnimation from "../../../components/common/animations/stackingCardsAnimation/StackingCardsAnimation";
+import MotionCardsAnimation from "../../../components/common/animations/motionCardsAnimation/MotionCardsAnimation";
+import ParallaxScrollAnimation from "../../../components/common/animations/parallaxScrollAnimation/ParallaxScrollAnimation";
 
 interface ServiceData {
   id: number;

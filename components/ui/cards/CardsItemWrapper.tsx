@@ -19,16 +19,19 @@ const CardsItemWrapper = ({ children, showAllCards, firstCardHeight }: CardsItem
   const effectiveHeight = firstCardHeight ?? 0;
   const calculateHeight = effectiveHeight * 2 + adjustHeight;
 
-  const ulAnimation = {
-    initial: false,
-    animate: { height: showAllCards ? "auto" : `${calculateHeight}px` },
-  };
-
   useEffect(() => {
     if ((size.width ?? 768) < 768) {
       setAdjustHeight(20);
+    } else {
+      setAdjustHeight(40);
     }
   }, [size]);
+
+  const ulAnimation = {
+    initial: false,
+    animate: { height: showAllCards ? "auto" : `${calculateHeight}px` },
+    transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
+  };
 
   return (
     <m.ul className={classes.cardsItemWrapper} {...ulAnimation}>

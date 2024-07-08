@@ -12,7 +12,7 @@ const AnimatedNumbers = ({ value, duration }: AnimatedNumbersProps) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCount((prevCount) => {
-        const increment = Math.ceil((value - prevCount) / 10);
+        const increment = Math.ceil((value - prevCount) / 100);
         return prevCount + increment;
       });
     }, duration / 10);

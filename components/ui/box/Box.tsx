@@ -1,5 +1,5 @@
 import ArrowButton from "../../common/buttons/ArrowButton";
-import InViewAnimation from "../../common/animations/SlideUpAnimation";
+import SlideUpAnimation from "../../common/animations/slideUpAnimation/SlideUpAnimation";
 
 import classes from "./Box.module.scss";
 
@@ -24,11 +24,11 @@ const Box = ({ heading, subHeading, data }: BoxProps) => {
         <ul>
           {data.map(({ id, title, text, animationDelay }) => (
             <li key={id}>
-              <InViewAnimation animationDelay={animationDelay}>
+              <SlideUpAnimation animationDelay={animationDelay}>
                 <span className="number">0{id + 1} /</span>
                 <h5>{title}</h5>
                 <p>{text}</p>
-              </InViewAnimation>
+              </SlideUpAnimation>
             </li>
           ))}
         </ul>

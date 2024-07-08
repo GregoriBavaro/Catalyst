@@ -55,7 +55,7 @@ const ContactFormServices = ({
       transition: {
         duration: 0.55,
         delay: animationDelay,
-        ease: "easeIn",
+        ease: [0.65, 0, 0.35, 1],
         scale: { delay: 0 },
         background: { delay: 0, duration: 0 },
       },

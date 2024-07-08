@@ -5,6 +5,7 @@ import { Roboto } from "next/font/google";
 import Navigation from "../components/layout/navigation/Navigation";
 import Footer from "../components/layout/footer/Footer";
 import Providers from "./providers";
+import SplashScreen from "../components/common/animations/splashScreenAnimation/SplashScreen";
 
 import "./styles/main.css";
 
@@ -41,6 +42,7 @@ const RootLayout = ({
         <meta name="apple-mobile-web-app-title" content="Catalyst" />
       </head>
       <body className={roboto.className}>
+        <SplashScreen />
         <Navigation />
         <main>
           <Providers>{children}</Providers>

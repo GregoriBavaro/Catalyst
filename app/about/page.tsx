@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import PageHeader from "../../components/layout/pageHeader/PageHeader";
 import GetInTouchBox from "../../components/ui/getInTouch/GetInTouchBox";
 import PageIntro from "../../components/ui/pageIntro/PageIntro";
-import MotionCards from "../../components/common/animations/MotionCardsAnimation";
+import MotionCards from "../../components/common/animations/motionCardsAnimation/MotionCardsAnimation";
 
 import { VALUES_DATA } from "../../db/values";
 

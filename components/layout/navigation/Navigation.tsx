@@ -4,6 +4,7 @@ import { motion as m } from "framer-motion";
 import useScrollPosition from "../../../hooks/use-ScrollPosition";
 import useScrollDirection from "../../../hooks/use-ScrollDirection";
 import useWindowSize from "../../../hooks/use-WindowSize";
+import { useSplashScreen } from "../../../store/store";
 
 import HamburgerMenu from "../../ui/hamburger/HamburgerMenu";
 import Logo from "../logo/Logo";
@@ -14,6 +15,11 @@ const Navigation = () => {
   const size = useWindowSize();
   const scrollPosition = useScrollPosition();
   const scrollDirection = useScrollDirection();
+  const { isActive } = useSplashScreen();
+
+  if (isActive) {
+    return null;
+  }
 
   const navigationStyles = {
     animate: {
@@ -26,7 +32,7 @@ const Navigation = () => {
           ? "linear-gradient(0deg, rgba(1,19,31,0) 0%, rgba(1,19,31,0.9156454818255427) 47%, rgba(1,19,31,1) 50%)"
           : "linear-gradient(0deg, rgba(1,19,31,0) 0%, rgba(1,19,31,0) 47%, rgba(1,19,31,0) 70%)",
     },
-    transition: { duration: 0.5 },
+    transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
   };
 
   return (

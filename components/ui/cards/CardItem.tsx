@@ -3,7 +3,7 @@ import Link from "next/link";
 import useWindowSize from "../../../hooks/use-WindowSize";
 
 import ArrowButton from "../../common/buttons/ArrowButton";
-import InViewAnimation from "../../common/animations/SlideUpAnimation";
+import SlideUpAnimation from "../../common/animations/slideUpAnimation/SlideUpAnimation";
 
 import classes from "./CardItem.module.scss";
 
@@ -34,11 +34,11 @@ const CardItem = ({
     if (ref.current && setCardHeight) {
       setCardHeight(ref.current.offsetHeight);
     }
-  }, [setCardHeight, size.width, showAllCards]);
+  }, [setCardHeight, size, showAllCards]);
 
   return (
     <li key={id} ref={ref} className={classes.cardItem}>
-      <InViewAnimation animationDelay={animationDelay}>
+      <SlideUpAnimation animationDelay={animationDelay}>
         {path ? (
           <Link href={`/services/${path}`}>
             <h6>{title}</h6>
@@ -55,7 +55,7 @@ const CardItem = ({
             <p>{description}</p>
           </div>
         )}
-      </InViewAnimation>
+      </SlideUpAnimation>
     </li>
   );
 };

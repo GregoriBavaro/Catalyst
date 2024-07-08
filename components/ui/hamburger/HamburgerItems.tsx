@@ -36,7 +36,7 @@ const listAnimation = (delayTime: number, enterDelay: number) => {
     initial: { opacity: 0, transform: "translateY(120%)" },
     animate: { opacity: 1, transform: "translateY(0%)", transition: { delay: enterDelay } },
     exit: { opacity: 0, transform: "translateY(-120%)", transition: { delay: delayTime } },
-    transition: { duration: 0.3, delay: delayTime, bounce: 0 },
+    transition: { duration: 0.3, delay: delayTime, bounce: 0, ease: [0.65, 0, 0.35, 1] },
   };
 };
 
@@ -44,21 +44,21 @@ const lineAnimation = {
   initial: { width: "0%" },
   animate: { width: "100%", transition: { delay: 0.5 } },
   exit: { width: "0%" },
-  transition: { duration: 0.3 },
+  transition: { duration: 0.3, ease: [0.65, 0, 0.35, 1] },
 };
 
 const languagesAnimation = {
   initial: { scale: 0, opacity: 0 },
   animate: { scale: 1, opacity: 1 },
   exit: { scale: 0, opacity: 0 },
-  transition: { duration: 0.3, delay: 0.3 },
+  transition: { duration: 0.3, delay: 0.3, ease: [0.65, 0, 0.35, 1] },
 };
 
 const MarqueeAnimation = {
   initial: { y: "120%" },
   animate: { y: "0%", transition: { duration: 0.1, delay: 0.6 } },
   exit: { y: "120%" },
-  transition: { duration: 0.1, delay: 0 },
+  transition: { duration: 0.1, delay: 0, ease: [0.65, 0, 0.35, 1] },
 };
 
 const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {

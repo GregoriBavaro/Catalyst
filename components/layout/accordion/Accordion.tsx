@@ -46,6 +46,9 @@ const topicStyles = {
       },
     },
   },
+  transition: {
+    ease: [0.65, 0, 0.35, 1],
+  },
 };
 
 const Accordion = ({

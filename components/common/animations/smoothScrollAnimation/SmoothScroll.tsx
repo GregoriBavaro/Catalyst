@@ -1,8 +1,8 @@
 "use client";
 
-import React, { use } from "react";
+import React from "react";
 import { ReactLenis } from "lenis/react";
-import useWindowSize from "../../../hooks/use-WindowSize";
+import useWindowSize from "../../../../hooks/use-WindowSize";
 
 const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
   const size = useWindowSize();

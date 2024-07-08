@@ -9,22 +9,22 @@ import { socialMediaAutomation } from "./social-media-automation";
 export const SERVICES = [
   {
     id: 0,
+    title: "SEO",
+    pathId: "seo",
+    path: "seo",
+    ...seoService,
+  },
+  {
+    id: 1,
     title: "Web development & design",
     path: "web-dev-design",
     ...webDevDesignService,
   },
   {
-    id: 1,
+    id: 2,
     title: "Website maintenance",
     path: "website-maintenance",
     ...performanceOptimizationService,
-  },
-  {
-    id: 2,
-    title: "SEO",
-    pathId: "seo",
-    path: "seo",
-    ...seoService,
   },
   {
     id: 3,

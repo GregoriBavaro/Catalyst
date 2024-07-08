@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion as m, useScroll, useTransform, useInView } from "framer-motion";
-import useWindowSize from "../../../hooks/use-WindowSize";
+import { motion as m, useScroll, useTransform } from "framer-motion";
+import useWindowSize from "../../../../hooks/use-WindowSize";
 
-import Button from "../buttons/Button";
+import Button from "../../buttons/Button";
 
 import classes from "./ParallaxScrollAnimation.module.scss";
 

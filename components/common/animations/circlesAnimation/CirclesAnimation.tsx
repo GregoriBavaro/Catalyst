@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion as m } from "framer-motion";
 
-import classes from "../../ui/getInTouch/GetInTouchBox.module.scss";
+import classes from "../../../ui/getInTouch/GetInTouchBox.module.scss";
 
 const CirclesAnimation = () => {
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });

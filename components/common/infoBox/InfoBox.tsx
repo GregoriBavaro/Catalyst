@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { FaPlus } from "react-icons/fa";
 import { DotButton, useDotButton } from "../../../hooks/use-EmblaCarouselDotButton";
 
-import AnimatedNumbers from "../animations/NumberAnimation";
+import AnimatedNumbers from "../animations/numberAnimation/NumberAnimation";
 
 import classes from "./InfoBox.module.scss";
 
