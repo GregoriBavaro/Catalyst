@@ -74,7 +74,7 @@ const SplashScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setActive(false);
-    }, 1400);
+    }, 1200);
     return () => clearTimeout(timer);
   }, [setActive]);
 
@@ -87,9 +87,9 @@ const SplashScreen = () => {
 
   const logoAnimation = {
     initial: { scale: 0 },
-    animate: { scale: 1.05 },
-    exit: { scale: 1.05 },
-    transition: { duration: 0.5, delay: 1, ease: [0.65, 0, 0.35, 1] },
+    animate: { scale: 1 },
+    exit: { scale: 1 },
+    transition: { duration: 0.5, delay: 0.6, ease: [0.65, 0, 0.35, 1] },
   };
 
   const circlesAnimation = (delay: number, height: number) => {
