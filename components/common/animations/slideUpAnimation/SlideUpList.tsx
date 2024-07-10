@@ -34,6 +34,7 @@ const StaggerChildrenAnimation = ({
     }
   }, [size]);
 
+
   const listVariants = {
     visible: {
       opacity: 1,

@@ -62,7 +62,7 @@ const circles = [
   {
     id: 7,
     height: 100,
-    animationDelay: 0.7,
+    animationDelay: 1.2,
     overlapOrder: 1,
     backgroundColor: "rgb(1, 19, 31)",
   },
