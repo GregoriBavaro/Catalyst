@@ -10,7 +10,6 @@ export const SERVICES = [
   {
     id: 0,
     title: "SEO",
-    pathId: "seo",
     path: "seo",
     ...seoService,
   },

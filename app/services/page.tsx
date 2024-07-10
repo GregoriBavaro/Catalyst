@@ -23,7 +23,6 @@ const Services = () => {
         heading="Find out why our clients trust us to deliver outstanding results in marketing and web development."
         data={SERVICES}
         showCards
-        animationType="animationDelayContact"
         classWrapper={classes.cardsWrapper}
       />
       <MouseAnimation />

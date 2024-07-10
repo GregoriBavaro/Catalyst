@@ -38,56 +38,48 @@ export const performanceOptimizationService = {
     {
       id: 0,
       title: "Code Optimization",
-      animationDelay: 0.1,
       description:
         "Enhance your website's performance with our code optimization services. We analyze and refactor code to improve efficiency, reduce load times, and enhance overall user experience. Our approach focuses on optimizing front-end and back-end code to ensure smooth functionality and faster page rendering.",
     },
     {
       id: 1,
       title: "Server Configuration",
-      animationDelay: 0.2,
       description:
         "We optimize server configurations to deliver fast and reliable performance. Our experts fine-tune server settings, implement caching mechanisms, and optimize server-side processes to minimize response times and handle traffic spikes effectively.",
     },
     {
       id: 2,
       title: "Image Optimization",
-      animationDelay: 0.3,
       description:
         "Improve your website's load times with our image optimization services. We compress and optimize images without compromising quality, ensuring fast page load times and a smooth user experience. Our techniques reduce file sizes while maintaining visual clarity, making your website visually appealing and performant.",
     },
     {
       id: 3,
       title: "Database Optimization",
-      animationDelay: 0.1,
       description:
         "Optimize database performance to enhance your website's responsiveness and efficiency. We analyze database queries, optimize indexing, and implement caching strategies to reduce query times and improve data retrieval speed. Our solutions ensure your website handles data seamlessly and delivers optimal performance.",
     },
     {
       id: 4,
       title: "Front-end Performance",
-      animationDelay: 0.2,
       description:
         "Enhance front-end performance with our comprehensive optimization strategies. We optimize HTML, CSS, and JavaScript code, minify files, and leverage browser caching to reduce page load times and improve user interactions. Our solutions ensure your website delivers a fast and responsive user experience across all devices.",
     },
     {
       id: 5,
       title: "Mobile Optimization",
-      animationDelay: 0.3,
       description:
         "Optimize your website for mobile devices to ensure optimal performance and usability. We implement responsive design principles, optimize touch interactions, and streamline content delivery for mobile users. Our mobile optimization services enhance user experience and engagement on smartphones and tablets.",
     },
     {
       id: 6,
       title: "Content Delivery Network (CDN)",
-      animationDelay: 0.1,
       description:
         "Accelerate content delivery and improve website performance with a Content Delivery Network (CDN). We integrate and configure CDNs to cache content, reduce latency, and enhance global accessibility. Our CDN solutions ensure fast and reliable content delivery to users worldwide.",
     },
     {
       id: 7,
       title: "Performance Monitoring",
-      animationDelay: 0.2,
       description:
         "Monitor and optimize website performance with our performance monitoring services. We implement tools to track key metrics, identify performance bottlenecks, and make data-driven optimizations. Our continuous monitoring ensures your website maintains peak performance and user satisfaction.",
     },

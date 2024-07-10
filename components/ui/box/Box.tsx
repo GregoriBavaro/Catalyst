@@ -1,5 +1,6 @@
 import ArrowButton from "../../common/buttons/ArrowButton";
-import SlideUpAnimation from "../../common/animations/slideUpAnimation/SlideUpAnimation";
+import SlideUpItems from "../../common/animations/slideUpAnimation/SlideUpItems";
+import SlideUpList from "../../common/animations/slideUpAnimation/SlideUpList";
 
 import classes from "./Box.module.scss";
 
@@ -21,17 +22,17 @@ const Box = ({ heading, subHeading, data }: BoxProps) => {
           <h4>{heading}</h4>
           <ArrowButton label="About our company" routeTo="about" />
         </div>
-        <ul>
-          {data.map(({ id, title, text, animationDelay }) => (
-            <li key={id}>
-              <SlideUpAnimation animationDelay={animationDelay}>
+        <SlideUpList showAllCards listClass={classes.boxList}>
+          {data.map(({ id, title, text }) => (
+            <SlideUpItems key={id} itemClass={classes.boxItem}>
+              <>
                 <span className="number">0{id + 1} /</span>
                 <h5>{title}</h5>
                 <p>{text}</p>
-              </SlideUpAnimation>
-            </li>
+              </>
+            </SlideUpItems>
           ))}
-        </ul>
+        </SlideUpList>
       </div>
     </section>
   );

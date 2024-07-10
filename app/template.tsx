@@ -1,12 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import React from "react";
-import { motion as m, AnimatePresence } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { useHamburgerMenu } from "../store/store";
 
 const Template = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname();
   const { isOpen } = useHamburgerMenu();
 
   const pageVariants = {
@@ -18,19 +16,9 @@ const Template = ({ children }: { children: React.ReactNode }) => {
       opacity: 1,
       y: 0,
     },
-    exit: {
-      opacity: 0,
-      y: "-5vh",
-    },
     transition: { duration: isOpen ? 0 : 0.5, ease: [0.65, 0, 0.35, 1] },
   };
-  return (
-    <AnimatePresence mode="wait">
-      <m.div key={pathname} {...pageVariants}>
-        {children}
-      </m.div>
-    </AnimatePresence>
-  );
+  return <m.div {...pageVariants}>{children}</m.div>;
 };
 
 export default Template;

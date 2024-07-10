@@ -1,7 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
 import { Field, FormikErrors } from "formik";
 import { motion as m } from "framer-motion";
-import { serviceCards } from "../../../config/animations";
+
+import SlideUpItems from "../../common/animations/slideUpAnimation/SlideUpItems";
+import SlideUpList from "../../common/animations/slideUpAnimation/SlideUpList";
 
 import classes from "./ContactFormServices.module.scss";
 
@@ -44,17 +46,15 @@ const ContactFormServices = ({
     }));
   };
 
-  const listsAnimation = (id: number, animationDelay: number) => {
+  const listsAnimation = (id: number) => {
     return {
-      initial: { scale: 1, y: "5rem", opacity: 0 },
+      initial: { scale: 1, opacity: 0 },
       animate: {
         background: checked[id] ? "rgba(255, 255, 255, 0.068)" : "rgb(8, 39, 65)",
-        y: 0,
         opacity: 1,
       },
       transition: {
         duration: 0.55,
-        delay: animationDelay,
         ease: [0.65, 0, 0.35, 1],
         scale: { delay: 0 },
         background: { delay: 0, duration: 0 },
@@ -63,25 +63,6 @@ const ContactFormServices = ({
     };
   };
 
-  const {
-    webDevDesign,
-    performanceOptimization,
-    seo,
-    marketing,
-    socialMedia,
-    brandIdentity,
-    socialMediaAutomation,
-  } = serviceCards();
-  const cardsConfig = [
-    webDevDesign,
-    performanceOptimization,
-    seo,
-    marketing,
-    socialMedia,
-    brandIdentity,
-    socialMediaAutomation,
-  ];
-
   return (
     <div className={classes.checkboxes}>
       <div>
@@ -89,15 +70,13 @@ const ContactFormServices = ({
         <p>(select one or more)</p>
       </div>
       <div className={classes.listWrapper}>
-        <ul className={classes.list}>
+        <SlideUpList showAllCards listClass={classes.listWrapper__list}>
           {SERVICES.map(({ id, title }) => {
-            const { animationDelayContact } = cardsConfig[id];
-
             return (
-              <li key={id}>
+              <SlideUpItems key={id} itemClass={classes.listWrapper__item}>
                 <m.div
-                  {...listsAnimation(id, animationDelayContact)}
-                  className={classes.lists}
+                  {...listsAnimation(id)}
+                  className={classes.listWrapper__checkbox}
                   onClick={() => {
                     handleCheckboxChange(id);
                     const updatedPreferences = checked[id]
@@ -109,10 +88,10 @@ const ContactFormServices = ({
                   <Field type="checkbox" name="preferences" value={title} checked={checked[id]} />
                   <span>{title}</span>
                 </m.div>
-              </li>
+              </SlideUpItems>
             );
           })}
-        </ul>
+        </SlideUpList>
       </div>
     </div>
   );

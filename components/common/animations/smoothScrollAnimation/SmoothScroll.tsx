@@ -12,7 +12,7 @@ const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
       root
       options={{
         lerp: 0.1,
-        duration: (size.width ?? 768) > 768 ? 1.8 : 0,
+        duration: (size.width ?? 768) > 768 ? 1.6 : 0,
         smoothWheel: true,
         syncTouch: true,
       }}

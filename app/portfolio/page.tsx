@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
 import PageHeader from "../../components/layout/pageHeader/PageHeader";
+import Grid from "../../components/ui/grid/Grid";
+import MouseAnimation from "../../components/ui/getInTouch/GetInTouchBox";
+
+import { PROJECTS } from "../../db/projects/projects";
 
 export const metadata: Metadata = {
   title: "Our Portfolio",
@@ -9,7 +13,13 @@ export const metadata: Metadata = {
 };
 
 const Portfolio = () => {
-  return <PageHeader header="Our portfolio" />;
+  return (
+    <>
+      <PageHeader header="Our portfolio" />
+      <Grid data={PROJECTS} />
+      <MouseAnimation />
+    </>
+  );
 };
 
 export default Portfolio;

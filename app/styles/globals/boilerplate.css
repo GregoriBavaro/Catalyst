@@ -40,6 +40,7 @@ main {
   padding: calc(128px + 2rem) 6rem 0;
   max-width: 1870px;
   margin: 0 auto;
+  background-color: transparent !important;
 }
 
 ul {

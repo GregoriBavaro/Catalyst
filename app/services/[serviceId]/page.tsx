@@ -20,7 +20,6 @@ interface ServiceData {
 interface ServiceServices {
   id: number;
   title: string;
-  animationDelay: number;
   description: string;
 }
 
@@ -88,7 +87,6 @@ const ServicesDetails = async ({ params }: { params: { serviceId: string } }) =>
         heading="We provide a wide range of tailored solutions to meet your business needs."
         data={service.services}
         showCards
-        animationType="animationDelayHome"
       />
       <ParallaxScrollAnimation data={service.servicePhases} />
       <GetInTouch />

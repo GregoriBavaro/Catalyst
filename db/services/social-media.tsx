@@ -36,42 +36,36 @@ export const socialMediaService = {
     {
       id: 0,
       title: "Strategy Development",
-      animationDelay: 0.1,
       description:
         "At Catalyst, we develop comprehensive social media strategies tailored to your brand's goals and audience. Our approach involves thorough research, competitive analysis, and a deep understanding of your target market to create a plan that drives engagement and growth.",
     },
     {
       id: 1,
       title: "Content Creation",
-      animationDelay: 0.2,
       description:
         "Our team specializes in creating compelling social media content that resonates with your audience. We leverage the latest trends and best practices to produce high-quality visuals, videos, and copy that capture attention and drive interaction.",
     },
     {
       id: 2,
       title: "Community Management",
-      animationDelay: 0.3,
       description:
         "We manage your social media communities with a focus on building relationships and fostering engagement. Our services include responding to comments, engaging with followers, and creating a positive brand presence across all social platforms.",
     },
     {
       id: 3,
       title: "Paid Social Advertising",
-      animationDelay: 0.1,
       description:
         "Maximize your reach with targeted social media advertising. We design and manage ad campaigns on platforms like Facebook, Instagram, and LinkedIn, ensuring your ads reach the right audience at the right time to drive conversions and ROI.",
     },
     {
       id: 4,
       title: "Analytics and Reporting",
-      animationDelay: 0.2,
       description:
         "We provide in-depth analytics and reporting to track the performance of your social media efforts. Our insights help you understand what's working, what needs improvement, and how to optimize your strategy for better results.",
     },
     {
       id: 5,
       title: "Influencer Collaboration",
-      animationDelay: 0.3,
       description:
         "Partner with influencers to amplify your brand's reach and credibility. We identify and connect with influencers who align with your brand values and can effectively promote your products or services to their audience.",
     },

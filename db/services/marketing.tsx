@@ -37,42 +37,36 @@ export const marketingService = {
     {
       id: 0,
       title: "Strategy Development",
-      animationDelay: 0.1,
       description:
         "At Catalyst, we develop data-driven marketing strategies that align with your business goals and target audience. Our approach involves thorough market research, competitor analysis, and audience segmentation to create a plan that drives growth and engagement.",
     },
     {
       id: 1,
       title: "Content Marketing",
-      animationDelay: 0.2,
       description:
         "We specialize in creating and distributing valuable, relevant, and consistent content that attracts and engages your target audience. Our content marketing services include content strategy development, creation, distribution, and performance analysis to ensure maximum impact and ROI.",
     },
     {
       id: 2,
       title: "Social Media Marketing",
-      animationDelay: 0.3,
       description:
         "Our social media marketing services help you leverage the power of social platforms to build brand awareness, drive traffic, and increase engagement. We create targeted campaigns, manage social media accounts, and analyze performance to optimize results and achieve your marketing objectives.",
     },
     {
       id: 3,
       title: "Email Marketing",
-      animationDelay: 0.1,
       description:
         "Maximize your reach and engagement with targeted email marketing campaigns. We design, execute, and analyze email campaigns that nurture leads, promote products/services, and drive conversions. Our strategic approach ensures your emails deliver value and drive results.",
     },
     {
       id: 4,
       title: "Search Engine Optimization (SEO)",
-      animationDelay: 0.2,
       description:
         "Improve your website’s visibility and ranking in search engine results with our SEO services. We conduct comprehensive audits, optimize on-page and off-page factors, and implement SEO best practices to increase organic traffic and enhance your online presence.",
     },
     {
       id: 5,
       title: "Paid Advertising",
-      animationDelay: 0.3,
       description:
         "We manage and optimize paid advertising campaigns across various platforms, including Google Ads, Facebook Ads, and LinkedIn Ads. Our services include campaign strategy development, ad creation, targeting, monitoring, and optimization to maximize ROI and achieve your advertising goals.",
     },

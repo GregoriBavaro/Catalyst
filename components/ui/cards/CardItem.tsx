@@ -3,7 +3,7 @@ import Link from "next/link";
 import useWindowSize from "../../../hooks/use-WindowSize";
 
 import ArrowButton from "../../common/buttons/ArrowButton";
-import SlideUpAnimation from "../../common/animations/slideUpAnimation/SlideUpAnimation";
+import SlideUpItems from "../../common/animations/slideUpAnimation/SlideUpItems";
 
 import classes from "./CardItem.module.scss";
 
@@ -12,20 +12,11 @@ interface CardItemProps {
   title: string;
   description: string;
   path?: string;
-  animationDelay: number | undefined;
   showAllCards: boolean;
   setCardHeight?: (height: number) => void;
 }
 
-const CardItem = ({
-  id,
-  title,
-  description,
-  path,
-  animationDelay,
-  showAllCards,
-  setCardHeight,
-}: CardItemProps) => {
+const CardItem = ({ id, title, description, path, showAllCards, setCardHeight }: CardItemProps) => {
   const ref = useRef<HTMLLIElement | null>(null);
 
   const size = useWindowSize();
@@ -37,26 +28,24 @@ const CardItem = ({
   }, [setCardHeight, size, showAllCards]);
 
   return (
-    <li key={id} ref={ref} className={classes.cardItem}>
-      <SlideUpAnimation animationDelay={animationDelay}>
-        {path ? (
-          <Link href={`/services/${path}`}>
-            <h6>{title}</h6>
-            <p>{description}</p>
-            <ArrowButton
-              label="learn more"
-              classNameWrapper={classes.learnMore}
-              classNameIcon={classes.icon}
-            />
-          </Link>
-        ) : (
-          <div className={classes.noHrefCard}>
-            <h6>{title}</h6>
-            <p>{description}</p>
-          </div>
-        )}
-      </SlideUpAnimation>
-    </li>
+    <SlideUpItems key={id} forwardRef={ref} itemClass={classes.cardItem}>
+      {path ? (
+        <Link href={`/services/${path}`}>
+          <h6>{title}</h6>
+          <p>{description}</p>
+          <ArrowButton
+            label="learn more"
+            classNameWrapper={classes.learnMore}
+            classNameIcon={classes.icon}
+          />
+        </Link>
+      ) : (
+        <>
+          <h6>{title}</h6>
+          <p>{description}</p>
+        </>
+      )}
+    </SlideUpItems>
   );
 };
 
