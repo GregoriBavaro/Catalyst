@@ -25,11 +25,9 @@ const Box = ({ heading, subHeading, data }: BoxProps) => {
         <SlideUpList showAllCards listClass={classes.boxList}>
           {data.map(({ id, title, text }) => (
             <SlideUpItems key={id} itemClass={classes.boxItem}>
-              <>
-                <span className="number">0{id + 1} /</span>
-                <h5>{title}</h5>
-                <p>{text}</p>
-              </>
+              <span className="number">0{id + 1} /</span>
+              <h5>{title}</h5>
+              <p>{text}</p>
             </SlideUpItems>
           ))}
         </SlideUpList>
