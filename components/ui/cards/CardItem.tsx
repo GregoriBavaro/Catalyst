@@ -16,14 +16,7 @@ interface CardItemProps {
   setCardHeight?: (height: number) => void;
 }
 
-const CardItem = ({
-  id,
-  title,
-  description,
-  path,
-  showAllCards,
-  setCardHeight,
-}: CardItemProps) => {
+const CardItem = ({ id, title, description, path, showAllCards, setCardHeight }: CardItemProps) => {
   const ref = useRef<HTMLLIElement | null>(null);
 
   const size = useWindowSize();
@@ -35,11 +28,7 @@ const CardItem = ({
   }, [setCardHeight, size, showAllCards]);
 
   return (
-    <SlideUpItems
-      key={id}
-      forwardRef={ref}
-      itemClass={classes.cardItem}
-    >
+    <SlideUpItems key={id} forwardRef={ref} itemClass={classes.cardItem}>
       {path ? (
         <Link href={`/services/${path}`}>
           <h6>{title}</h6>
