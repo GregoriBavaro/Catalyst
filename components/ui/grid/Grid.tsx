@@ -23,7 +23,7 @@ const Grid = ({ data }: GridProps) => {
     <section className={classes.grid}>
       <SlideUpList listClass={classes.grid__wrapper} showAllCards>
         {data.map(({ id, path, client, projectShortDescription }) => (
-          <SlideUpItems key={id} itemClass={classes.grid__item}>
+          <SlideUpItems key={id} itemClass={classes.grid__item} id={0}>
             <Link href={`portfolio/${path}`}>
               <h5>{client}</h5>
               <p>{projectShortDescription}</p>

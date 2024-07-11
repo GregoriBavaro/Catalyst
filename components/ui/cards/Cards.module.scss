@@ -3,7 +3,11 @@
 }
 
 @mixin respond-to($media) {
-  @if $media == "small" {
+  @if $media == "medium" {
+    @media (max-width: 1110px) {
+      @content;
+    }
+  } @else if $media == "small" {
     @media (max-width: 768px) {
       @content;
     }
@@ -25,12 +29,13 @@
       gap: 2rem;
       align-items: stretch;
       overflow: hidden;
-    
-      @media (max-width: 1110px) {
+      height: 100%;
+
+      @include respond-to(medium) {
         grid-template-columns: repeat(2, 1fr);
       }
-    
-      @media (max-width: 768px) {
+
+      @include respond-to(small) {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
       }

@@ -73,7 +73,7 @@ const ContactFormServices = ({
         <SlideUpList showAllCards listClass={classes.listWrapper__list}>
           {SERVICES.map(({ id, title }) => {
             return (
-              <SlideUpItems key={id} itemClass={classes.listWrapper__item}>
+              <SlideUpItems key={id} itemClass={classes.listWrapper__item} id={0}>
                 <m.div
                   {...listsAnimation(id)}
                   className={classes.listWrapper__checkbox}

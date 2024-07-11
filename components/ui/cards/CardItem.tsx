@@ -28,7 +28,13 @@ const CardItem = ({ id, title, description, path, showAllCards, setCardHeight }:
   }, [setCardHeight, size, showAllCards]);
 
   return (
-    <SlideUpItems key={id} forwardRef={ref} itemClass={classes.cardItem}>
+    <SlideUpItems
+      key={id}
+      forwardRef={ref}
+      itemClass={classes.cardItem}
+      showAllCards={showAllCards}
+      id={id}
+    >
       {path ? (
         <Link href={`/services/${path}`}>
           <h6>{title}</h6>

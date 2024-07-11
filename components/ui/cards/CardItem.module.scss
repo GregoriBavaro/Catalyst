@@ -34,14 +34,6 @@
   cursor: pointer;
   padding: 2rem;
 
-  @include respond-to(x-small) {
-    min-height: 200px;
-  }
-
-  @include respond-to(xx-small) {
-    min-height: 250px;
-  }
-
   a {
     display: flex;
     flex-direction: column;
