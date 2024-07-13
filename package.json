@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap && node scripts/generate-sitemaps.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",

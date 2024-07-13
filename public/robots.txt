@@ -7,3 +7,5 @@ Host: https://catalyst.mk
 
 # Sitemaps
 Sitemap: https://catalyst.mk/sitemap.xml
+Sitemap: https://www.catalyst.mk/sitemap-portfolio.xml
+Sitemap: https://www.catalyst.mk/sitemap-services.xml
