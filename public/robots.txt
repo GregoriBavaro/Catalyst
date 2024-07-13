@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://catalyst.mk
+
+# Sitemaps
+Sitemap: https://catalyst.mk/sitemap.xml

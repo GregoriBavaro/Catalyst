@@ -8,6 +8,7 @@ import Providers from "./providers";
 import SplashScreen from "../components/common/animations/splashScreenAnimation/SplashScreen";
 
 import "./styles/main.css";
+import logo from "../public/images/logo/catalyst-logo-two.png";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
@@ -15,6 +16,9 @@ export const metadata: Metadata = {
   title: "Catalyst",
   description:
     "Catalyst delivers innovative software development and marketing solutions tailored to your business needs. Our expert team specializes in custom software development, digital marketing strategies, and data-driven solutions to drive growth and success. Partner with us to transform your business and stay ahead in the digital landscape.",
+  openGraph: {
+    images: [{ url: logo.src, width: 800, height: 600, alt: "Catalyst Logo" }],
+  },
   icons: {
     icon: [
       { rel: "icon", url: "/favicon.ico" },
