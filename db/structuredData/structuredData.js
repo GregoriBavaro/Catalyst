@@ -8,6 +8,14 @@ export const structuredData = {
   url: "https://catalyst.mk",
   telephone: "+38970337508",
   sameAs: ["https://www.instagram.com/catalystmacedonia/"],
+  address: {
+    "@type": "Blvd. Partizanski Odredi 165, SKopje 1000",
+    streetAddress: "Blvd. Partizanski Odredi 165, SKopje 1000",
+    addressLocality: "Skopje",
+    addressRegion: "Gjorce Petrov",
+    postalCode: "1000",
+    addressCountry: "Macedonia",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+38970337508",
