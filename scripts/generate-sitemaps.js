@@ -3,7 +3,6 @@ const path = require("path");
 
 const baseUrl = "https://www.catalyst.mk";
 
-// Example dynamic data (replace with actual data fetching logic)
 const services = [
   "web-dev-design",
   "marketing",

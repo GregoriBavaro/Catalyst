@@ -1,15 +1,11 @@
-# Reference: https://www.robotstxt.org/robotstxt.html
-
-# General directives for all User-agents
+# *
 User-agent: *
 Allow: /
 
-# Specify the host
-Host: https://catalyst.mk
+# Host
+Host: https://www.catalyst.mk
 
-# Specify the sitemaps
-Sitemap: https://catalyst.mk/sitemap.xml
+# Sitemaps
+Sitemap: https://www.catalyst.mk/sitemap.xml
 Sitemap: https://www.catalyst.mk/sitemap-portfolio.xml
 Sitemap: https://www.catalyst.mk/sitemap-services.xml
-
-
