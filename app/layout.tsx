@@ -7,6 +7,8 @@ import Footer from "../components/layout/footer/Footer";
 import Providers from "./providers";
 import SplashScreen from "../components/common/animations/splashScreenAnimation/SplashScreen";
 
+import { structuredData } from "../db/structuredData/structuredData";
+
 import "./styles/main.css";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -43,6 +45,10 @@ const RootLayout = ({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="Catalyst" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body className={roboto.className}>
         <SplashScreen />
