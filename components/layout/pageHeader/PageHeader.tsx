@@ -15,7 +15,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ header }: PageHeaderProps) => {
   const path = usePathname();
-  const [arrOfPaths, setArrOfPaths] = useState<string[]>(path.split("/").filter(Boolean));
+  const [arrOfPaths, setArrOfPaths] = useState<string[] | undefined>();
 
   useEffect(() => {
     const newArr = path.split("/").filter(Boolean);
@@ -31,7 +31,7 @@ const PageHeader = ({ header }: PageHeaderProps) => {
             <span>Home</span>
           </Link>
         </li>
-        {arrOfPaths.map((str) => (
+        {arrOfPaths?.map((str) => (
           <li key={str}>
             <Link href={`/${str}`}>
               <IoIosArrowForward />
