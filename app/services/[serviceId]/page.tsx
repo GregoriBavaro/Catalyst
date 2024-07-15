@@ -1,7 +1,7 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { StaticImageData } from "next/image";
 import { SERVICES } from "../../../db/services/services";
-
 import PageHeader from "../../../components/layout/pageHeader/PageHeader";
 import PageIntro from "../../../components/ui/pageIntro/PageIntro";
 import Cards from "../../../components/ui/cards/Cards";
@@ -42,27 +42,25 @@ interface Service {
   servicePhases: ServicePhases[];
 }
 
-const fetchServiceData = async (serviceId: string): Promise<Service | null> => {
+const fetchServiceData = (serviceId: string): Service | null => {
   const service = SERVICES.find((s) => s.path === serviceId);
-
-  if (!service) {
-    return null;
-  }
-
-  return service;
+  return service || null;
 };
 
-export const generateMetadata = async ({ params }: { params: { serviceId: string } }) => {
-  const service = await fetchServiceData(params.serviceId);
-
+export async function generateMetadata({
+  params,
+}: {
+  params: { serviceId: string };
+}): Promise<Metadata> {
+  const service = fetchServiceData(params.serviceId);
   return {
-    title: service?.title,
-    description: service?.componentDescription,
+    title: service?.title || "Service",
+    description: service?.componentDescription || "",
   };
-};
+}
 
-const ServicesDetails = async ({ params }: { params: { serviceId: string } }) => {
-  const service = await fetchServiceData(params.serviceId);
+const ServicesDetails = ({ params }: { params: { serviceId: string } }) => {
+  const service = fetchServiceData(params.serviceId);
 
   if (!service) {
     notFound();
