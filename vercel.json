@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/services/:serviceId",
+      "destination": "/services/[serviceId]/page"
+    },
+    {
+      "source": "/portfolio/:projectId",
+      "destination": "/portfolio/[projectId]/page"
+    }
+  ]
+}
