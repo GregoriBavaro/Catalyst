@@ -78,4 +78,14 @@ input:-webkit-autofill:active {
     touch-action: unset;
     -webkit-overflow-scrolling: unset !important;
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :has(:target) {
+      scroll-behavior: smooth;
+    }
+  }
 }
