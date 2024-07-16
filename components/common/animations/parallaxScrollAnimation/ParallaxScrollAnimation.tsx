@@ -27,7 +27,7 @@ const ParallaxScrollAnimation = ({ data }: ServicePhases) => {
   const isInView = useInView(leftRef, { amount: "all", margin: "0px 0px -40px 0px" });
 
   useEffect(() => {
-    setParallaxScroll(!isInView);
+    setParallaxScroll(isInView);
   }, [isInView, setParallaxScroll]);
 
   return (

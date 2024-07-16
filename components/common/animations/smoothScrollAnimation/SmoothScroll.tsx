@@ -9,31 +9,31 @@ import useWindowSize from "../../../../hooks/use-WindowSize";
 const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
   const size = useWindowSize();
   const { isParallaxScroll } = useParallaxScroll();
-  const [scrollSpeed, setScrollSpeed] = useState<number>(1.5);
+  const [scrollSpeed, setScrollSpeed] = useState<number | undefined>();
 
-  const isWideScreen = (size.width ?? 1024) > 1024;
+  const isDesktop = (size.width ?? 1024) > 1024;
 
   useEffect(() => {
-    if (isWideScreen) {
+    if (isDesktop) {
       setScrollSpeed(1.3);
-      if (!isParallaxScroll) {
+      if (isParallaxScroll) {
         setScrollSpeed(6);
+      } else {
+        setScrollSpeed(1.3);
       }
     } else {
       setScrollSpeed(0);
     }
-  }, [size.width, isParallaxScroll, isWideScreen]);
-
-  console.log(scrollSpeed);
+  }, [size.width, isParallaxScroll, isDesktop]);
 
   return (
     <ReactLenis
       root
       options={{
-        lerp: isWideScreen ? 0.1 : 0,
+        lerp: isDesktop ? 0.1 : 0,
         duration: scrollSpeed,
-        smoothWheel: isWideScreen,
-        syncTouch: isWideScreen,
+        smoothWheel: isDesktop,
+        syncTouch: isDesktop,
       }}
     >
       {children}
