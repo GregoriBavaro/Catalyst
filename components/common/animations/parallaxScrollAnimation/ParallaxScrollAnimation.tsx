@@ -1,7 +1,10 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import Link from "next/link";
-import { motion as m, useScroll, useTransform } from "framer-motion";
+import { motion as m, useScroll, useTransform, useInView } from "framer-motion";
+import { useParallaxScroll } from "../../../../store/store";
+
 import useWindowSize from "../../../../hooks/use-WindowSize";
 
 import Button from "../../buttons/Button";
@@ -15,13 +18,21 @@ interface ServicePhases {
 const ParallaxScrollAnimation = ({ data }: ServicePhases) => {
   const size = useWindowSize();
   const { scrollY } = useScroll();
+  const leftRef = useRef<HTMLDivElement>(null);
+  const { setParallaxScroll } = useParallaxScroll();
 
   const marginTop = (size.width ?? 950) < 950 ? 0 : 48;
   const y = useTransform(scrollY, [0, 500], [0, marginTop]);
 
+  const isInView = useInView(leftRef, { amount: "all", margin: "0px 0px -40px 0px" });
+
+  useEffect(() => {
+    setParallaxScroll(!isInView);
+  }, [isInView, setParallaxScroll]);
+
   return (
     <section className={classes.parallaxScrollAnimation}>
-      <m.div className={classes.parallaxScrollAnimation__left} style={{ y }}>
+      <m.div className={classes.parallaxScrollAnimation__left} ref={leftRef} style={{ y }}>
         <div className="subHeadingWrapper">
           <span className="subHeadingSquare" />
           <h6>Project Phases Overview</h6>

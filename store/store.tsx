@@ -19,3 +19,13 @@ export const useSplashScreen = create<SplashScreen>((set) => ({
   isActive: true,
   setActive: (isActive: boolean) => set({ isActive }),
 }));
+
+interface ParallaxScroll {
+  isParallaxScroll: boolean;
+  setParallaxScroll: (isStepsInView: boolean) => void;
+}
+
+export const useParallaxScroll = create<ParallaxScroll>((set) => ({
+  isParallaxScroll: false,
+  setParallaxScroll: (isParallaxScroll: boolean) => set({ isParallaxScroll }),
+}));
