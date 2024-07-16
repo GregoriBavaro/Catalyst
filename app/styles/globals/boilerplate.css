@@ -78,7 +78,9 @@ input:-webkit-autofill:active {
     touch-action: unset;
     -webkit-overflow-scrolling: unset !important;
   }
+}
 
+@media (max-width: 1024px) {
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
