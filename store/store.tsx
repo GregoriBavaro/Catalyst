@@ -5,15 +5,15 @@ interface HamburgerMenu {
   setOpen: (isOpen: boolean) => void;
 }
 
-interface SplashScreen {
-  isActive: boolean;
-  setActive: (isOpen: boolean) => void;
-}
-
 export const useHamburgerMenu = create<HamburgerMenu>((set) => ({
   isOpen: false,
   setOpen: (isOpen: boolean) => set({ isOpen }),
 }));
+
+interface SplashScreen {
+  isActive: boolean;
+  setActive: (isOpen: boolean) => void;
+}
 
 export const useSplashScreen = create<SplashScreen>((set) => ({
   isActive: true,

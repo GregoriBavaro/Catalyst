@@ -52,6 +52,11 @@ a {
   color: inherit;
 }
 
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
