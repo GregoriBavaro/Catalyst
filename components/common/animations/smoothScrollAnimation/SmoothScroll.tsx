@@ -15,11 +15,16 @@ const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     if (isWideScreen) {
-      setScrollSpeed(isParallaxScroll ? 1.2 : 6);
+      setScrollSpeed(1.3);
+      if (!isParallaxScroll) {
+        setScrollSpeed(6);
+      }
     } else {
       setScrollSpeed(0);
     }
   }, [size.width, isParallaxScroll, isWideScreen]);
+
+  console.log(scrollSpeed);
 
   return (
     <ReactLenis
