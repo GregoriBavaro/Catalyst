@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -15,12 +14,11 @@ interface PageHeaderProps {
 
 const PageHeader = ({ header }: PageHeaderProps) => {
   const path = usePathname();
-  const [arrOfPaths, setArrOfPaths] = useState<string[] | undefined>();
+  const arrOfPaths = path.split("/").filter(Boolean);
 
-  useEffect(() => {
-    const newArr = path.split("/").filter(Boolean);
-    setArrOfPaths(newArr);
-  }, [path]);
+  const buildPath = (index: number) => {
+    return `/${arrOfPaths.slice(0, index + 1).join("/")}`;
+  };
 
   return (
     <div className={classes.pageHeader}>
@@ -31,9 +29,9 @@ const PageHeader = ({ header }: PageHeaderProps) => {
             <span>Home</span>
           </Link>
         </li>
-        {arrOfPaths?.map((str) => (
+        {arrOfPaths?.map((str, index) => (
           <li key={str}>
-            <Link href={`/${str}`}>
+            <Link href={buildPath(index)}>
               <IoIosArrowForward />
               <span>{str}</span>
             </Link>
