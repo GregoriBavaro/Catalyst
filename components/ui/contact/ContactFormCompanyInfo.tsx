@@ -7,7 +7,7 @@ const ContactFormCompanyInfo = () => {
   return (
     <div className={classes.companyInfo}>
       <div className={classes.contactInfoItems}>
-        <h5>Contact information</h5>
+        <h1>Contact information</h1>
         <p>
           We&apos;re here to help! Contact us with any questions about our marketing and web
           development services. Our team is ready to assist you.

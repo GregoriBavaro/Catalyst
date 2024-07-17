@@ -1,6 +1,6 @@
 .accordion {
   padding: 4rem 0;
-  
+
   .accordionWrapper {
     display: flex;
     gap: 1rem;
@@ -17,6 +17,10 @@
       background-color: var(--dark-transparent-blue);
       border-radius: var(--border-radius);
       padding: 3rem 2rem;
+
+      h1 {
+        font-weight: 100;
+      }
 
       .subTextAndButton {
         display: flex;

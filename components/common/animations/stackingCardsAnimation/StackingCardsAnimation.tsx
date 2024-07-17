@@ -57,7 +57,7 @@ const StackingCardsAnimation = ({ data }: StackingCardsProps) => {
               <Image src={icon} alt={title} priority />
             </div>
             <div className={classes.stackingCardsTextWrapper}>
-              <h5>{title}</h5>
+              <h1>{title}</h1>
               <p>{serviceDescription}</p>
             </div>
           </m.li>

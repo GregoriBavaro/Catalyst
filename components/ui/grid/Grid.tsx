@@ -25,7 +25,7 @@ const Grid = ({ data }: GridProps) => {
         {data.map(({ id, path, client, projectShortDescription }) => (
           <SlideUpItems key={id} itemClass={classes.grid__item} id={0}>
             <Link href={`portfolio/${path}`}>
-              <h5>{client}</h5>
+              <h1>{client}</h1>
               <p>{projectShortDescription}</p>
               <ArrowButton
                 label="learn more"

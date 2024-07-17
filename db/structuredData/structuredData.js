@@ -9,7 +9,7 @@ export const structuredData = {
   telephone: "+38970337508",
   sameAs: ["https://www.instagram.com/catalystmacedonia/"],
   address: {
-    "@type": "Blvd. Partizanski Odredi 165, SKopje 1000",
+    "@type": "PostalAddress",
     streetAddress: "Blvd. Partizanski Odredi 165, SKopje 1000",
     addressLocality: "Skopje",
     addressRegion: "Gjorce Petrov",

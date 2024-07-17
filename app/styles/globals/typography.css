@@ -24,11 +24,13 @@ p {
 }
 
 h1 {
-  font-size: var(--fs-700);
+  /* font-size: var(--fs-700); */
+  font-size: var(--fs-400);
+  max-width: 52ch;
 }
 
 h2 {
-  font-size: var(--fs-600);
+  font-size: var(--fs-200);
 }
 
 h3 {

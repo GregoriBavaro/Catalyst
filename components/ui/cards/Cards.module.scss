@@ -23,6 +23,10 @@
     align-items: center;
     gap: 3rem;
 
+    h1 {
+      max-width: unset;
+    }
+
     .cardsItemWrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

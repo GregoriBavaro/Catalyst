@@ -66,7 +66,7 @@ const ContactFormServices = ({
   return (
     <div className={classes.checkboxes}>
       <div>
-        <h5>Service you are interested in</h5>
+        <h1>Service you are interested in</h1>
         <p>(select one or more)</p>
       </div>
       <div className={classes.listWrapper}>

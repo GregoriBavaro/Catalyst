@@ -17,16 +17,16 @@ const Box = ({ heading, subHeading, data }: BoxProps) => {
         <div className={classes.headingText}>
           <div className="subHeadingWrapper">
             <span className="subHeadingSquare" />
-            <h6>{subHeading}</h6>
+            <h2>{subHeading}</h2>
           </div>
-          <h4>{heading}</h4>
+          <h1>{heading}</h1>
           <ArrowButton label="About our company" routeTo="about" />
         </div>
         <SlideUpList showAllCards listClass={classes.boxList}>
           {data.map(({ id, title, text }) => (
             <SlideUpItems key={id} itemClass={classes.boxItem} id={0}>
               <span className="number">0{id + 1} /</span>
-              <h5>{title}</h5>
+              <h1>{title}</h1>
               <p>{text}</p>
             </SlideUpItems>
           ))}

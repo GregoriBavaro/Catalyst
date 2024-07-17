@@ -52,7 +52,7 @@ const ParallaxScrollAnimation = ({ data }: ServicePhases) => {
           {data.map(({ id, title, description }) => (
             <li key={id}>
               <span className="number">0{id + 1} /</span>
-              <h5>{title}</h5>
+              <h1>{title}</h1>
               <p>{description}</p>
             </li>
           ))}

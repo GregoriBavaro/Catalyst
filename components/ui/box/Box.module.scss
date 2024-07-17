@@ -31,6 +31,10 @@
       align-items: flex-start;
       gap: 3rem;
 
+      h1 {
+        max-width: unset;
+      }
+
       div:nth-child(1) {
         display: flex;
         gap: 0.7rem;
@@ -44,6 +48,11 @@
       gap: 2rem;
       align-items: stretch;
       overflow: hidden;
+
+      h1 {
+        font-weight: 100;
+        font-size: var(--fs-300);
+      }
 
       .boxItem {
         height: 100%;

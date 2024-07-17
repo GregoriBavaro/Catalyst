@@ -38,7 +38,7 @@ const PageHeader = ({ header }: PageHeaderProps) => {
           </li>
         ))}
       </ul>
-      <h2>{header}</h2>
+      <h1>{header}</h1>
     </div>
   );
 };

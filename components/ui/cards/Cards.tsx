@@ -34,10 +34,10 @@ const Cards = ({ data, heading, subHeading, showCards, classWrapper }: CardsProp
         {subHeading && (
           <div className="subHeadingWrapper">
             <span className="subHeadingSquare" />
-            <h6>{subHeading}</h6>
+            <h2>{subHeading}</h2>
           </div>
         )}
-        <h4>{heading}</h4>
+        <h1>{heading}</h1>
         <SlideUpList
           listClass={classes.cardsItemWrapper}
           showAllCards={showAllCards}

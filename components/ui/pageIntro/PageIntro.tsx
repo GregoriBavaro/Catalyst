@@ -41,9 +41,9 @@ const PageIntro = ({
         <div className={classes.pageIntroTextWrapper}>
           <div className="subHeadingWrapper">
             <span className="subHeadingSquare" />
-            <h6>{subHeader}</h6>
+            <h2>{subHeader}</h2>
           </div>
-          <h4>{header}</h4>
+          <h1>{header}</h1>
           <div>
             <m.p {...listAnimation(0.4, 0.5)}>{description}</m.p>
           </div>

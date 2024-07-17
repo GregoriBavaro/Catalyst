@@ -77,8 +77,9 @@
         padding: 2rem;
         transition: transform 0.5s ease;
 
-        h5 {
+        h1 {
           font-weight: 100;
+          font-size: var(--fs-300);
         }
 
         p {

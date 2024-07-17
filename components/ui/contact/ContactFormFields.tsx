@@ -6,7 +6,7 @@ import classes from "./ContactFormFields.module.scss";
 const ContactFormInfo = ({ isSubmitting }: { isSubmitting: boolean }) => {
   return (
     <div className={classes.info}>
-      <h5>Your personal information</h5>
+      <h1>Your personal information</h1>
       <div className={classes.duo}>
         <div className={classes.field}>
           <Field name="name" placeholder="Name" />

@@ -71,9 +71,9 @@ const Accordion = ({
     <section className={classes.accordion}>
       <div className={classes.accordionWrapper}>
         <div className={classes.text}>
-          <h5>{heading}</h5>
+          <h1>{heading}</h1>
           <div className={classes.subTextAndButton} style={{ display: showButtonAndSubText }}>
-            <h6>{subHeading}</h6>
+            <h2>{subHeading}</h2>
             <Link href="contact">
               <Button label={buttonLabel} />
             </Link>
@@ -83,7 +83,7 @@ const Accordion = ({
           {data.map(({ id, title, description }) => (
             <li key={id} onClick={() => handleClickedTopic(id)} role="presentation">
               <div className={classes.title}>
-                <h6>{title}</h6>
+                <h2>{title}</h2>
                 <PlusButton trigger={clickedTopic[id]} />
               </div>
               <AnimatePresence>
