@@ -8,9 +8,9 @@ import MotionCards from "../../components/common/animations/motionCardsAnimation
 import { VALUES_DATA } from "../../db/values";
 
 export const metadata: Metadata = {
-  title: "About us",
+  title: "About Us - Catalyst",
   description:
-    "With over two decades of industry leadership, we are a distinguished marketing and web development agency dedicated to propelling businesses forward. Combining strategic insight, creative excellence, and technological prowess, we specialize in crafting tailored solutions that amplify your brand's presence and drive measurable results. Whether you're seeking innovative digital marketing strategies or robust web development solutions, our experienced team is committed to delivering excellence at every step. Partner with us to unleash your brand's potential and achieve lasting success in the digital landscape.",
+    "With over two decades of industry leadership, Catalyst propels businesses forward with tailored marketing and web development solutions. Partner with us to amplify your brand and achieve lasting success in the digital landscape.",
 };
 
 const About = () => {

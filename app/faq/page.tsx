@@ -7,9 +7,9 @@ import MouseAnimation from "../../components/ui/getInTouch/GetInTouchBox";
 import { FAQ_DATA } from "../../db/faq";
 
 export const metadata: Metadata = {
-  title: "Frequently asked questions",
+  title: "Frequently asked questions - Catalyst",
   description:
-    "Explore answers to common questions about our services, policies, and more. Find detailed explanations to help you navigate through frequently asked questions and make informed decisions.",
+    "Find answers to common questions about our services and policies. Get detailed explanations to help you make informed decisions.",
 };
 
 const Faq = () => {

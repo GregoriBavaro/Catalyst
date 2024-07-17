@@ -9,9 +9,9 @@ import classes from "./Services.module.scss";
 import { SERVICES } from "../../db/services/services";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Services - Catalyst",
   description:
-    "Discover the wide range of services offered by Catalyst. From web development and design to performance optimization, SEO, marketing, social media management, brand identity creation, and social media automation, our expert team delivers top-notch solutions tailored to your needs. Explore each service in detail to see how we can help your business thrive.",
+    "Explore Catalyst's wide range of services including web development, design, performance optimization, SEO, marketing, social media management, brand identity creation, and more. Discover how our expert team delivers tailored solutions to help your business thrive.",
 };
 
 const Services = () => {

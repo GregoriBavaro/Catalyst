@@ -7,9 +7,9 @@ import MouseAnimation from "../../components/ui/getInTouch/GetInTouchBox";
 import { LEGAL_DATA } from "../../db/legal";
 
 export const metadata: Metadata = {
-  title: "Legal Notice",
+  title: "Legal Notice - Catalyst",
   description:
-    "Explore our legal notice for important information regarding terms of service, privacy policy, and other legal aspects. Our accordion-style layout makes it easy to navigate through detailed sections, ensuring transparency and clarity on how we handle your data and our terms of use.",
+    "Find important information on terms of service, privacy policy, and other legal aspects. Navigate through detailed sections with our clear and transparent accordion-style layout.",
 };
 
 const Legal = () => {
