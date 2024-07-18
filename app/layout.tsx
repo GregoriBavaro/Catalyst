@@ -55,8 +55,8 @@ const RootLayout = ({
         <Navigation />
         <main>
           <Providers>{children}</Providers>
+          <Footer />
         </main>
-        <Footer />
       </body>
     </html>
   );

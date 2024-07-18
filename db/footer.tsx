@@ -4,7 +4,7 @@ export const FOOTER_DATA = [
     title: "Services",
     links: [
       { id: 0, linksTitle: "Web development & Design", link: "/services/web-dev-design" },
-      { id: 1, linksTitle: "Social Media", link: "/services/social-media" },
+      { id: 1, linksTitle: "Social Media", link: "/services/social-media-management" },
       { id: 2, linksTitle: "marketing", link: "/services/marketing" },
       { id: 3, linksTitle: "SEO", link: "/services/seo" },
       { id: 4, linksTitle: "Brand", link: "/services/brand-identity" },

@@ -14,7 +14,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <SmoothScroll>
-      {children}
+      <div className="pageWrapper">{children}</div>
       <ProgressBar
         height="4px"
         color="var(--bright-aqua)"
