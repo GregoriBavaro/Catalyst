@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { StaticImageData } from "next/image";
 
 import { SERVICES } from "../../../db/services/services";
 
@@ -12,49 +11,14 @@ import StackingCardsAnimation from "../../../components/common/animations/stacki
 import MotionCardsAnimation from "../../../components/common/animations/motionCardsAnimation/MotionCardsAnimation";
 import ParallaxScrollAnimation from "../../../components/common/animations/parallaxScrollAnimation/ParallaxScrollAnimation";
 
-interface ServiceData {
-  id: number;
-  icon: StaticImageData;
-  title: string;
-  description: string;
-}
-
-interface ServiceServices {
-  id: number;
-  title: string;
-  description: string;
-}
-
-interface ServicePhases {
-  id: number;
-  title: string;
-  description: string;
-}
-
-interface Service {
-  id: number;
-  title: string;
-  path: string;
-  componentHeader: string;
-  componentSubHeader: string;
-  componentDescription: string;
-  componentCardHeader: string;
-  serviceData: ServiceData[];
-  services: ServiceServices[];
-  servicePhases: ServicePhases[];
-}
-
-const fetchServiceData = (serviceId: string): Service | null => {
-  const service = SERVICES.find((s) => s.path === serviceId);
-  return service || null;
-};
+import { fetchData } from "../../../utils/fetchData";
 
 export async function generateMetadata({
   params,
 }: {
   params: { serviceId: string };
 }): Promise<Metadata> {
-  const service = fetchServiceData(params.serviceId);
+  const service = fetchData(params.serviceId, SERVICES);
   return {
     title: service?.title || "Service",
     description: service?.componentDescription || "",
@@ -62,7 +26,7 @@ export async function generateMetadata({
 }
 
 const ServicesDetails = ({ params }: { params: { serviceId: string } }) => {
-  const service = fetchServiceData(params.serviceId);
+  const service = fetchData(params.serviceId, SERVICES);
 
   if (!service) {
     notFound();
