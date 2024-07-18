@@ -1,10 +1,11 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 
 import { IoIosArrowForward } from "react-icons/io";
 import { RiHomeLine } from "react-icons/ri";
+
+import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
 
 import classes from "./PageHeader.module.scss";
 
@@ -24,17 +25,17 @@ const PageHeader = ({ header }: PageHeaderProps) => {
     <div className={classes.pageHeader}>
       <ul>
         <li>
-          <Link href="/">
+          <LinkAnimation href="/">
             <RiHomeLine />
             <span>Home</span>
-          </Link>
+          </LinkAnimation>
         </li>
         {arrOfPaths?.map((str, index) => (
           <li key={str}>
-            <Link href={buildPath(index)}>
+            <LinkAnimation href={buildPath(index)}>
               <IoIosArrowForward />
               <span>{str}</span>
-            </Link>
+            </LinkAnimation>
           </li>
         ))}
       </ul>

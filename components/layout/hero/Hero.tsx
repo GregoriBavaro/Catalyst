@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import Button from "../../common/buttons/Button";
 import InfoBox from "../../common/infoBox/InfoBox";
+import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
 
 import classes from "./Hero.module.scss";
 
@@ -22,9 +22,9 @@ const Hero = () => {
             marketing solutions ensure your message resonates far and wide. Lets elevate your online
             presence together.
           </p>
-          <Link href="/contact">
+          <LinkAnimation href="/contact">
             <Button label="contact" type="button" />
-          </Link>
+          </LinkAnimation>
         </div>
         <div className={classes.pictureContainer}>
           <Image src={growth} alt="growth" priority />

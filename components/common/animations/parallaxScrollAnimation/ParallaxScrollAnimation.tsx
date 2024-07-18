@@ -1,13 +1,13 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import Link from "next/link";
 import { motion as m, useScroll, useTransform, useInView } from "framer-motion";
 import { useParallaxScroll } from "../../../../store/store";
 
 import useWindowSize from "../../../../hooks/use-WindowSize";
 
 import Button from "../../buttons/Button";
+import LinkAnimation from "../linkAnimation/linkAnimation";
 
 import classes from "./ParallaxScrollAnimation.module.scss";
 
@@ -43,9 +43,9 @@ const ParallaxScrollAnimation = ({ data }: ServicePhases) => {
           proficiency in navigating projects of varying scopes and complexities with meticulous
           attention and unwavering commitment.
         </p>
-        <Link href="/contact">
+        <LinkAnimation href="/contact">
           <Button label="Book a project" buttonWidth="15rem" />
-        </Link>
+        </LinkAnimation>
       </m.div>
       <div className={classes.parallaxScrollAnimation__right}>
         <ul>

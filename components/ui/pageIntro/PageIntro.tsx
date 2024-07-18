@@ -5,6 +5,7 @@ import { motion as m } from "framer-motion";
 import Link from "next/link";
 
 import Button from "../../common/buttons/Button";
+import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
 
 import classes from "./PageIntro.module.scss";
 
@@ -47,9 +48,9 @@ const PageIntro = ({
           <div>
             <m.p {...listAnimation(0.4, 0.5)}>{description}</m.p>
           </div>
-          <Link href="/contact">
+          <LinkAnimation href="/contact">
             <Button label={buttonLabel} />
-          </Link>
+          </LinkAnimation>
         </div>
       </div>
     </section>

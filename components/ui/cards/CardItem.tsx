@@ -1,9 +1,9 @@
 import { useRef, useEffect } from "react";
-import Link from "next/link";
 import useWindowSize from "../../../hooks/use-WindowSize";
 
 import ArrowButton from "../../common/buttons/ArrowButton";
 import SlideUpItems from "../../common/animations/slideUpAnimation/SlideUpItems";
+import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
 
 import classes from "./CardItem.module.scss";
 
@@ -36,18 +36,18 @@ const CardItem = ({ id, title, description, path, showAllCards, setCardHeight }:
       id={id}
     >
       {path ? (
-        <Link href={`/services/${path}`}>
-          <h6>{title}</h6>
+        <LinkAnimation href={`/services/${path}`}>
+          <h2>{title}</h2>
           <p>{description}</p>
           <ArrowButton
             label="learn more"
             classNameWrapper={classes.learnMore}
             classNameIcon={classes.icon}
           />
-        </Link>
+        </LinkAnimation>
       ) : (
         <>
-          <h6>{title}</h6>
+          <h2>{title}</h2>
           <p>{description}</p>
         </>
       )}

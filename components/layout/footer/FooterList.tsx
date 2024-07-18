@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { motion as m, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import PlusButton from "../../common/buttons/PlusButton";
 import useWindowSize from "../../../hooks/use-WindowSize";
+
+import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
 
 import classes from "./FooterList.module.scss";
 
@@ -77,7 +78,7 @@ const FooterList = () => {
               <m.ul {...topicStyles} className={classes.footerLinkList}>
                 {links.map(({ id: linkId, linksTitle, link }) => (
                   <li key={linkId} className={classes.footerLinkListLi}>
-                    <Link href={link}>{linksTitle}</Link>
+                    <LinkAnimation href={link}>{linksTitle}</LinkAnimation>
                   </li>
                 ))}
               </m.ul>

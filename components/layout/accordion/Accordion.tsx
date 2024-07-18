@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { motion as m, AnimatePresence } from "framer-motion";
 import Button from "../../common/buttons/Button";
 import PlusButton from "../../common/buttons/PlusButton";
+
+import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
 
 import classes from "./Accordion.module.scss";
 
@@ -74,9 +75,9 @@ const Accordion = ({
           <h1>{heading}</h1>
           <div className={classes.subTextAndButton} style={{ display: showButtonAndSubText }}>
             <h2>{subHeading}</h2>
-            <Link href="contact">
+            <LinkAnimation href="contact">
               <Button label={buttonLabel} />
-            </Link>
+            </LinkAnimation>
           </div>
         </div>
         <ul className={classes.list}>

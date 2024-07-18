@@ -32,6 +32,9 @@ main {
   max-width: 1870px;
   margin: 0 auto;
   background-color: transparent !important;
+  transition-property: opacity, background-color, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
 }
 
 ul {
@@ -50,6 +53,13 @@ input:-webkit-autofill:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: var(--sand-white);
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.link-animation {
+  opacity: 0;
+  background-color: var(--dark-blue);
+  transform: translateY(40px);
+  filter: blur(12px);
 }
 
 @media (max-width: 1024px) {
