@@ -1,98 +1,46 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion as m, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useSplashScreen } from "../../../../store/store";
+import { sleep } from "../../../../utils/sleep";
 
 import logo from "../../../../public/images/logo/catalyst-logo-two.png";
 
+import OBJECTS from "./SplashObjects";
+
 import classes from "./SplashScreen.module.scss";
 
-const circles = [
-  {
-    id: 0,
-    height: 25,
-    animationDelay: 0.02,
-    overlapOrder: 8,
-    backgroundColor: "--dark-transparent-blue",
-  },
-  {
-    id: 1,
-    height: 35,
-    animationDelay: 0.07,
-    overlapOrder: 7,
-    backgroundColor: "--dark-transparent-blue",
-  },
-  {
-    id: 2,
-    height: 45,
-    animationDelay: 0.13,
-    overlapOrder: 6,
-    backgroundColor: "--dark-transparent-blue",
-  },
-  {
-    id: 3,
-    height: 55,
-    animationDelay: 0.17,
-    overlapOrder: 5,
-    backgroundColor: "--dark-transparent-blue",
-  },
-  {
-    id: 4,
-    height: 63,
-    animationDelay: 0.23,
-    overlapOrder: 4,
-    backgroundColor: "--dark-transparent-blue",
-  },
-  {
-    id: 5,
-    height: 73,
-    animationDelay: 0.35,
-    overlapOrder: 3,
-    backgroundColor: "--dark-transparent-blue",
-  },
-  {
-    id: 6,
-    height: 85,
-    animationDelay: 0.55,
-    overlapOrder: 2,
-    backgroundColor: "--dark-transparent-blue",
-  },
-  {
-    id: 7,
-    height: 100,
-    animationDelay: 1.2,
-    overlapOrder: 1,
-    backgroundColor: "rgb(1, 19, 31)",
-  },
-];
+const opacityAnimation = {
+  initial: { opacity: 1 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { ease: [0.65, 0, 0.35, 1] },
+};
+
+const logoAnimation = {
+  initial: { scale: 0 },
+  animate: { scale: 1 },
+  exit: { scale: 1 },
+  transition: { duration: 0.5, delay: 0.6, ease: [0.65, 0, 0.35, 1] },
+};
 
 const SplashScreen = () => {
   const { isActive, setActive } = useSplashScreen();
+  const pathname = usePathname();
+
+  const handleActive = async (ms: number) => {
+    await sleep(ms);
+    setActive(false);
+  };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setActive(false);
-    }, 1200);
-    return () => clearTimeout(timer);
-  }, [setActive]);
+    handleActive(1200);
+  });
 
-  const opacityAnimation = {
-    initial: { opacity: 1 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-    transition: { ease: [0.65, 0, 0.35, 1] },
-  };
-
-  const logoAnimation = {
-    initial: { scale: 0 },
-    animate: { scale: 1 },
-    exit: { scale: 1 },
-    transition: { duration: 0.5, delay: 0.6, ease: [0.65, 0, 0.35, 1] },
-  };
-
-  const circlesAnimation = (delay: number, height: number) => {
+  const objectsAnimation = (delay: number, height: number) => {
     return {
       initial: { height: `${height}%` },
       animate: { height: 0 },
@@ -103,13 +51,13 @@ const SplashScreen = () => {
 
   return (
     <AnimatePresence>
-      {isActive && (
+      {isActive && pathname === "/" && (
         <m.ul {...opacityAnimation} className={classes.splashAnimation}>
-          {circles.map(({ id, height, animationDelay, backgroundColor, overlapOrder }) => (
+          {OBJECTS.map(({ id, height, animationDelay, backgroundColor, overlapOrder }) => (
             <m.li
               key={id}
               style={{ backgroundColor, zIndex: overlapOrder }}
-              {...circlesAnimation(animationDelay, height)}
+              {...objectsAnimation(animationDelay, height)}
               className={classes.splashAnimation__li}
             />
           ))}

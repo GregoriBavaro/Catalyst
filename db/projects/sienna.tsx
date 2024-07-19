@@ -2,7 +2,7 @@ export const siennaPastryBoutique = {
   client: "Sienna Pastry Boutique",
   clientIndustry: "Pastry",
   clientDescription:
-    "A premium boutique offering a wide range of pastries and baked goods, known for their quality and unique flavors.",
+    "A premium pastry boutique offering a wide range of pastries and baked goods, known for their quality and unique flavors.",
   projectDescription:
     "Revamped Sienna Pastry Boutique's website to enhance user experience, improve online visibility, and boost sales through strategic web development, design, SEO, and marketing efforts.",
   projectShortDescription: "Enhanced online presence and sales for Sienna Pastry Boutique.",

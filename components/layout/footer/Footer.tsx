@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { FaRegCopyright } from "react-icons/fa6";
 import { useSplashScreen } from "../../../store/store";
@@ -16,8 +17,9 @@ import { SOCIAL } from "../../../db/social";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { isActive } = useSplashScreen();
+  const pathname = usePathname();
 
-  if (isActive) {
+  if (isActive && pathname === "/") {
     return null;
   }
 

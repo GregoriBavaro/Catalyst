@@ -27,7 +27,7 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
 
   return (
     <>
-      <PageHeader header={params.projectId} />
+      <PageHeader header={project.client} />
       <h1>{project.clientDescription}</h1>
     </>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import React from "react";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import SmoothScroll from "../components/common/animations/smoothScrollAnimation/SmoothScroll";
@@ -7,8 +8,9 @@ import { useSplashScreen } from "../store/store";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   const { isActive } = useSplashScreen();
+  const pathname = usePathname();
 
-  if (isActive) {
+  if (isActive && pathname === "/") {
     return null;
   }
 
