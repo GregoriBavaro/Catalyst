@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { IoIosArrowForward } from "react-icons/io";
 import { RiHomeLine } from "react-icons/ri";
 
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./PageHeader.module.scss";
 
@@ -25,17 +25,17 @@ const PageHeader = ({ header }: PageHeaderProps) => {
     <div className={classes.pageHeader}>
       <ul>
         <li>
-          <LinkAnimation href="/">
+          <PageTransition href="/">
             <RiHomeLine />
             <span>Home</span>
-          </LinkAnimation>
+          </PageTransition>
         </li>
         {arrOfPaths?.map((str, index) => (
           <li key={str}>
-            <LinkAnimation href={buildPath(index)}>
+            <PageTransition href={buildPath(index)}>
               <IoIosArrowForward />
               <span>{str}</span>
-            </LinkAnimation>
+            </PageTransition>
           </li>
         ))}
       </ul>

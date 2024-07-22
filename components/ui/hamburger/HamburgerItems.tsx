@@ -1,12 +1,11 @@
 import React from "react";
 import { motion as m } from "framer-motion";
-import Link from "next/link";
 
 import { GrLinkUp } from "react-icons/gr";
 
 import Slider from "../../common/marquee/Marquee";
 import Selector from "../selector/Selector";
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./HamburgerItems.module.scss";
 
@@ -76,7 +75,7 @@ const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
           <ul className={classes.paths}>
             {PATHS.map(({ id, title, animationDelay, path }) => (
               <li key={id}>
-                <LinkAnimation href={path}>
+                <PageTransition href={path}>
                   <m.div
                     {...listAnimation(animationDelay, animationDelay + 0.3)}
                     onClick={() => setOpen(false)}
@@ -87,7 +86,7 @@ const HamburgerItems = ({ setOpen }: HamburgerItemsProps) => {
                     <span className={classes.title}>{title}</span>
                     <span className={`${classes.number} number`}>0{id + 1} /</span>
                   </m.div>
-                </LinkAnimation>
+                </PageTransition>
               </li>
             ))}
           </ul>

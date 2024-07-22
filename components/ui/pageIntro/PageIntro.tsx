@@ -2,10 +2,9 @@
 
 import React from "react";
 import { motion as m } from "framer-motion";
-import Link from "next/link";
 
 import Button from "../../common/buttons/Button";
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./PageIntro.module.scss";
 
@@ -48,9 +47,9 @@ const PageIntro = ({
           <div>
             <m.p {...listAnimation(0.4, 0.5)}>{description}</m.p>
           </div>
-          <LinkAnimation href="/contact">
+          <PageTransition href="/contact">
             <Button label={buttonLabel} />
-          </LinkAnimation>
+          </PageTransition>
         </div>
       </div>
     </section>

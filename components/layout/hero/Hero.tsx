@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "../../common/buttons/Button";
 import InfoBox from "../../common/infoBox/InfoBox";
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./Hero.module.scss";
 
@@ -22,9 +22,9 @@ const Hero = () => {
             marketing solutions ensure your message resonates far and wide. Lets elevate your online
             presence together.
           </p>
-          <LinkAnimation href="/contact">
+          <PageTransition href="/contact">
             <Button label="contact" type="button" />
-          </LinkAnimation>
+          </PageTransition>
         </div>
         <div className={classes.pictureContainer}>
           <Image src={growth} alt="growth" priority />

@@ -3,7 +3,7 @@ import useWindowSize from "../../../hooks/use-WindowSize";
 
 import ArrowButton from "../../common/buttons/ArrowButton";
 import SlideUpItems from "../../common/animations/slideUpAnimation/SlideUpItems";
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./CardItem.module.scss";
 
@@ -36,7 +36,7 @@ const CardItem = ({ id, title, description, path, showAllCards, setCardHeight }:
       id={id}
     >
       {path ? (
-        <LinkAnimation href={`/services/${path}`}>
+        <PageTransition href={`/services/${path}`}>
           <h2>{title}</h2>
           <p>{description}</p>
           <ArrowButton
@@ -44,7 +44,7 @@ const CardItem = ({ id, title, description, path, showAllCards, setCardHeight }:
             classNameWrapper={classes.learnMore}
             classNameIcon={classes.icon}
           />
-        </LinkAnimation>
+        </PageTransition>
       ) : (
         <>
           <h2>{title}</h2>

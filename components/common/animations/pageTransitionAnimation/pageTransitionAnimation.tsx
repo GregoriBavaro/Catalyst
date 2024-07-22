@@ -6,12 +6,12 @@ import { useRouter, usePathname } from "next/navigation";
 
 import { sleep } from "../../../../utils/sleep";
 
-interface LinkAnimationProps extends LinkProps {
+interface PageTransitionProps extends LinkProps {
   children: React.ReactNode;
   href: string;
 }
 
-const LinkAnimation = ({ children, href, ...props }: LinkAnimationProps) => {
+const PageTransition = ({ children, href, ...props }: PageTransitionProps) => {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -40,4 +40,4 @@ const LinkAnimation = ({ children, href, ...props }: LinkAnimationProps) => {
   );
 };
 
-export default LinkAnimation;
+export default PageTransition;

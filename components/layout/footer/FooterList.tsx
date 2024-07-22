@@ -5,7 +5,7 @@ import { motion as m, AnimatePresence } from "framer-motion";
 import PlusButton from "../../common/buttons/PlusButton";
 import useWindowSize from "../../../hooks/use-WindowSize";
 
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./FooterList.module.scss";
 
@@ -78,7 +78,7 @@ const FooterList = () => {
               <m.ul {...topicStyles} className={classes.footerLinkList}>
                 {links.map(({ id: linkId, linksTitle, link }) => (
                   <li key={linkId} className={classes.footerLinkListLi}>
-                    <LinkAnimation href={link}>{linksTitle}</LinkAnimation>
+                    <PageTransition href={link}>{linksTitle}</PageTransition>
                   </li>
                 ))}
               </m.ul>

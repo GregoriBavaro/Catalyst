@@ -5,7 +5,7 @@ import { motion as m, AnimatePresence } from "framer-motion";
 import Button from "../../common/buttons/Button";
 import PlusButton from "../../common/buttons/PlusButton";
 
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./Accordion.module.scss";
 
@@ -75,9 +75,9 @@ const Accordion = ({
           <h1>{heading}</h1>
           <div className={classes.subTextAndButton} style={{ display: showButtonAndSubText }}>
             <h2>{subHeading}</h2>
-            <LinkAnimation href="contact">
+            <PageTransition href="contact">
               <Button label={buttonLabel} />
-            </LinkAnimation>
+            </PageTransition>
           </div>
         </div>
         <ul className={classes.list}>

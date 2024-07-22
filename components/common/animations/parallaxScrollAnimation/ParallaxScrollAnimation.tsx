@@ -7,7 +7,7 @@ import { useParallaxScroll } from "../../../../store/store";
 import useWindowSize from "../../../../hooks/use-WindowSize";
 
 import Button from "../../buttons/Button";
-import LinkAnimation from "../linkAnimation/linkAnimation";
+import PageTransition from "../pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./ParallaxScrollAnimation.module.scss";
 
@@ -43,9 +43,9 @@ const ParallaxScrollAnimation = ({ data }: ServicePhases) => {
           proficiency in navigating projects of varying scopes and complexities with meticulous
           attention and unwavering commitment.
         </p>
-        <LinkAnimation href="/contact">
+        <PageTransition href="/contact">
           <Button label="Book a project" buttonWidth="15rem" />
-        </LinkAnimation>
+        </PageTransition>
       </m.div>
       <div className={classes.parallaxScrollAnimation__right}>
         <ul>

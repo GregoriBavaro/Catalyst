@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
-
 import ArrowButton from "../../common/buttons/ArrowButton";
 import SlideUpList from "../../common/animations/slideUpAnimation/SlideUpList";
 import SlideUpItems from "../../common/animations/slideUpAnimation/SlideUpItems";
-import LinkAnimation from "../../common/animations/linkAnimation/linkAnimation";
+import PageTransition from "../../common/animations/pageTransitionAnimation/pageTransitionAnimation";
 
 import classes from "./Grid.module.scss";
 
@@ -25,7 +23,7 @@ const Grid = ({ data }: GridProps) => {
       <SlideUpList listClass={classes.grid__wrapper} showAllCards>
         {data.map(({ id, path, client, projectShortDescription }) => (
           <SlideUpItems key={id} itemClass={classes.grid__item} id={0}>
-            <LinkAnimation href={`portfolio/${path}`}>
+            <PageTransition href={`portfolio/${path}`}>
               <h1>{client}</h1>
               <p>{projectShortDescription}</p>
               <ArrowButton
@@ -33,7 +31,7 @@ const Grid = ({ data }: GridProps) => {
                 classNameWrapper={classes.learnMore}
                 classNameIcon={classes.icon}
               />
-            </LinkAnimation>
+            </PageTransition>
           </SlideUpItems>
         ))}
       </SlideUpList>
