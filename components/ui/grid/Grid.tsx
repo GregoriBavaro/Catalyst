@@ -25,7 +25,9 @@ const Grid = ({ data }: GridProps) => {
           <SlideUpItems key={id} itemClass={classes.grid__item} id={0}>
             <PageTransition href={`portfolio/${path}`}>
               <h1>{client}</h1>
-              <p>{projectShortDescription}</p>
+              <div className={classes.itemDescription}>
+                <p>{projectShortDescription}</p>
+              </div>
               <ArrowButton
                 label="learn more"
                 classNameWrapper={classes.learnMore}

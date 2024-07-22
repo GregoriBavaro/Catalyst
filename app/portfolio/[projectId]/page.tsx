@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageHeader from "../../../components/layout/pageHeader/PageHeader";
+import ProjectDetails from "../../../components/layout/projectDetails/ProjectDetails";
+import MouseAnimation from "../../../components/ui/getInTouch/GetInTouchBox";
 
 import { fetchData } from "../../../utils/fetchData";
 
@@ -28,7 +30,8 @@ const ProjectDetail = ({ params }: { params: { projectId: string } }) => {
   return (
     <>
       <PageHeader header={project.client} />
-      <h1>{project.clientDescription}</h1>
+      <ProjectDetails data={project} />
+      <MouseAnimation />
     </>
   );
 };

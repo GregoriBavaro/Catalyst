@@ -13,6 +13,11 @@
   --fs-1000: clamp(5.27rem, calc(2.72rem + 9.95vw), 10.31rem);
 }
 
+p {
+  font-size: var(--fs-200);
+  line-height: 1.6rem;
+}
+
 h1,
 h2,
 h3,

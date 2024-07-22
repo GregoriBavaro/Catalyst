@@ -1,0 +1,97 @@
+@mixin respond-to($media) {
+  @if $media == "medium" {
+    @media (max-width: 870px) {
+      @content;
+    }
+  } @else if $media == "small" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+.projectDetails {
+  padding: 4rem 0;
+
+  @include respond-to(small) {
+    padding: 3rem 0;
+  }
+
+  &__info {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--dark-transparent-blue);
+
+    @include respond-to(medium) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    p {
+      opacity: 0.5;
+    }
+
+    h1 {
+      font-weight: 100;
+    }
+
+    &__left {
+      flex: 1 1 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      border-radius: var(--border-radius);
+      background-color: var(--dark-transparent-blue);
+
+      @include respond-to(medium) {
+        flex: 0;
+      }
+
+      p,
+      ul {
+        margin-top: 0.5rem;
+      }
+
+      div:nth-child(1) {
+        p {
+          max-width: 25rem;
+
+          @include respond-to(medium) {
+            max-width: unset;
+          }
+        }
+
+        a {
+          display: block;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    &__right {
+      flex: 1 1 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding: 3rem 0;
+
+      @include respond-to(medium) {
+        flex: 0;
+        padding: 0 0 1rem;
+      }
+
+      p {
+        margin-top: 1.5rem;
+      }
+
+      div {
+        @include respond-to(medium) {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+}
