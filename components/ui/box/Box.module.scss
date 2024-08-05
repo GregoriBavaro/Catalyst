@@ -17,13 +17,25 @@
 .box {
   padding: 4rem 0;
 
+  @include respond-to(small) {
+    padding: 3rem 0;
+  }
+
   .boxWrapper {
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    padding: 5rem 4rem;
+    padding: 5rem 4rem 4rem;
     border-radius: var(--border-radius);
     background-color: var(--dark-transparent-blue);
+
+    @include respond-to(medium) {
+      padding: 4rem;
+    }
+
+    @include respond-to(small) {
+      padding: 1.7rem 1rem 1rem;
+    }
 
     .headingText {
       display: flex;
@@ -49,6 +61,14 @@
       align-items: stretch;
       overflow: hidden;
 
+      @include respond-to(large) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      @include respond-to(small) {
+        gap: 1rem;
+      }
+
       h1 {
         font-weight: 100;
         font-size: var(--fs-300);
@@ -71,30 +91,6 @@
           margin-top: -0.5rem;
         }
       }
-
-      @include respond-to(large) {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      @include respond-to(small) {
-        gap: 1rem;
-      }
     }
-
-    @include respond-to(large) {
-      padding: 5rem 4rem;
-    }
-
-    @include respond-to(medium) {
-      padding: 4rem;
-    }
-
-    @include respond-to(small) {
-      padding: 1.7rem 1rem 1rem;
-    }
-  }
-
-  @include respond-to(small) {
-    padding: 3rem 0;
   }
 }

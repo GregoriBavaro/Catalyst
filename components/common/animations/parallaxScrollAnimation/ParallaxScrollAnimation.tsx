@@ -35,9 +35,9 @@ const ParallaxScrollAnimation = ({ data }: ServicePhases) => {
       <m.div className={classes.parallaxScrollAnimation__left} ref={leftRef} style={{ y }}>
         <div className="subHeadingWrapper">
           <span className="subHeadingSquare" />
-          <h6>Project Phases Overview</h6>
+          <h2>Project Phases Overview</h2>
         </div>
-        <h4>Exploring Our Expertise in Managing Diverse Project Scopes</h4>
+        <h1>Exploring Our Expertise in Managing Diverse Project Scopes</h1>
         <p>
           Delve into the comprehensive project phases highlighted alongside, demonstrating our
           proficiency in navigating projects of varying scopes and complexities with meticulous

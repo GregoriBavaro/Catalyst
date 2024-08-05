@@ -1,10 +1,11 @@
 import Hero from "../components/layout/hero/Hero";
 import Cards from "../components/ui/cards/Cards";
 import Box from "../components/ui/box/Box";
+import Wizard from "../components/ui/wizard/Wizard";
 import MouseAnimation from "../components/ui/getInTouch/GetInTouchBox";
 
 import { SERVICES } from "../db/services/services";
-import { WHY_US } from "../db/promos";
+import { WHY_US, EXPLORE_OUR_WORK } from "../db/promos";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         heading="Built by Marketers and Developers, We created Catalyst to elevate your brand to new heights"
         data={WHY_US}
       />
+      <Wizard data={EXPLORE_OUR_WORK} />
       <MouseAnimation />
     </>
   );

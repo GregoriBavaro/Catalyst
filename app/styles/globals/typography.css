@@ -29,9 +29,9 @@ p {
 }
 
 h1 {
-  /* font-size: var(--fs-700); */
   font-size: var(--fs-400);
   max-width: 52ch;
+  font-weight: 100;
 }
 
 h2 {

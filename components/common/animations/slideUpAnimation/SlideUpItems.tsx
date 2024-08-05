@@ -9,7 +9,7 @@ interface SlideUpProps {
   forwardRef?: any;
   itemClass: string;
   showAllCards?: boolean;
-  id: number;
+  id?: number;
 }
 
 const SlideUpItems = ({ children, itemClass, forwardRef, showAllCards, id }: SlideUpProps) => {
@@ -28,7 +28,7 @@ const SlideUpItems = ({ children, itemClass, forwardRef, showAllCards, id }: Sli
 
   const itemVariants = {
     visible: {
-      opacity: showAllCards || id < showItems ? 1 : 0,
+      opacity: showAllCards || (id ?? 1) < showItems ? 1 : 0,
       y: 0,
       transition: {
         duration: 0.5,
