@@ -5,21 +5,17 @@ const baseUrl = "https://www.catalyst.mk";
 
 const services = [
   "web-dev-design",
-  "marketing",
   "seo",
   "website-maintenance",
   "social-media-management",
-  "brand-identity",
-  "social-media-automation",
+  "marketing-strategy-and-planning",
+  "promotional-activities",
+  "events-and-promotions",
+  "sales-planning-tools",
+  "product-placement",
 ];
 
-const portfolios = [
-  "sienna-pastry-boutique",
-  "eco-travel-adventure",
-  "green-leaf-organic-farm",
-  "modern-tech-solutions",
-  "urban-fit-gym",
-];
+const portfolios = ["sienna-pastry-boutique"];
 
 const generateSitemap = (urls, filename) => {
   const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>

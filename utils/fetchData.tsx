@@ -1,5 +1,3 @@
-import { StaticImageData } from "next/image";
-
 interface Project {
   id: number;
   path: string;
@@ -18,7 +16,6 @@ interface Project {
 
 interface ServiceData {
   id: number;
-  icon: StaticImageData;
   title: string;
   description: string;
 }

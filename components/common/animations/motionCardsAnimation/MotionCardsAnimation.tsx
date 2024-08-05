@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import { motion as m, useTransform, useScroll } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
 import { motionCards } from "@/config/animations";
 
 import classes from "./MotionCardsAnimation.module.scss";
@@ -11,7 +10,6 @@ interface MotionCardsProps {
   data: {
     id: number;
     title: string;
-    icon: StaticImageData;
     description: string;
   }[];
 }
@@ -33,7 +31,7 @@ const MotionCards = ({ data }: MotionCardsProps) => {
 
   return (
     <ul ref={ref} className={classes.motionCardsWrapper}>
-      {data.map(({ id, title, description, icon }) => {
+      {data.map(({ id, title, description }) => {
         const { yStart, yEnd, scaleStart, scaleEnd } = cardsConfig[id];
         const y = GetTransform(yStart, yEnd);
         const scale = GetTransform(scaleStart, scaleEnd);
@@ -47,9 +45,6 @@ const MotionCards = ({ data }: MotionCardsProps) => {
               scale,
             }}
           >
-            <div className={classes.motionCardsIcon}>
-              <Image src={icon} alt={title} priority />
-            </div>
             <div className={classes.motionCardsTextWrapper}>
               <h1>{title}</h1>
               <p>{description}</p>

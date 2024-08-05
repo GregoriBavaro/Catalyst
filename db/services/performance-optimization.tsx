@@ -1,7 +1,3 @@
-import code from "../../public/images/icons/code.png";
-import web from "../../public/images/icons/web.png";
-import responsive from "../../public/images/icons/responsive.png";
-
 export const performanceOptimizationService = {
   description:
     "Keep your website secure and up-to-date with regular updates, backups, and performance monitoring.",
@@ -14,21 +10,18 @@ export const performanceOptimizationService = {
   serviceData: [
     {
       id: 0,
-      icon: code,
       title: "Code Optimization",
       description:
         "Optimizing code structure and reducing unnecessary complexity for improved performance.",
     },
     {
       id: 1,
-      icon: web,
       title: "Server Configuration",
       description:
         "Configuring server settings to maximize speed and reliability for your website.",
     },
     {
       id: 2,
-      icon: responsive,
       title: "Image Optimization",
       description:
         "Compressing and optimizing images to reduce load times without compromising visual quality.",

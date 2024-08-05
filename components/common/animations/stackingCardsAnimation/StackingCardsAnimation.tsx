@@ -2,7 +2,6 @@
 
 import React, { useRef } from "react";
 import { motion as m, useTransform, useScroll } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
 import { stackingCards } from "../../../../config/animations";
 
 import classes from "./StackingCardsAnimation.module.scss";
@@ -12,7 +11,6 @@ interface StackingCardsProps {
     id: number;
     title: string;
     description: string;
-    icon: StaticImageData;
   }[];
 }
 
@@ -33,7 +31,7 @@ const StackingCardsAnimation = ({ data }: StackingCardsProps) => {
 
   return (
     <ul ref={ref} className={classes.stackingCardsWrapper}>
-      {data.map(({ id, title, description: serviceDescription, icon }) => {
+      {data.map(({ id, title, description: serviceDescription }) => {
         const { xEnd, xStart, yEnd, yStart, rotateEnd, rotateStart, scaleEnd, scaleStart } =
           cardsConfig[id];
 
@@ -53,9 +51,6 @@ const StackingCardsAnimation = ({ data }: StackingCardsProps) => {
               rotate,
             }}
           >
-            <div className={classes.stackingCardsIcon}>
-              <Image src={icon} alt={title} priority />
-            </div>
             <div className={classes.stackingCardsTextWrapper}>
               <h1>{title}</h1>
               <p>{serviceDescription}</p>

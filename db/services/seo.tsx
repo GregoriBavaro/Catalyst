@@ -1,7 +1,3 @@
-import code from "../../public/images/icons/code.png";
-import web from "../../public/images/icons/web.png";
-import responsive from "../../public/images/icons/responsive.png";
-
 export const seoService = {
   description:
     "Boost your search engine rankings and drive organic traffic with our proven SEO strategies, including keyword optimization and technical SEO.",
@@ -14,21 +10,18 @@ export const seoService = {
   serviceData: [
     {
       id: 0,
-      icon: code,
       title: "On-Page SEO",
       description:
         "Optimizing website content and HTML source code for improved search engine rankings.",
     },
     {
       id: 1,
-      icon: web,
       title: "Technical SEO",
       description:
         "Improving website structure, speed, and performance to enhance search engine visibility.",
     },
     {
       id: 2,
-      icon: responsive,
       title: "Link Building",
       description:
         "Earning high-quality backlinks from reputable websites to boost authority and improve search engine rankings.",

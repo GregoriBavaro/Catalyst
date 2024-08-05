@@ -5,24 +5,4 @@
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
-<url>
-    <loc>https://www.catalyst.mk/portfolio/eco-travel-adventure</loc>generate-sitemaps.js
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://www.catalyst.mk/portfolio/green-leaf-organic-farm</loc>generate-sitemaps.js
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://www.catalyst.mk/portfolio/modern-tech-solutions</loc>generate-sitemaps.js
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-<url>
-    <loc>https://www.catalyst.mk/portfolio/urban-fit-gym</loc>generate-sitemaps.js
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
 </urlset>

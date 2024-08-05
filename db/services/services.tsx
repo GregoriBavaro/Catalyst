@@ -1,17 +1,18 @@
 import { webDevDesignService } from "./web-dev-design";
 import { performanceOptimizationService } from "./performance-optimization";
 import { seoService } from "./seo";
-import { marketingService } from "./marketing";
-import { socialMediaService } from "./social-media";
-import { brandIdentityService } from "./brand-identity";
-import { socialMediaAutomation } from "./social-media-automation";
+import { marketingStrategyAndPlanningService } from "./marketing-strategy";
+import { promotionalActivitiesService } from "./promotional-activities";
+import { socialMediaManagementService } from "./social-media-management";
+import { eventsAndPromotionsService } from "./organizing-events-and-promotions";
+import { salesPlanAndToolsService } from "./sales-plan-and-tools";
+import { productPlacementService } from "./product-placement";
 
-export const SERVICES = [
-  {
+export const SERVICES = [{
     id: 0,
-    title: "SEO",
-    path: "seo",
-    ...seoService,
+    title: "Comprehensive Social Media Strategy and Management",
+    path: "social-media-management",
+    ...socialMediaManagementService,
   },
   {
     id: 1,
@@ -27,26 +28,38 @@ export const SERVICES = [
   },
   {
     id: 3,
-    title: "Marketing",
-    path: "marketing",
-    ...marketingService,
+    title: "Marketing Strategy for Advertising & Promotions",
+    path: "marketing-strategy-and-planning",
+    ...marketingStrategyAndPlanningService,
   },
   {
     id: 4,
-    title: "Social media management",
-    path: "social-media-management",
-    ...socialMediaService,
+    title: "Promotional activities",
+    path: "promotional-activities",
+    ...promotionalActivitiesService,
   },
   {
     id: 5,
-    title: "Brand identity",
-    path: "brand-identity",
-    ...brandIdentityService,
+    title: "SEO",
+    path: "seo",
+    ...seoService,
   },
   {
     id: 6,
-    title: "Social media automation",
-    path: "social-media-automation",
-    ...socialMediaAutomation,
+    title: "Organizing events and promotions",
+    path: "events-and-promotions",
+    ...eventsAndPromotionsService,
+  },
+  {
+    id: 7,
+    title: "Developing Sales Plans & Implementing Sales Tools",
+    path: "sales-planning-tools",
+    ...salesPlanAndToolsService,
+  },
+  {
+    id: 8,
+    title: "Product placement",
+    path: "product-placement",
+    ...productPlacementService,
   },
 ];

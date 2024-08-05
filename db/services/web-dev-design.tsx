@@ -1,7 +1,3 @@
-import code from "../../public/images/icons/code.png";
-import web from "../../public/images/icons/web.png";
-import responsive from "../../public/images/icons/responsive.png";
-
 export const webDevDesignService = {
   description:
     "Transform your vision into a stunning, responsive website that delivers an exceptional user experience on any device.",
@@ -14,19 +10,16 @@ export const webDevDesignService = {
   serviceData: [
     {
       id: 0,
-      icon: code,
       title: "Custom development.",
       description: "Using next generation frameworks like Next.js",
     },
     {
       id: 1,
-      icon: web,
       title: "SEO",
       description: "SEO-friendly websites with server-side rendering and static site generation.",
     },
     {
       id: 2,
-      icon: responsive,
       title: "Responsive design",
       description:
         "Responsive design makes websites work well on any device by adjusting layouts and images automatically.",
