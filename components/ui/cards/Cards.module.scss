@@ -17,6 +17,10 @@
 .cards {
   padding: 4rem 0;
 
+  @include respond-to(small) {
+    padding: 3rem 0;
+  }
+
   .cardsWrapper {
     display: flex;
     flex-direction: column;
@@ -69,7 +73,5 @@
     }
   }
 
-  @include respond-to(small) {
-    padding: 3rem 0;
-  }
+ 
 }
