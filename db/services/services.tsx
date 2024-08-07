@@ -10,7 +10,7 @@ import { productPlacementService } from "./product-placement";
 
 export const SERVICES = [{
     id: 0,
-    title: "Comprehensive Social Media Strategy and Management",
+    title: "Comprehensive social media strategy and management",
     path: "social-media-management",
     ...socialMediaManagementService,
   },
@@ -28,7 +28,7 @@ export const SERVICES = [{
   },
   {
     id: 3,
-    title: "Marketing Strategy for Advertising & Promotions",
+    title: "Marketing strategy for advertising & promotions",
     path: "marketing-strategy-and-planning",
     ...marketingStrategyAndPlanningService,
   },
@@ -52,7 +52,7 @@ export const SERVICES = [{
   },
   {
     id: 7,
-    title: "Developing Sales Plans & Implementing Sales Tools",
+    title: "Developing sales plans & implementing sales tools",
     path: "sales-planning-tools",
     ...salesPlanAndToolsService,
   },

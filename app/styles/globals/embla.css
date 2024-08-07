@@ -13,10 +13,11 @@
 .embla__controls {
   display: flex;
   justify-content: flex-end;
+  margin-top: 1rem;
 }
 
 .embla__buttons {
-  padding: 0 1rem 2rem;
+  padding: 1rem;
 }
 
 .embla__button {
