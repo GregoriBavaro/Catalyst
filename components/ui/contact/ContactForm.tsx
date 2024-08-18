@@ -57,9 +57,9 @@ const ContactForm = () => {
     transition: Slide,
   };
 
-  const EMAIL_JS_SERVICE = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE;
-  const EMAIL_JS_TEMPLATE = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE;
-  const EMAIL_JS_PUBLIC_PASS = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_PASS;
+  const EMAIL_JS_SERVICE = "service_7258vua";
+  const EMAIL_JS_TEMPLATE = "template_j42t50w";
+  const EMAIL_JS_PUBLIC_PASS = "D7JVJyPhITgUHk0mk";
 
   const handleSubmit = (
     values: FormValues,
