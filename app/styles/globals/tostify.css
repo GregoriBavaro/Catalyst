@@ -2,6 +2,8 @@
   background-color: var(--sand-white) !important;
   color: var(--dark-blue) !important;
   border-radius: 0.2rem !important;
+  position: fixed !important;
+  right: 0 !important;
 }
 
 .Toastify__toast--success .Toastify__progress-bar--bg {
@@ -14,4 +16,12 @@
 
 .Toastify__toast--success .Toastify__progress-bar {
   background-color: var(--dark-blue);
+}
+
+@media (max-width: 767px) {
+  .Toastify__toast {
+    top: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+  }
 }

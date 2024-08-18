@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import { ToastContainer } from "react-toastify";
 import { Roboto } from "next/font/google";
 
 import Navigation from "../components/layout/navigation/Navigation";
@@ -51,6 +52,7 @@ const RootLayout = ({
         />
       </head>
       <body className={roboto.className}>
+        <ToastContainer />
         <SplashScreen />
         <Navigation />
         <main>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast, ToastOptions, Slide } from "react-toastify";
+import { toast, ToastOptions, Slide } from "react-toastify";
 import useEmblaCarousel from "embla-carousel-react";
 import { Formik, Form, FormikHelpers } from "formik";
 import * as Yup from "yup";
@@ -111,48 +111,45 @@ const ContactForm = () => {
   };
 
   return (
-    <>
-      <ToastContainer />
-      <section className={classes.contactForm}>
-        <div className={classes.contactFormWrapper}>
-          <ContactFormCompanyInfo />
-          <Formik
-            initialValues={initialValues}
-            onSubmit={handleSubmit}
-            validationSchema={validationSchema}
-          >
-            {({ isSubmitting, setFieldValue, values }) => (
-              <Form className={classes.form}>
-                <div className="embla" ref={emblaRef}>
-                  <div className="embla__container">
-                    <div className="embla__slide">
-                      <ContactFormServices
-                        values={values}
-                        setFieldValue={setFieldValue}
-                        checked={checked}
-                        setChecked={setChecked}
-                      />
-                    </div>
-                    <div className="embla__slide">
-                      {isSubmitting ? (
-                        <Loading styles={loadingStyles} isLoading={isSubmitting} />
-                      ) : (
-                        <ContactFormInfo isSubmitting={isSubmitting} />
-                      )}
-                    </div>
+    <section className={classes.contactForm}>
+      <div className={classes.contactFormWrapper}>
+        <ContactFormCompanyInfo />
+        <Formik
+          initialValues={initialValues}
+          onSubmit={handleSubmit}
+          validationSchema={validationSchema}
+        >
+          {({ isSubmitting, setFieldValue, values }) => (
+            <Form className={classes.form}>
+              <div className="embla" ref={emblaRef}>
+                <div className="embla__container">
+                  <div className="embla__slide">
+                    <ContactFormServices
+                      values={values}
+                      setFieldValue={setFieldValue}
+                      checked={checked}
+                      setChecked={setChecked}
+                    />
                   </div>
-                  <div className="embla__controls">
-                    <div className="embla__buttons">
-                      <ToggleButton label={buttonLabel} onClick={onButtonClick} />
-                    </div>
+                  <div className="embla__slide">
+                    {isSubmitting ? (
+                      <Loading styles={loadingStyles} isLoading={isSubmitting} />
+                    ) : (
+                      <ContactFormInfo isSubmitting={isSubmitting} />
+                    )}
                   </div>
                 </div>
-              </Form>
-            )}
-          </Formik>
-        </div>
-      </section>
-    </>
+                <div className="embla__controls">
+                  <div className="embla__buttons">
+                    <ToggleButton label={buttonLabel} onClick={onButtonClick} />
+                  </div>
+                </div>
+              </div>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </section>
   );
 };
 
