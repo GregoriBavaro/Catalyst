@@ -23,7 +23,7 @@ const generateSitemap = (urls, filename) => {
   ${urls
     .map(
       (url) => `<url>
-    <loc>${baseUrl}${url}</loc>generate-sitemaps.js
+    <loc>${baseUrl}${url}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>`
